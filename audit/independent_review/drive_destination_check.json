@@ -1,11 +1,10 @@
 {
   "audit_method": "Compared Google Drive folder listings against the local SHA-256 file manifest; independently downloaded selected files for byte-level hashing.",
   "folders_checked": 34,
-  "manifest_rows_before_this_report": 194,
-  "manifest_files_found": 194,
+  "manifest_files_found": 195,
   "files_with_size_mismatch": 0,
   "missing_files": 0,
-  "manifest_file_size_bytes": 20164,
+  "manifest_file_size_bytes": 20289,
   "manifest_itself_size_matched": true,
   "sampled_byte_hash_checks": [
     {
@@ -30,5 +29,6 @@
       "match": true
     }
   ],
-  "limits": "Drive listing verified every manifest file name and byte size. Direct remote SHA-256 comparison was performed for the listed sample; checksums for all local files remain recorded in the manifest and annual checksums.sha256 files."
+  "limits": "Drive listing verified every manifest file name and byte size. Direct remote SHA-256 comparison was performed for the listed sample; checksums for all local files remain recorded in the manifest and annual checksums.sha256 files.",
+  "manifest_rows_checked": 195
 }
