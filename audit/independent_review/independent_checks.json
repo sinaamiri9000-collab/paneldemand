@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 16976)
+Total output lines: 2914
+
 {
   "checks": [
     {
@@ -103,6 +106,23 @@
       "n_bad": 0
     },
     {
+      "check": "1390_income_subsidy_readable",
+      "status": "pass",
+      "rows": 41241,
+      "columns": 7,
+      "sha256": "085175fc546c936a5de1275ae157739ac3680ffdb6b1afe29d5d4b3d433b6a30"
+    },
+    {
+      "check": "1390_income_subsidy_required_columns",
+      "status": "pass",
+      "missing": []
+    },
+    {
+      "check": "1390_income_subsidy_year_values",
+      "status": "pass",
+      "n_bad": 0
+    },
+    {
       "check": "1390_housing_readable",
       "status": "pass",
       "rows": 38513,
@@ -151,6 +171,11 @@
     },
     {
       "check": "1390_income_other_foreign_key",
+      "status": "pass",
+      "n_unmatched_ids": 0
+    },
+    {
+      "check": "1390_income_subsidy_foreign_key",
       "status": "pass",
       "n_unmatched_ids": 0
     },
@@ -273,6 +298,23 @@
       "n_bad": 0
     },
     {
+      "check": "1391_income_subsidy_readable",
+      "status": "pass",
+      "rows": 40475,
+      "columns": 7,
+      "sha256": "791ece7aab1c30bb0ba50d1206a56a41bd27777f526c660352c79c3e0533420b"
+    },
+    {
+      "check": "1391_income_subsidy_required_columns",
+      "status": "pass",
+      "missing": []
+    },
+    {
+      "check": "1391_income_subsidy_year_values",
+      "status": "pass",
+      "n_bad": 0
+    },
+    {
       "check": "1391_housing_readable",
       "status": "pass",
       "rows": 38192,
@@ -321,6 +363,11 @@
     },
     {
       "check": "1391_income_other_foreign_key",
+      "status": "pass",
+      "n_unmatched_ids": 0
+    },
+    {
+      "check": "1391_income_subsidy_foreign_key",
       "status": "pass",
       "n_unmatched_ids": 0
     },
@@ -443,6 +490,23 @@
       "n_bad": 0
     },
     {
+      "check": "1392_income_subsidy_readable",
+      "status": "pass",
+      "rows": 40688,
+      "columns": 7,
+      "sha256": "1728f650ad4d941fff6b2bd5cd6f992dc9cd3a18c32c8a562c38c8f676c1a14f"
+    },
+    {
+      "check": "1392_income_subsidy_required_columns",
+      "status": "pass",
+      "missing": []
+    },
+    {
+      "check": "1392_income_subsidy_year_values",
+      "status": "pass",
+      "n_bad": 0
+    },
+    {
       "check": "1392_housing_readable",
       "status": "pass",
       "rows": 38331,
@@ -491,6 +555,11 @@
     },
     {
       "check": "1392_income_other_foreign_key",
+      "status": "pass",
+      "n_unmatched_ids": 0
+    },
+    {
+      "check": "1392_income_subsidy_foreign_key",
       "status": "pass",
       "n_unmatched_ids": 0
     },
@@ -613,6 +682,23 @@
       "n_bad": 0
     },
     {
+      "check": "1393_income_subsidy_readable",
+      "status": "pass",
+      "rows": 40788,
+      "columns": 7,
+      "sha256": "b8cc5125b634b27de117cfba610a80fe6aac2e62a92633c89ae4f012754396d8"
+    },
+    {
+      "check": "1393_income_subsidy_required_columns",
+      "status": "pass",
+      "missing": []
+    },
+    {
+      "check": "1393_income_subsidy_year_values",
+      "status": "pass",
+      "n_bad": 0
+    },
+    {
       "check": "1393_housing_readable",
       "status": "pass",
       "rows": 39856,
@@ -661,6 +747,11 @@
     },
     {
       "check": "1393_income_other_foreign_key",
+      "status": "pass",
+      "n_unmatched_ids": 0
+    },
+    {
+      "check": "1393_income_subsidy_foreign_key",
       "status": "pass",
       "n_unmatched_ids": 0
     },
@@ -761,1044 +852,7 @@
       "missing": []
     },
     {
-      "check": "1394_income_self_employed_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1394_income_other_readable",
-      "status": "pass",
-      "rows": 21266,
-      "columns": 10,
-      "sha256": "2554a72760504fb5618940201e514573cf89cfcfff228d40c4de357b09a619c7"
-    },
-    {
-      "check": "1394_income_other_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1394_income_other_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1394_housing_readable",
-      "status": "pass",
-      "rows": 39857,
-      "columns": 63,
-      "sha256": "5bda0465749a7b9294b795431e491736229b5e551eae4162a11f9832330f044c"
-    },
-    {
-      "check": "1394_housing_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1394_housing_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1394_household_unique",
-      "status": "pass",
-      "duplicates": 0
-    },
-    {
-      "check": "1394_household_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1394_members_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1394_food_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1394_income_wage_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1394_income_self_employed_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1394_income_other_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1394_housing_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1394_members_unique",
-      "status": "pass",
-      "duplicates": 0
-    },
-    {
-      "check": "1394_checksums",
-      "status": "pass",
-      "checked": 9,
-      "bad": []
-    },
-    {
-      "check": "1395_household_readable",
-      "status": "pass",
-      "rows": 39864,
-      "columns": 18,
-      "sha256": "de24beeee432b2b1215ec74137564c128efbc25a66f1a63513d825d2c7ae772e"
-    },
-    {
-      "check": "1395_household_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1395_household_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1395_members_readable",
-      "status": "pass",
-      "rows": 135552,
-      "columns": 11,
-      "sha256": "511b488de46d8450beb3cea11c43f0948d61289b780e5ebae1b047eba950daa2"
-    },
-    {
-      "check": "1395_members_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1395_members_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1395_food_readable",
-      "status": "pass",
-      "rows": 1231814,
-      "columns": 18,
-      "sha256": "44530bc10574b73701b6aaed8d93a7244bf6a217cffb6ddf3ac282fdc9b11a6b"
-    },
-    {
-      "check": "1395_food_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1395_food_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1395_income_wage_readable",
-      "status": "pass",
-      "rows": 23564,
-      "columns": 18,
-      "sha256": "8531c4be5aa14116abe1932702f06d0ad4218efabaf6472a981f68c6efe94644"
-    },
-    {
-      "check": "1395_income_wage_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1395_income_wage_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1395_income_self_employed_readable",
-      "status": "pass",
-      "rows": 21822,
-      "columns": 18,
-      "sha256": "945a221b23505099b7f16a5843e9c3b96f3f357d5bab590937d81f51ee6a6cc7"
-    },
-    {
-      "check": "1395_income_self_employed_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1395_income_self_employed_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1395_income_other_readable",
-      "status": "pass",
-      "rows": 21647,
-      "columns": 10,
-      "sha256": "8731929610192433e9f037907fba252a5c6e095efeed74c9a03a984edf790261"
-    },
-    {
-      "check": "1395_income_other_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1395_income_other_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1395_housing_readable",
-      "status": "pass",
-      "rows": 39864,
-      "columns": 63,
-      "sha256": "48d277ecdfc96d7eb34e5e9922b1a548484023923651fd7a5ff3d686d802354e"
-    },
-    {
-      "check": "1395_housing_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1395_housing_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1395_household_unique",
-      "status": "pass",
-      "duplicates": 0
-    },
-    {
-      "check": "1395_household_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1395_members_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1395_food_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1395_income_wage_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1395_income_self_employed_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1395_income_other_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1395_housing_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1395_members_unique",
-      "status": "pass",
-      "duplicates": 0
-    },
-    {
-      "check": "1395_checksums",
-      "status": "pass",
-      "checked": 9,
-      "bad": []
-    },
-    {
-      "check": "1396_household_readable",
-      "status": "pass",
-      "rows": 37962,
-      "columns": 18,
-      "sha256": "fe65f520fe6ecdbd955d515e66a48e3f754a3c2f6eb2a58d995db826284d5818"
-    },
-    {
-      "check": "1396_household_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1396_household_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1396_members_readable",
-      "status": "pass",
-      "rows": 134389,
-      "columns": 11,
-      "sha256": "24958d1aa4d79b65411bc5d1a1c124ac12f8b560a8aeadc2cdccadd65ac122e3"
-    },
-    {
-      "check": "1396_members_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1396_members_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1396_food_readable",
-      "status": "pass",
-      "rows": 1257681,
-      "columns": 18,
-      "sha256": "7b2e98a72afa3d705d3489f55eb01f98d50eacf58505de6361b8efe8b558ae2d"
-    },
-    {
-      "check": "1396_food_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1396_food_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1396_income_wage_readable",
-      "status": "pass",
-      "rows": 23805,
-      "columns": 18,
-      "sha256": "2271807a51daf0988bad7a1870f6eea6800ce57b57747b933aab0641d83c0240"
-    },
-    {
-      "check": "1396_income_wage_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1396_income_wage_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1396_income_self_employed_readable",
-      "status": "pass",
-      "rows": 22290,
-      "columns": 18,
-      "sha256": "be372f6d7e94a6e0a70fa2dc70553db8eeb0588e105c52830cfb6d5bd87dcc68"
-    },
-    {
-      "check": "1396_income_self_employed_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1396_income_self_employed_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1396_income_other_readable",
-      "status": "pass",
-      "rows": 25316,
-      "columns": 10,
-      "sha256": "7a24a56d0fbcf352ac060a0d176e2c34823e3241a2666ee39e2ae14814043fcd"
-    },
-    {
-      "check": "1396_income_other_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1396_income_other_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1396_housing_readable",
-      "status": "pass",
-      "rows": 37962,
-      "columns": 46,
-      "sha256": "35dc7b1ec427b68b4660205a353c7da9e7bbc9555433ad2b8fef0a3205f57d24"
-    },
-    {
-      "check": "1396_housing_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1396_housing_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1396_household_unique",
-      "status": "pass",
-      "duplicates": 0
-    },
-    {
-      "check": "1396_household_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1396_members_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1396_food_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1396_income_wage_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1396_income_self_employed_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1396_income_other_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1396_housing_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1396_members_unique",
-      "status": "pass",
-      "duplicates": 0
-    },
-    {
-      "check": "1396_checksums",
-      "status": "pass",
-      "checked": 9,
-      "bad": []
-    },
-    {
-      "check": "1397_household_readable",
-      "status": "pass",
-      "rows": 38960,
-      "columns": 18,
-      "sha256": "04848b012f7855819d7ddf9968db3fc2829c5316c9ac87be6e26c20025e69ff5"
-    },
-    {
-      "check": "1397_household_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1397_household_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1397_members_readable",
-      "status": "pass",
-      "rows": 135830,
-      "columns": 11,
-      "sha256": "38ecf812499d84c7dc0539a1245d40030adf8e3354a4734fa3a3de8313a061f2"
-    },
-    {
-      "check": "1397_members_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1397_members_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1397_food_readable",
-      "status": "pass",
-      "rows": 1220929,
-      "columns": 18,
-      "sha256": "5b16e6426da11d9699b351dfc7a263b6e0c986943d79138712fbf0a68d829b49"
-    },
-    {
-      "check": "1397_food_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1397_food_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1397_income_wage_readable",
-      "status": "pass",
-      "rows": 24482,
-      "columns": 18,
-      "sha256": "68b8793dd76f1f45f8f7e64d1328339b977b0cd08be80c60df70eed3fd3db0ac"
-    },
-    {
-      "check": "1397_income_wage_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1397_income_wage_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1397_income_self_employed_readable",
-      "status": "pass",
-      "rows": 21988,
-      "columns": 18,
-      "sha256": "fbcd65f284ba589eff397a0e39b653299c7d0ae6ece9f78a0f8c5571aab8e850"
-    },
-    {
-      "check": "1397_income_self_employed_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1397_income_self_employed_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1397_income_other_readable",
-      "status": "pass",
-      "rows": 35009,
-      "columns": 10,
-      "sha256": "4e3f16b1685cf6b547075b0ac0c18a92906892f0ef0836802a32706821066d75"
-    },
-    {
-      "check": "1397_income_other_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1397_income_other_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1397_housing_readable",
-      "status": "pass",
-      "rows": 38960,
-      "columns": 46,
-      "sha256": "5fb20a99ea3d51ec094a822c13a04a8f17c9248620c0f6eccf5ccb1b8afa11a7"
-    },
-    {
-      "check": "1397_housing_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1397_housing_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1397_household_unique",
-      "status": "pass",
-      "duplicates": 0
-    },
-    {
-      "check": "1397_household_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1397_members_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1397_food_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1397_income_wage_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1397_income_self_employed_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1397_income_other_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1397_housing_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1397_members_unique",
-      "status": "pass",
-      "duplicates": 0
-    },
-    {
-      "check": "1397_checksums",
-      "status": "pass",
-      "checked": 9,
-      "bad": []
-    },
-    {
-      "check": "1398_household_readable",
-      "status": "pass",
-      "rows": 38328,
-      "columns": 18,
-      "sha256": "698f86c7fcb0fc24d38bbb879dff08b7050105dcbc7e77b9e8bc95ecfcb16b00"
-    },
-    {
-      "check": "1398_household_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1398_household_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1398_members_readable",
-      "status": "pass",
-      "rows": 132541,
-      "columns": 11,
-      "sha256": "0da3e9187706da9582da882822542c134a4260ff8f9bf1fe8e869cf90e875a0b"
-    },
-    {
-      "check": "1398_members_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1398_members_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1398_food_readable",
-      "status": "pass",
-      "rows": 1149157,
-      "columns": 18,
-      "sha256": "6ae67dcf5cd82324322183cb62c577421c402c4fb6a8e44205521aaa91b28013"
-    },
-    {
-      "check": "1398_food_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1398_food_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1398_income_wage_readable",
-      "status": "pass",
-      "rows": 23575,
-      "columns": 18,
-      "sha256": "91fa80f7c659f9cc1df0c309484b96e968a0d98a6131ae863a3bf0e02b5ee6ef"
-    },
-    {
-      "check": "1398_income_wage_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1398_income_wage_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1398_income_self_employed_readable",
-      "status": "pass",
-      "rows": 21651,
-      "columns": 18,
-      "sha256": "9d5a628601aff467a5e3c04592b567c0fbadb643df45aac36d8694e7d93058f1"
-    },
-    {
-      "check": "1398_income_self_employed_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1398_income_self_employed_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1398_income_other_readable",
-      "status": "pass",
-      "rows": 37964,
-      "columns": 10,
-      "sha256": "aebe36550fa4aacfb8c5618e39929bb1841575217600147888750949d5e83dd3"
-    },
-    {
-      "check": "1398_income_other_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1398_income_other_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1398_housing_readable",
-      "status": "pass",
-      "rows": 38328,
-      "columns": 46,
-      "sha256": "101882d9b7952ee1539c2547d4f43a38b4cade3a853456e2b44ad399169ea4e3"
-    },
-    {
-      "check": "1398_housing_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1398_housing_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1398_household_unique",
-      "status": "pass",
-      "duplicates": 0
-    },
-    {
-      "check": "1398_household_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1398_members_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1398_food_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1398_income_wage_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1398_income_self_employed_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1398_income_other_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1398_housing_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1398_members_unique",
-      "status": "pass",
-      "duplicates": 0
-    },
-    {
-      "check": "1398_checksums",
-      "status": "pass",
-      "checked": 9,
-      "bad": []
-    },
-    {
-      "check": "1399_household_readable",
-      "status": "pass",
-      "rows": 37557,
-      "columns": 18,
-      "sha256": "6fb164bfa3eef1afca4e2b2aac97e423608f9fd76ba4310970e2bc4b976b4d6b"
-    },
-    {
-      "check": "1399_household_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1399_household_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1399_members_readable",
-      "status": "pass",
-      "rows": 128955,
-      "columns": 11,
-      "sha256": "880a1d6a06854e25c33a97e1a004aa2402cb6048e9696be88e6224a7aa58257d"
-    },
-    {
-      "check": "1399_members_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1399_members_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1399_food_readable",
-      "status": "pass",
-      "rows": 1102050,
-      "columns": 18,
-      "sha256": "e64c8d0e30eb2e261b9229bd4cbc0fde770c44c8453f7f435746d2c6e79ab971"
-    },
-    {
-      "check": "1399_food_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1399_food_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1399_income_wage_readable",
-      "status": "pass",
-      "rows": 23073,
-      "columns": 18,
-      "sha256": "83c291226ac53f0a229873247d4f340c8306c886e83fce1c9a0ce17fe8ad6828"
-    },
-    {
-      "check": "1399_income_wage_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1399_income_wage_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1399_income_self_employed_readable",
-      "status": "pass",
-      "rows": 19323,
-      "columns": 18,
-      "sha256": "1ab1528e4485302c619ed216e5771b0e75253d286de4df686636fe50ffbfbfd2"
-    },
-    {
-      "check": "1399_income_self_employed_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1399_income_self_employed_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1399_income_other_readable",
-      "status": "pass",
-      "rows": 47622,
-      "columns": 10,
-      "sha256": "82290accbed0b2b36eb2e811b303bb4776d120fb531baf9e781e6039c6e53b51"
-    },
-    {
-      "check": "1399_income_other_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1399_income_other_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1399_housing_readable",
-      "status": "pass",
-      "rows": 37557,
-      "columns": 46,
-      "sha256": "c262917c9d51c2a791857d758659304d13c89b17889e788252a58e6044b8cf70"
-    },
-    {
-      "check": "1399_housing_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1399_housing_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1399_household_unique",
-      "status": "pass",
-      "duplicates": 0
-    },
-    {
-      "check": "1399_household_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1399_members_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1399_food_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1399_income_wage_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1399_income_self_employed_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1399_income_other_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1399_housing_foreign_key",
-      "status": "pass",
-      "n_unmatched_ids": 0
-    },
-    {
-      "check": "1399_members_unique",
-      "status": "pass",
-      "duplicates": 0
-    },
-    {
-      "check": "1399_checksums",
-      "status": "pass",
-      "checked": 9,
-      "bad": []
-    },
-    {
-      "check": "1400_household_readable",
-      "status": "pass",
-      "rows": 37988,
-      "columns": 17,
-      "sha256": "5754ee94c20d19de5ca677877d16b97c987f4b9191ae742c05957a681686f554"
-    },
-    {
-      "check": "1400_household_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1400_household_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1400_members_readable",
-      "status": "pass",
-      "rows": 128914,
-      "columns": 11,
-      "sha256": "ff786f249ca6c9f0389ce3972b025c956851ce2ae8c6d6d69bc0285607bbccdc"
-    },
-    {
-      "check": "1400_members_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1400_members_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1400_food_readable",
-      "status": "pass",
-      "rows": 1127133,
-      "columns": 18,
-      "sha256": "cbc3cb5832040a942b333a00ca13bbda31660fb1e1a41153185c43ae35c49035"
-    },
-    {
-      "check": "1400_food_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1400_food_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1400_income_wage_readable",
-      "status": "pass",
-      "rows": 23130,
-      "columns": 18,
-      "sha256": "c45ae74d37107ba2257e0edb5638ef38e7af213bfb0e0e8126eac32fae8708d0"
-    },
-    {
-      "check": "1400_income_wage_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1400_income_wage_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1400_income_self_employed_readable",
-      "status": "pass",
-      "rows": 18570,
-      "columns": 18,
-      "sha256": "8b8feec9d6a837454c858a691846ffd9bb80be8f7ef70aed44c32fd294a0363e"
-    },
-    {
-      "check": "1400_income_self_employed_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1400_income_self_employed_year_values",
-      "status": "pass",
-      "n_bad": 0
-    },
-    {
-      "check": "1400_income_other_readable",
-      "status": "pass",
-      "rows": 49442,
-      "columns": 10,
-      "sha256": "fe743625f23897eb39eaf935fb797082159b92041d61456cf54edf967b769ae9"
-    },
-    {
-      "check": "1400_income_other_required_columns",
-      "status": "pass",
-      "missing": []
-    },
-    {
-      "check": "1400_income_other_year_values",
+ …6976 tokens truncated…ubsidy_year_values",
       "status": "pass",
       "n_bad": 0
     },
@@ -1851,6 +905,11 @@
     },
     {
       "check": "1400_income_other_foreign_key",
+      "status": "pass",
+      "n_unmatched_ids": 0
+    },
+    {
+      "check": "1400_income_subsidy_foreign_key",
       "status": "pass",
       "n_unmatched_ids": 0
     },
@@ -1973,6 +1032,23 @@
       "n_bad": 0
     },
     {
+      "check": "1401_income_subsidy_readable",
+      "status": "pass",
+      "rows": 61527,
+      "columns": 7,
+      "sha256": "8ae8c00e24d98cefac9cb6d25ef827446f16d10ea00d53ade8a5c4f42b15c528"
+    },
+    {
+      "check": "1401_income_subsidy_required_columns",
+      "status": "pass",
+      "missing": []
+    },
+    {
+      "check": "1401_income_subsidy_year_values",
+      "status": "pass",
+      "n_bad": 0
+    },
+    {
       "check": "1401_housing_readable",
       "status": "pass",
       "rows": 37951,
@@ -2021,6 +1097,11 @@
     },
     {
       "check": "1401_income_other_foreign_key",
+      "status": "pass",
+      "n_unmatched_ids": 0
+    },
+    {
+      "check": "1401_income_subsidy_foreign_key",
       "status": "pass",
       "n_unmatched_ids": 0
     },
@@ -2143,6 +1224,23 @@
       "n_bad": 0
     },
     {
+      "check": "1402_income_subsidy_readable",
+      "status": "pass",
+      "rows": 36623,
+      "columns": 7,
+      "sha256": "0ace850425a80ed303ed42e081f67bcc512ddd7ef9d56194b82be5539452220f"
+    },
+    {
+      "check": "1402_income_subsidy_required_columns",
+      "status": "pass",
+      "missing": []
+    },
+    {
+      "check": "1402_income_subsidy_year_values",
+      "status": "pass",
+      "n_bad": 0
+    },
+    {
       "check": "1402_housing_readable",
       "status": "pass",
       "rows": 37883,
@@ -2191,6 +1289,11 @@
     },
     {
       "check": "1402_income_other_foreign_key",
+      "status": "pass",
+      "n_unmatched_ids": 0
+    },
+    {
+      "check": "1402_income_subsidy_foreign_key",
       "status": "pass",
       "n_unmatched_ids": 0
     },
@@ -2313,6 +1416,23 @@
       "n_bad": 0
     },
     {
+      "check": "1403_income_subsidy_readable",
+      "status": "pass",
+      "rows": 36310,
+      "columns": 7,
+      "sha256": "7538cfcec75270e9976bce6ddcd9003b794b47c687050b766641b84020934af2"
+    },
+    {
+      "check": "1403_income_subsidy_required_columns",
+      "status": "pass",
+      "missing": []
+    },
+    {
+      "check": "1403_income_subsidy_year_values",
+      "status": "pass",
+      "n_bad": 0
+    },
+    {
       "check": "1403_housing_readable",
       "status": "pass",
       "rows": 37505,
@@ -2365,6 +1485,11 @@
       "n_unmatched_ids": 0
     },
     {
+      "check": "1403_income_subsidy_foreign_key",
+      "status": "pass",
+      "n_unmatched_ids": 0
+    },
+    {
       "check": "1403_housing_foreign_key",
       "status": "pass",
       "n_unmatched_ids": 0
@@ -2408,8 +1533,8 @@
         "2": 104549,
         "1": 150951,
         "3": 60660,
-        "4": 238,
         "5": 79,
+        "4": 238,
         "6": 36
       }
     },
@@ -2520,14 +1645,86 @@
         "1401": 1081382,
         "1403": 1056480
       }
+    },
+    {
+      "check": "combined_income_subsidy_counts",
+      "status": "pass",
+      "expected": {
+        "1390": 41241,
+        "1391": 40475,
+        "1392": 40688,
+        "1393": 40788,
+        "1394": 40439,
+        "1395": 39766,
+        "1396": 39825,
+        "1397": 40407,
+        "1398": 39443,
+        "1399": 57608,
+        "1400": 64107,
+        "1401": 61527,
+        "1402": 36623,
+        "1403": 36310
+      },
+      "actual": {
+        "1400": 64107,
+        "1401": 61527,
+        "1399": 57608,
+        "1390": 41241,
+        "1393": 40788,
+        "1392": 40688,
+        "1391": 40475,
+        "1394": 40439,
+        "1397": 40407,
+        "1396": 39825,
+        "1395": 39766,
+        "1398": 39443,
+        "1402": 36623,
+        "1403": 36310
+      }
+    },
+    {
+      "check": "combined_income_counts",
+      "status": "pass",
+      "expected": {
+        "1390": 112459,
+        "1391": 111976,
+        "1392": 107535,
+        "1393": 108196,
+        "1394": 107907,
+        "1395": 106799,
+        "1396": 111236,
+        "1397": 121886,
+        "1398": 122633,
+        "1399": 147626,
+        "1400": 155249,
+        "1401": 155179,
+        "1402": 123891,
+        "1403": 122272
+      },
+      "actual": {
+        "1400": 155249,
+        "1401": 155179,
+        "1399": 147626,
+        "1402": 123891,
+        "1398": 122633,
+        "1403": 122272,
+        "1397": 121886,
+        "1390": 112459,
+        "1391": 111976,
+        "1396": 111236,
+        "1393": 108196,
+        "1394": 107907,
+        "1392": 107535,
+        "1395": 106799
+      }
     }
   ],
   "id_presence_distribution": {
     "2": 104549,
     "1": 150951,
     "3": 60660,
-    "4": 238,
     "5": 79,
+    "4": 238,
     "6": 36
   },
   "note": "Only existence and calculations backed by available files are verified. Raw-to-standard mapping and destination readback require separate evidence."

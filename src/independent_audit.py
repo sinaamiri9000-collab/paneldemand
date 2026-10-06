@@ -36,7 +36,7 @@ def main():
         base = candidates[0].parent
         frames = {}
         for name in ['household', 'members', 'food', 'income_wage',
-                     'income_self_employed', 'income_other', 'housing']:
+                     'income_self_employed', 'income_other', 'income_subsidy', 'housing']:
             p = base / f'{name}.parquet'
             if not p.exists():
                 record(f'{year}_{name}_exists', 'fail')
@@ -121,7 +121,14 @@ def main():
            counts=distribution)
 
     # Combined row counts must match annual exports, with complete year coverage.
-    for name in ['household', 'members', 'food']:
+    combined_specs = {
+        'household': ('household_rows',),
+        'members': ('members_rows',),
+        'food': ('food_rows',),
+        'income_subsidy': ('income_subsidy_rows',),
+        'income': ('income_wage_rows', 'income_self_employed_rows', 'income_other_rows', 'income_subsidy_rows'),
+    }
+    for name, components in combined_specs.items():
         candidates = [p for p in files if p.name == f'{name}_1390_1403.parquet']
         if len(candidates) != 1:
             record(f'combined_{name}', 'blocked', n_candidates=len(candidates))
@@ -129,7 +136,10 @@ def main():
         try:
             df = pd.read_parquet(candidates[0], columns=['Year'])
             actual = {int(y): int(n) for y, n in df['Year'].value_counts().items()}
-            expected = {r['Year']: r[name + '_rows'] for r in counts if name + '_rows' in r}
+            expected = {
+                r['Year']: sum(r.get(component, 0) for component in components)
+                for r in counts
+            }
             record(f'combined_{name}_counts', 'pass' if actual == expected else 'fail',
                    expected=expected, actual=actual)
         except Exception as e:
