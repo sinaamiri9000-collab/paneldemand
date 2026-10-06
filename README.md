@@ -13,6 +13,7 @@
 - `audit/yearly_sample_summary.csv`: شمار خانوار، عضو، خوراکی، پوشش متغیرها و وزن به تفکیک سال.
 - `audit/commodity_year_audit.csv.gz`: ممیزی تجمیعی سال × کد خوراکی؛ نسخهٔ کامل Parquet نیز در Drive است.
 - `audit/panel_overlap_by_year.csv` و `audit/panel_length_distribution.csv`: همپوشانی و طول حضور شناسه‌ها.
+- `audit/independent_review/drive_destination_check.json`: تطبیق نام و اندازهٔ فایل‌های مقصد Drive با مانیفست و چند آزمون هش مستقیم.
 - `audit/demographic_variable_audit.csv`, `audit/hbsir_transformations.csv`, `audit/issues_log.csv`.
 
 ## اجرای کد
