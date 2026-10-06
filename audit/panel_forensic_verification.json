@@ -1,0 +1,271 @@
+{
+  "Passed": 66,
+  "Failed": 0,
+  "Checks": [
+    {
+      "Check": "8 direct Access nonmissing ID sets exactly match HBSIR",
+      "Passed": true
+    },
+    {
+      "Check": "8 Access databases unchanged",
+      "Passed": true
+    },
+    {
+      "Check": "all 362 tables inventoried",
+      "Passed": true
+    },
+    {
+      "Check": "HBSIR_ID 1390-1391 counts",
+      "Passed": true
+    },
+    {
+      "Check": "HBSIR_ID 1390-1392 counts",
+      "Passed": true
+    },
+    {
+      "Check": "HBSIR_ID 1391-1392 counts",
+      "Passed": true
+    },
+    {
+      "Check": "HBSIR_ID 1391-1393 counts",
+      "Passed": true
+    },
+    {
+      "Check": "HBSIR_ID 1392-1393 counts",
+      "Passed": true
+    },
+    {
+      "Check": "HBSIR_ID 1393-1395 counts",
+      "Passed": true
+    },
+    {
+      "Check": "HBSIR_ID 1395-1396 counts",
+      "Passed": true
+    },
+    {
+      "Check": "HBSIR_ID 1395-1397 counts",
+      "Passed": true
+    },
+    {
+      "Check": "HBSIR_ID 1396-1397 counts",
+      "Passed": true
+    },
+    {
+      "Check": "HBSIR_ID 1396-1398 counts",
+      "Passed": true
+    },
+    {
+      "Check": "HBSIR_ID 1397-1398 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Raw_Address 1390-1391 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Raw_Address 1390-1392 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Raw_Address 1391-1392 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Raw_Address 1391-1393 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Raw_Address 1392-1393 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Raw_Address 1393-1395 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Raw_Address 1395-1396 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Raw_Address 1395-1397 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Raw_Address 1396-1397 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Raw_Address 1396-1398 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Raw_Address 1397-1398 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Frame_Address 1390-1391 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Frame_Address 1390-1392 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Frame_Address 1391-1392 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Frame_Address 1391-1393 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Frame_Address 1392-1393 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Frame_Address 1393-1395 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Frame_Address 1395-1396 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Frame_Address 1395-1397 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Frame_Address 1396-1397 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Frame_Address 1396-1398 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Frame_Address 1397-1398 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Original_Only 1390-1391 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Original_Only 1390-1392 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Original_Only 1391-1392 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Original_Only 1391-1393 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Original_Only 1392-1393 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Original_Only 1393-1395 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Original_Only 1395-1396 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Original_Only 1395-1397 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Original_Only 1396-1397 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Original_Only 1396-1398 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Original_Only 1397-1398 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Respondent_Location 1390-1391 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Respondent_Location 1390-1392 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Respondent_Location 1391-1392 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Respondent_Location 1391-1393 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Respondent_Location 1392-1393 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Respondent_Location 1393-1395 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Respondent_Location 1395-1396 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Respondent_Location 1395-1397 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Respondent_Location 1396-1397 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Respondent_Location 1396-1398 counts",
+      "Passed": true
+    },
+    {
+      "Check": "Respondent_Location 1397-1398 counts",
+      "Passed": true
+    },
+    {
+      "Check": "2000 source-key samples",
+      "Passed": true
+    },
+    {
+      "Check": "sample age flags independently recomputed",
+      "Passed": true
+    },
+    {
+      "Check": "sample sex flags independently recomputed",
+      "Passed": true
+    },
+    {
+      "Check": "24 partial raw-source reviews",
+      "Passed": true
+    },
+    {
+      "Check": "353 repeated labels exclusively across two frames",
+      "Passed": true
+    },
+    {
+      "Check": "prior 195 artifacts unchanged",
+      "Passed": true
+    },
+    {
+      "Check": "no unsupported final crosswalk or validated panel",
+      "Passed": true
+    },
+    {
+      "Check": "uncertified family counts stay unknown",
+      "Passed": true
+    }
+  ],
+  "Scope": "recomputed artifact integrity and formulas, not certification of family identity"
+}

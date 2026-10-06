@@ -1,0 +1,9 @@
+Year,Raw_Households,Raw_Missing_Address,Standard_Households,Raw_Duplicates,ID_Set_Equal,Raw_Numeric_To_ID_OneToOne
+1390,40011,1,40010,0,True,True
+1391,40007,0,40007,0,True,True
+1392,39864,0,39864,0,True,True
+1393,39856,0,39856,0,True,True
+1395,39864,0,39864,0,True,True
+1396,37962,0,37962,0,True,True
+1397,38960,0,38960,0,True,True
+1398,38328,0,38328,0,True,True

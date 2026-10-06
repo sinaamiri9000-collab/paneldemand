@@ -1,0 +1,6 @@
+{
+  "Previous_Manifest_Entries": 195,
+  "Verified_Unchanged_Files": 195,
+  "Mismatches": [],
+  "Note": "Drive split-part paths resolved by size and SHA256 to local upload_parts/documentation aliases; old remote files not modified"
+}

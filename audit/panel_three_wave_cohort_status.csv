@@ -1,0 +1,13 @@
+Cohort,Crosses_Frame_Boundary,Existing_Address_Candidate_Count,Validated_Family_Count,Status
+1390-1392,True,0,,boundary_no_continuous_key
+1391-1393,True,0,,boundary_no_continuous_key
+1392-1394,False,9344,,not_certified; missing_full_three_wave_raw_pilot_coverage
+1393-1395,False,8871,,not_certified; missing_full_three_wave_raw_pilot_coverage
+1394-1396,False,8530,,not_certified; missing_full_three_wave_raw_pilot_coverage
+1395-1397,True,0,,boundary_no_continuous_key
+1396-1398,True,0,,boundary_no_continuous_key
+1397-1399,False,7297,,not_certified; missing_full_three_wave_raw_pilot_coverage
+1398-1400,False,7068,,not_certified; missing_full_three_wave_raw_pilot_coverage
+1399-1401,False,6504,,not_certified; missing_full_three_wave_raw_pilot_coverage
+1400-1402,False,6485,,not_certified; missing_full_three_wave_raw_pilot_coverage
+1401-1403,False,6617,,not_certified; missing_full_three_wave_raw_pilot_coverage

@@ -1,0 +1,18 @@
+{
+  "distinct_ids": 353,
+  "transitions": 1210,
+  "consecutive_transitions": 822,
+  "max_consecutive_run_distribution": {
+    "1": 3,
+    "2": 90,
+    "3": 260
+  },
+  "cross_boundary_1391_1392_ids": 0,
+  "cross_boundary_1396_1397_ids": 353,
+  "consecutive_age_default_evaluable": 820,
+  "consecutive_age_default_rate": 0.44634146341463415,
+  "sex_evaluable": 1207,
+  "sex_rate": 0.8649544324772163,
+  "confirmed_reuse_count": null,
+  "confirmed_same_family_count": null
+}

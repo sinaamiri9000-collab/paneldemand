@@ -1,0 +1,24 @@
+{
+  "Direct_Raw_Pilot_Completed": true,
+  "Pilot_Years": [
+    1390,
+    1391,
+    1392,
+    1393,
+    1395,
+    1396,
+    1397,
+    1398
+  ],
+  "Candidate_Methods": 5,
+  "Pilot_Key_Certified": false,
+  "Full_Raw_Expansion_Performed": false,
+  "Crosswalk_Created": false,
+  "Validated_Three_Wave_File_Created": false,
+  "Validated_Family_Count": null,
+  "Reason": "Population identity and rotation assignments remain unproven; demographic conflicts substantial. Conditional outputs withheld per request.",
+  "353_Labels_Appear_In_Two_Frames": true,
+  "Max_Observed_Years_Per_Frame": 3,
+  "Existing_Three_Wave_Candidates": 60716,
+  "Prior_Outputs_Overwritten": false
+}

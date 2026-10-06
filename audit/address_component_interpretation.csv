@@ -1,0 +1,39 @@
+Year,Component,Start_0based,End_Exclusive,Unique_Count,Evidence,Verified_Against_Independent_Raw_Column
+1390,Urban_Rural,0,1,2,پرسشنامه صفحه۱ و HBSIR id_information,False
+1390,Province,1,3,31,پرسشنامه صفحه۱ و HBSIR id_information,False
+1390,PSU_or_Cluster,3,7,340,۱۳۹۰–۱۳۹۶ واحد نمونه اولیه؛ از۱۳۹۷ خوشه، از چینش پرسشنامه استنباط می‌شود,False
+1390,Household_Row,7,10,408,چینش پرسشنامه و طول خام؛ نگاشت رسمی ردیف به گروه چرخش در دسترس نیست,False
+1391,Urban_Rural,0,1,2,پرسشنامه صفحه۱ و HBSIR id_information,False
+1391,Province,1,3,31,پرسشنامه صفحه۱ و HBSIR id_information,False
+1391,PSU_or_Cluster,3,7,340,۱۳۹۰–۱۳۹۶ واحد نمونه اولیه؛ از۱۳۹۷ خوشه، از چینش پرسشنامه استنباط می‌شود,False
+1391,Household_Row,7,10,406,چینش پرسشنامه و طول خام؛ نگاشت رسمی ردیف به گروه چرخش در دسترس نیست,False
+1392,Urban_Rural,0,1,2,پرسشنامه صفحه۱ و HBSIR id_information,False
+1392,Province,1,3,31,پرسشنامه صفحه۱ و HBSIR id_information,False
+1392,County,3,5,38,از۱۳۹۲: دو رقم شهرستان درون استان؛ قبل آن از Address به‌تنهایی قابل استخراج نیست,False
+1392,PSU_or_Cluster,5,9,6644,۱۳۹۰–۱۳۹۶ واحد نمونه اولیه؛ از۱۳۹۷ خوشه، از چینش پرسشنامه استنباط می‌شود,False
+1392,Household_Row,9,11,6,چینش پرسشنامه و طول خام؛ نگاشت رسمی ردیف به گروه چرخش در دسترس نیست,False
+1393,Urban_Rural,0,1,2,پرسشنامه صفحه۱ و HBSIR id_information,False
+1393,Province,1,3,31,پرسشنامه صفحه۱ و HBSIR id_information,False
+1393,County,3,5,38,از۱۳۹۲: دو رقم شهرستان درون استان؛ قبل آن از Address به‌تنهایی قابل استخراج نیست,False
+1393,PSU_or_Cluster,5,9,6644,۱۳۹۰–۱۳۹۶ واحد نمونه اولیه؛ از۱۳۹۷ خوشه، از چینش پرسشنامه استنباط می‌شود,False
+1393,Household_Row,9,11,14,چینش پرسشنامه و طول خام؛ نگاشت رسمی ردیف به گروه چرخش در دسترس نیست,False
+1395,Urban_Rural,0,1,2,پرسشنامه صفحه۱ و HBSIR id_information,False
+1395,Province,1,3,31,پرسشنامه صفحه۱ و HBSIR id_information,False
+1395,County,3,5,38,از۱۳۹۲: دو رقم شهرستان درون استان؛ قبل آن از Address به‌تنهایی قابل استخراج نیست,False
+1395,PSU_or_Cluster,5,9,6644,۱۳۹۰–۱۳۹۶ واحد نمونه اولیه؛ از۱۳۹۷ خوشه، از چینش پرسشنامه استنباط می‌شود,False
+1395,Household_Row,9,11,17,چینش پرسشنامه و طول خام؛ نگاشت رسمی ردیف به گروه چرخش در دسترس نیست,False
+1396,Urban_Rural,0,1,2,پرسشنامه صفحه۱ و HBSIR id_information,False
+1396,Province,1,3,31,پرسشنامه صفحه۱ و HBSIR id_information,False
+1396,County,3,5,38,از۱۳۹۲: دو رقم شهرستان درون استان؛ قبل آن از Address به‌تنهایی قابل استخراج نیست,False
+1396,PSU_or_Cluster,5,9,6607,۱۳۹۰–۱۳۹۶ واحد نمونه اولیه؛ از۱۳۹۷ خوشه، از چینش پرسشنامه استنباط می‌شود,False
+1396,Household_Row,9,11,16,چینش پرسشنامه و طول خام؛ نگاشت رسمی ردیف به گروه چرخش در دسترس نیست,False
+1397,Urban_Rural,0,1,2,پرسشنامه صفحه۱ و HBSIR id_information,False
+1397,Province,1,3,31,پرسشنامه صفحه۱ و HBSIR id_information,False
+1397,County,3,5,39,از۱۳۹۲: دو رقم شهرستان درون استان؛ قبل آن از Address به‌تنهایی قابل استخراج نیست,False
+1397,PSU_or_Cluster,5,9,6794,۱۳۹۰–۱۳۹۶ واحد نمونه اولیه؛ از۱۳۹۷ خوشه، از چینش پرسشنامه استنباط می‌شود,False
+1397,Household_Row,9,11,6,چینش پرسشنامه و طول خام؛ نگاشت رسمی ردیف به گروه چرخش در دسترس نیست,False
+1398,Urban_Rural,0,1,2,پرسشنامه صفحه۱ و HBSIR id_information,False
+1398,Province,1,3,31,پرسشنامه صفحه۱ و HBSIR id_information,False
+1398,County,3,5,39,از۱۳۹۲: دو رقم شهرستان درون استان؛ قبل آن از Address به‌تنهایی قابل استخراج نیست,False
+1398,PSU_or_Cluster,5,9,6793,۱۳۹۰–۱۳۹۶ واحد نمونه اولیه؛ از۱۳۹۷ خوشه، از چینش پرسشنامه استنباط می‌شود,False
+1398,Household_Row,9,11,14,چینش پرسشنامه و طول خام؛ نگاشت رسمی ردیف به گروه چرخش در دسترس نیست,False
