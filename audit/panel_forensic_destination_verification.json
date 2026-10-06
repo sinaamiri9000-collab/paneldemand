@@ -1,0 +1,21 @@
+{
+  "Drive_Artifact_Count_Checked": 81,
+  "Missing_Files": 0,
+  "Size_Mismatches": 0,
+  "Drive_Download_SHA256_Samples": [
+    {
+      "File": "panel_identifier_forensic_audit.md",
+      "SHA256": "dd6ca69cb85a430aa22ca596cc3788ea115f995142e212e5159b0a06b7930a16",
+      "Remote_Download_Matches": true
+    },
+    {
+      "File": "Questionnaire92.pdf",
+      "SHA256": "8e72b99235707e27bbb763d26c685a5cc51fd8ddd707d9730cf8bebd8236cefd",
+      "Remote_Download_Matches": true
+    }
+  ],
+  "GitHub_Files_Added": 38,
+  "GitHub_Commit": "813cb32bf4ad3f0b614b9ea952492dfe404030a3",
+  "GitHub_Report_And_Validator_Blob_SHA_Match": true,
+  "Limit": "Drive checks sizes for every file; byte SHA checked on two samples only; household identity remains uncertified"
+}
