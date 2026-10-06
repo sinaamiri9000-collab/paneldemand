@@ -4,14 +4,14 @@
 
 ## فایل داده‌ها
 
-آرشیوهای خام، هشت جدول استاندارد هر سال، جداول ترکیبی و خروجی‌های سطح خانوار در پوشهٔ خصوصی Google Drive [paneldemand](https://drive.google.com/drive/folders/1Q2wH3_8qIgadwC5-eEeOlTSjNa3SyP6N) نگهداری می‌شوند. فایل‌های خام و داده‌های خانوار در این مخزن قرار ندارند. برای هر فایل خام، منبع، اندازه و SHA-256 در `metadata/raw_sources.csv` ثبت شده است. آرشیو ۱۴۰۲ در Drive به دو بخش تقسیم شده تا از سقف انتقال فایل عبور کند؛ دستور بازسازی و هش فایل اصلی کنار بخش‌ها ثبت شده است.
+آرشیوهای خام، هشت جدول استاندارد هر سال، جداول ترکیبی و خروجی‌های سطح خانوار در پوشهٔ خصوصی Google Drive [paneldemand](https://drive.google.com/drive/folders/1Q2wH3_8qIgadwC5-eEeOlTSjNa3SyP6N) نگهداری می‌شوند. فایل‌های خام و داده‌های خانوار در این مخزن قرار ندارند. برای هر فایل خام، منبع، اندازه و SHA-256 در `metadata/raw_sources.csv` ثبت شده است. آرشیو ۱۴۰۲ و جدول خوراکی ترکیبی به‌دلیل سقف انتقال Drive هرکدام در دو بخش ذخیره شده‌اند؛ راهنمای اتصال دوباره و هش فایل کامل در پوشه‌های مربوط و `metadata/drive_file_manifest.csv` ثبت شده است.
 
 مهم‌ترین فایل‌های قابل مرور در همین مخزن:
 
 - `audit/final_audit_report.md`: گزارش فارسی نهایی و موارد باز.
 - `audit/1402_validation_report.md`: بررسی اسناد و تطبیق مستقیم آرشیو Access سال ۱۴۰۲ با خروجی HBSIR.
 - `audit/yearly_sample_summary.csv`: شمار خانوار، عضو، خوراکی، پوشش متغیرها و وزن به تفکیک سال.
-- `audit/commodity_year_audit.csv`: ممیزی تجمیعی سال × کد خوراکی؛ نسخهٔ کامل Parquet نیز در Drive است.
+- `audit/commodity_year_audit.csv.gz`: ممیزی تجمیعی سال × کد خوراکی؛ نسخهٔ کامل Parquet نیز در Drive است.
 - `audit/panel_overlap_by_year.csv` و `audit/panel_length_distribution.csv`: همپوشانی و طول حضور شناسه‌ها.
 - `audit/demographic_variable_audit.csv`, `audit/hbsir_transformations.csv`, `audit/issues_log.csv`.
 
