@@ -1,0 +1,6 @@
+hbsir @ git+https://github.com/Iran-Open-Data/HBSIR.git@e5b3e5d5146ccf76af3e3068c0fc12fa7b4b678f
+bssir==0.6.8
+pyarrow==25.0.1
+pandas==3.0.6
+PyYAML==6.0.3
+requests==2.34.2

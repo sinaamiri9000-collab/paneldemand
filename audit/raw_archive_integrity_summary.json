@@ -1,0 +1,10 @@
+{
+  "years": 14,
+  "manifest_checks_passed": 14,
+  "official_http_503": 14,
+  "zip_integrity_passed": 2,
+  "rar_integrity_passed": 12,
+  "rar_integrity_not_attempted": 0,
+  "unrar_path": "/workspace/paneldemand/.local/rar/usr/lib/unrar",
+  "created_at_utc": "2026-10-06T21:29:30.794945+00:00"
+}

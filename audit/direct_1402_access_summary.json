@@ -1,0 +1,92 @@
+{
+  "year": 1402,
+  "source_archive": "raw/1402/data.rar",
+  "archive_sha256": "f043d964e09573e58fdeec0291aeb03f726f0d58284814373c5e7eb1e84d37ee",
+  "access_database_sha256": "241786228895b2f0755dada46a549d6d5e05e28dff7177e90875ce5698aff954",
+  "access_tables_available": 42,
+  "raw_standardized_table_count_checks": {
+    "household": true,
+    "members": true,
+    "housing": true,
+    "food": true,
+    "income_wage": true,
+    "income_self_employed": true,
+    "income_other": true,
+    "income_subsidy": true
+  },
+  "household_address_unique_rows": 37883,
+  "household_addresses_match_standardized_ids": true,
+  "weight_value_mismatches": 0,
+  "season_value_mismatches": 0,
+  "raw_household_design_fields_added": [
+    "Raw_TakmilDescA",
+    "Raw_TakmilDescB",
+    "Raw_TakmilDescC",
+    "Raw_JaygozinDescA",
+    "Raw_JaygozinDescB",
+    "Raw_BlkAbdJaygozin",
+    "Raw_RadifJaygozin"
+  ],
+  "raw_household_design_field_nonmissing_counts": {
+    "TakmilDescA": {
+      "nonmissing": 1697,
+      "rows": 37883
+    },
+    "TakmilDescB": {
+      "nonmissing": 0,
+      "rows": 37883
+    },
+    "TakmilDescC": {
+      "nonmissing": 8245,
+      "rows": 37883
+    },
+    "JaygozinDescA": {
+      "nonmissing": 0,
+      "rows": 37883
+    },
+    "JaygozinDescB": {
+      "nonmissing": 4,
+      "rows": 37883
+    },
+    "BlkAbdJaygozin": {
+      "nonmissing": 37883,
+      "rows": 37883
+    },
+    "RadifJaygozin": {
+      "nonmissing": 37883,
+      "rows": 37883
+    }
+  },
+  "subsidy_323_count": 0,
+  "subsidy_1_raw_count": 34632,
+  "subsidy_raw_code_counts": {
+    "01": 34632,
+    "02": 728,
+    "03": 523,
+    "04": 300,
+    "05": 266,
+    "06": 113,
+    "07": 38,
+    "08": 14,
+    "09": 6,
+    "10": 1,
+    "11": 1,
+    "12": 1
+  },
+  "subsidy_recode_matches": true,
+  "self_employment_type_codes": {
+    "raw_code_counts": {
+      "4": 1896,
+      "5": 13500,
+      "6": 2172
+    },
+    "standardized_label_counts": {
+      "Independent_Worker": 13500,
+      "Family_Worker": 2172,
+      "Employer": 1896
+    }
+  },
+  "food_DYCOL07_presence_in_original_Access": "absent",
+  "separate_tobacco_source_rows": 6862,
+  "privacy": "This file contains aggregate counts only; household-level source fields are retained only in yearly/1402/household.parquet."
+}

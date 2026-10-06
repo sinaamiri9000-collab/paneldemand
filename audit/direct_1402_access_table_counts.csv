@@ -1,0 +1,28 @@
+﻿Year,Concept,Raw_Table,Raw_Rows,Standardized_Table,Standardized_Rows,Counts_Match
+1402,household,R1402Data,18243,,,
+1402,household,U1402Data,19640,,,
+1402,household,R+U source-table sum,37883,household.parquet,37883.0,True
+1402,members,R1402P1,59927,,,
+1402,members,U1402P1,63930,,,
+1402,members,R+U source-table sum,123857,members.parquet,123857.0,True
+1402,housing,R1402P2,18243,,,
+1402,housing,U1402P2,19640,,,
+1402,housing,R+U source-table sum,37883,housing.parquet,37883.0,True
+1402,food,R1402P3S01,488838,,,
+1402,food,U1402P3S01,596707,,,
+1402,food,R+U source-table sum,1085545,food.parquet,1085545.0,True
+1402,income_wage,R1402P4S01,10016,,,
+1402,income_wage,U1402P4S01,12078,,,
+1402,income_wage,R+U source-table sum,22094,income_wage.parquet,22094.0,True
+1402,income_self_employed,R1402P4S02,11250,,,
+1402,income_self_employed,U1402P4S02,6318,,,
+1402,income_self_employed,R+U source-table sum,17568,income_self_employed.parquet,17568.0,True
+1402,income_other,R1402P4S03,24390,,,
+1402,income_other,U1402P4S03,23216,,,
+1402,income_other,R+U source-table sum,47606,income_other.parquet,47606.0,True
+1402,income_subsidy,R1402P4S04,18160,,,
+1402,income_subsidy,U1402P4S04,18463,,,
+1402,income_subsidy,R+U source-table sum,36623,income_subsidy.parquet,36623.0,True
+1402,tobacco_separate_from_hbsir_food,R1402P3S02,3759,,,
+1402,tobacco_separate_from_hbsir_food,U1402P3S02,3103,,,
+1402,tobacco_separate_from_hbsir_food,R+U source-table sum,6862,not included in HBSIR food table,0.0,separate source domain

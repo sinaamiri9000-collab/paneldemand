@@ -1,0 +1,13 @@
+{
+  "package": "HBSIR",
+  "version": "0.6.6",
+  "repository": "https://github.com/Iran-Open-Data/HBSIR",
+  "branch": "master",
+  "commit": "e5b3e5d5146ccf76af3e3068c0fc12fa7b4b678f",
+  "commit_date": "2026-06-22T11:54:44+03:30",
+  "bssir_version": "0.6.8",
+  "python": "3.12.14",
+  "pandas": "3.0.6",
+  "hbsir_cleaned_archive_method": "1390-1401 and 1403: HBSIR-maintained cleaned parquet mirror, normalized with load_table(form='normalized'). 1402: rebuilt from the archived raw Access source through unmodified HBSIR; all eight standardized source tables were independently checked as full row multisets on shared normalized columns.",
+  "code_modified": false
+}

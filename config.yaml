@@ -1,0 +1,33 @@
+project:
+  title: "گردآوری، استانداردسازی و ممیزی داده‌های طرح هزینه و درآمد خانوار ایران"
+  first_year: 1390
+  last_year: 1403
+  language: fa
+paths:
+  raw: raw
+  yearly: yearly
+  combined: combined
+  intermediate: intermediate
+  audit: audit
+  metadata: metadata
+  documentation: documentation
+sources:
+  hbsir_raw_metadata: metadata/hbsir_raw_files.yaml
+  official_archive_field: original
+  mirrors:
+    - name: amazon
+      base_url: https://iran-open-data.s3.us-east-2.amazonaws.com/HBSIR/1_original
+    - name: arvan
+      base_url: https://s3.ir-tbz-sh1.arvanstorage.ir/iran-open-data/HBSIR/1_original
+  mirror_policy: "Use only the documented public BSSIR/HBSIR mirror after a failed official URL; record it as a mirror, not as a direct official download."
+hbsir:
+  repository: https://github.com/Iran-Open-Data/HBSIR
+  branch: master
+  commit: e5b3e5d5146ccf76af3e3068c0fc12fa7b4b678f
+  version: 0.6.6
+  cleaned_data_source: "Documented BSSIR/HBSIR Amazon S3 cleaned-table mirror for 1390-1401 and 1403; 1402 independently rebuilt from the archived raw Access source"
+  normalized_data_method: "HBSIR load_table(form='normalized'); for 1402 the archived raw Access source was rebuilt with unmodified HBSIR and checked against all eight project tables"
+audits:
+  positive_finite_validity: true
+  purchase_methods: [Purchase, Purchase_Free_Price, Purchase_Subsidised_Price]
+  overlap_rates: [common_over_n_t, common_over_n_next, jaccard]

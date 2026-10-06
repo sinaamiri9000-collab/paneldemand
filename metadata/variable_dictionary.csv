@@ -1,0 +1,485 @@
+﻿Year_Range,Table_Raw,Column_Raw,Table_HBSIR,Column_Standardized,Transformation_Type,Description
+1390-1403,household_information,ADDRESS,household_information,ID,rename/type conversion,standard name(s): ID; type=UInt64
+1390-1403,household_information,FASL,household_information,Season_Number,rename/type conversion,standard name(s): Season_Number; type=Int8
+1390-1403,household_information,MAHMORAJEH,household_information,Month,type conversion and year-specific value replacement,"standard name(s): Month; type=unsigned; year-specific replacement rules present: {1397: {0: 3}, 1398: None}"
+1396-1403,household_information,WEIGHT,household_information,Weight,rename/type conversion,standard name(s): Weight; type=unsigned
+1390-1403,household_information,NOEKHN,household_information,Household_Type,categorical code-to-label recoding,standard name(s): Household_Type; type=category; categorical labels recoded by HBSIR
+1390-1403,household_information,TAKMIL,household_information,Main_Household,boolean conversion from survey code,standard name(s): Main_Household; type=boolean
+1390-1403,household_information,JAYGOZIN,household_information,Alternative_Household,boolean conversion from survey code,standard name(s): Alternative_Household; type=boolean
+1390-1403,members_properties,ADDRESS,members_properties,ID,rename/type conversion,standard name(s): ID; type=UInt64
+1390-1403,members_properties,COL01,members_properties,Member_Number,rename/type conversion,standard name(s): Member_Number; type=UInt8
+1390-1403,members_properties,COL03,members_properties,Relationship,categorical code-to-label recoding,"standard name(s): Relationship; type=category; categorical labels recoded by HBSIR; year-specific replacement rules present: {1369: {'0': None}, 1370: None, 1371: {'0': None}, 1372: None}"
+1390-1403,members_properties,COL04,members_properties,Sex,categorical code-to-label recoding,"standard name(s): Sex; type=category; categorical labels recoded by HBSIR; year-specific replacement rules present: {1369: {'0': None, '3': None, '4': None, '5': None, '6': None, '8': None}, 1370: None}"
+1390-1403,members_properties,COL05,members_properties,Age,rename/type conversion,standard name(s): Age; type=UInt8
+1390-1403,members_properties,COL06,members_properties,Weeks_in_Household,rename/type conversion,"standard name(s): Weeks_in_Household, Marital_Status, Is_Literate"
+1390-1403,members_properties,COL06,members_properties,Marital_Status,rename/type conversion,"standard name(s): Weeks_in_Household, Marital_Status, Is_Literate"
+1390-1403,members_properties,COL06,members_properties,Is_Literate,rename/type conversion,"standard name(s): Weeks_in_Household, Marital_Status, Is_Literate"
+1390-1403,members_properties,COL07,members_properties,Marital_Status,rename/type conversion,"standard name(s): Marital_Status, Nationality, Literacy_Status, Is_Student"
+1390-1403,members_properties,COL07,members_properties,Nationality,rename/type conversion,"standard name(s): Marital_Status, Nationality, Literacy_Status, Is_Student"
+1390-1403,members_properties,COL07,members_properties,Literacy_Status,rename/type conversion,"standard name(s): Marital_Status, Nationality, Literacy_Status, Is_Student"
+1390-1403,members_properties,COL07,members_properties,Is_Student,rename/type conversion,"standard name(s): Marital_Status, Nationality, Literacy_Status, Is_Student"
+1390-1403,members_properties,COL08,members_properties,Nationality,rename/type conversion,"standard name(s): Nationality, Weeks_in_Household, Education_Level"
+1390-1403,members_properties,COL08,members_properties,Weeks_in_Household,rename/type conversion,"standard name(s): Nationality, Weeks_in_Household, Education_Level"
+1390-1403,members_properties,COL08,members_properties,Education_Level,rename/type conversion,"standard name(s): Nationality, Weeks_in_Household, Education_Level"
+1390-1403,members_properties,COL09,members_properties,Literacy_Status,rename/type conversion,"standard name(s): Literacy_Status, Activity_Status"
+1390-1403,members_properties,COL09,members_properties,Activity_Status,rename/type conversion,"standard name(s): Literacy_Status, Activity_Status"
+1390-1403,members_properties,COL10,members_properties,Education_Level,rename/type conversion,"standard name(s): Education_Level, Occupation_Code, Marital_Status"
+1390-1403,members_properties,COL10,members_properties,Occupation_Code,rename/type conversion,"standard name(s): Education_Level, Occupation_Code, Marital_Status"
+1390-1403,members_properties,COL10,members_properties,Marital_Status,rename/type conversion,"standard name(s): Education_Level, Occupation_Code, Marital_Status"
+1390-1403,members_properties,COL11,members_properties,Activity_Status,rename/type conversion,"standard name(s): Activity_Status, Work_Place"
+1390-1403,members_properties,COL11,members_properties,Work_Place,rename/type conversion,"standard name(s): Activity_Status, Work_Place"
+1390-1403,members_properties,COL12,members_properties,Occupation_Code,rename/type conversion,"standard name(s): Occupation_Code, Work_Type"
+1390-1403,members_properties,COL12,members_properties,Work_Type,rename/type conversion,"standard name(s): Occupation_Code, Work_Type"
+1390-1403,members_properties,COL13,members_properties,Work_Place,rename/type conversion,"standard name(s): Work_Place, Weeks_in_Employment"
+1390-1403,members_properties,COL13,members_properties,Weeks_in_Employment,rename/type conversion,"standard name(s): Work_Place, Weeks_in_Employment"
+1390-1403,members_properties,COL14,members_properties,Work_Type,rename/type conversion,standard name(s): Work_Type
+1390-1403,members_properties,COL15,members_properties,Weeks_in_Employment,rename/type conversion,standard name(s): Weeks_in_Employment
+1390-1403,members_properties,DYCOL01,members_properties,Member_Number,rename/type conversion,standard name(s): Member_Number; type=UInt8
+1390-1403,members_properties,DYCOL03,members_properties,Relationship,categorical code-to-label recoding,"standard name(s): Relationship; type=category; categorical labels recoded by HBSIR; year-specific replacement rules present: {1369: {'0': None}, 1370: None, 1371: {'0': None}, 1372: None}"
+1390-1403,members_properties,DYCOL04,members_properties,Sex,categorical code-to-label recoding,"standard name(s): Sex; type=category; categorical labels recoded by HBSIR; year-specific replacement rules present: {1369: {'0': None, '3': None, '4': None, '5': None, '6': None, '8': None}, 1370: None}"
+1390-1403,members_properties,DYCOL05,members_properties,Age,rename/type conversion,standard name(s): Age; type=UInt8
+1390-1403,members_properties,DYCOL06,members_properties,Is_Literate,boolean conversion from survey code,standard name(s): Is_Literate; type=boolean
+1390-1403,members_properties,DYCOL07,members_properties,Is_Student,boolean conversion from survey code,standard name(s): Is_Student; type=boolean
+1390-1403,members_properties,DYCOL08,members_properties,Education_Level,categorical code-to-label recoding,"standard name(s): Education_Level; type varies by survey year; categorical labels recoded by HBSIR; year-specific replacement rules present: {1394: {'1': None}, 1395: None}"
+1390-1403,members_properties,DYCOL09,members_properties,Activity_Status,categorical code-to-label recoding,"standard name(s): Activity_Status; type varies by survey year; categorical labels recoded by HBSIR; year-specific replacement rules present: {1364: {'ٌق': None}, 1365: None, 1369: {'0': None, '9': None}, 1370: {'7': None}, 1371: {'9': None}, 1372: None}"
+1390-1403,members_properties,DYCOL10,members_properties,Marital_Status,categorical code-to-label recoding,"standard name(s): Marital_Status; type=category; categorical labels recoded by HBSIR; year-specific replacement rules present: {1369: {'0': None, '5': None, '7': None, '8': None, '9': None}, 1370: None}"
+1390-1403,food,ADDRESS,food,ID,rename/type conversion,standard name(s): ID; type=UInt64
+1390-1403,food,COL1,food,Commodity_Code,rename/type conversion,standard name(s): Commodity_Code; type=UInt32
+1390-1403,food,COL3,food,Provision_Method,categorical code-to-label recoding,standard name(s): Provision_Method; type=category; categorical labels recoded by HBSIR
+1390-1403,food,COL4,food,Price_System,rename/type conversion,"standard name(s): Price_System, Grams"
+1390-1403,food,COL4,food,Grams,rename/type conversion,"standard name(s): Price_System, Grams"
+1390-1403,food,COL4_5,food,Kilos,rename/type conversion,standard name(s): Kilos
+1390-1403,food,COL5_6,food,Kilos,rename/type conversion,standard name(s): Kilos
+1390-1403,food,COL5,food,Kilos,rename/type conversion,standard name(s): Kilos
+1390-1403,food,COL6,food,Expenditure,rename/type conversion,"standard name(s): Expenditure, Price"
+1390-1403,food,COL6,food,Price,rename/type conversion,"standard name(s): Expenditure, Price"
+1390-1403,food,COL7,food,Price,rename/type conversion,"standard name(s): Price, Expenditure"
+1390-1403,food,COL7,food,Expenditure,rename/type conversion,"standard name(s): Price, Expenditure"
+1390-1403,food,COL8,food,Expenditure,rename/type conversion,standard name(s): Expenditure
+1390-1403,food,DYCOL01,food,Commodity_Code,rename/type conversion,standard name(s): Commodity_Code; type=UInt32
+1390-1403,food,DYCOL02,food,Provision_Method,categorical code-to-label recoding,standard name(s): Provision_Method; type=category; categorical labels recoded by HBSIR
+1390-1403,food,DYCOL03,food,Grams,rename/type conversion,standard name(s): Grams; type=float
+1390-1403,food,DYCOL04,food,Kilos,rename/type conversion,standard name(s): Kilos; type=float
+1390-1403,food,DYCOL05,food,Price,rename/type conversion,standard name(s): Price; type=float
+1390-1403,food,DYCOL06,food,Expenditure,rename/type conversion,standard name(s): Expenditure; type=float
+1390-1403,food,DYCOL07,food,,drop,Column is declared drop in HBSIR metadata.
+1390-1403,employment_income,ADDRESS,employment_income,ID,type conversion and year-specific value replacement,"standard name(s): ID; type=UInt64; year-specific replacement rules present: {1374: {'00\x04': None, '01\x04': None, '02\x04': None, '10\x04': None, '11\x04': None, '12\x04': None}, 1375: None}"
+1390-1403,employment_income,COL01,employment_income,Member_Number,rename/type conversion,standard name(s): Member_Number; type=UInt8
+1390-1403,employment_income,COL02,employment_income,Occupation_Code,rename/type conversion,"standard name(s): Occupation_Code, Employment_Status"
+1390-1403,employment_income,COL02,employment_income,Employment_Status,rename/type conversion,"standard name(s): Occupation_Code, Employment_Status"
+1390-1403,employment_income,COL03,employment_income,Industry_Code,rename/type conversion,"standard name(s): Industry_Code, Occupation_Code"
+1390-1403,employment_income,COL03,employment_income,Occupation_Code,rename/type conversion,"standard name(s): Industry_Code, Occupation_Code"
+1390-1403,employment_income,COL04,employment_income,Sector,rename/type conversion,"standard name(s): Sector, Industry_Code"
+1390-1403,employment_income,COL04,employment_income,Industry_Code,rename/type conversion,"standard name(s): Sector, Industry_Code"
+1390-1403,employment_income,COL05,employment_income,Monthly_Gross_Income,rename/type conversion,"standard name(s): Monthly_Gross_Income, Sector"
+1390-1403,employment_income,COL05,employment_income,Sector,rename/type conversion,"standard name(s): Monthly_Gross_Income, Sector"
+1390-1403,employment_income,COL06,employment_income,Annual_Gross_Income,rename/type conversion,"standard name(s): Annual_Gross_Income, Monthly_Gross_Income"
+1390-1403,employment_income,COL06,employment_income,Monthly_Gross_Income,rename/type conversion,"standard name(s): Annual_Gross_Income, Monthly_Gross_Income"
+1390-1403,employment_income,COL07,employment_income,Monthly_Continuous_Income,rename/type conversion,"standard name(s): Monthly_Continuous_Income, Annual_Gross_Income"
+1390-1403,employment_income,COL07,employment_income,Annual_Gross_Income,rename/type conversion,"standard name(s): Monthly_Continuous_Income, Annual_Gross_Income"
+1390-1403,employment_income,COL08,employment_income,Annual_Continuous_Income,rename/type conversion,"standard name(s): Annual_Continuous_Income, Monthly_Continuous_Income"
+1390-1403,employment_income,COL08,employment_income,Monthly_Continuous_Income,rename/type conversion,"standard name(s): Annual_Continuous_Income, Monthly_Continuous_Income"
+1390-1403,employment_income,COL09,employment_income,Monthly_Temporary_Income,rename/type conversion,"standard name(s): Monthly_Temporary_Income, Annual_Continuous_Income"
+1390-1403,employment_income,COL09,employment_income,Annual_Continuous_Income,rename/type conversion,"standard name(s): Monthly_Temporary_Income, Annual_Continuous_Income"
+1390-1403,employment_income,COL10,employment_income,Annual_Temporary_Income,rename/type conversion,"standard name(s): Annual_Temporary_Income, Monthly_Temporary_Income"
+1390-1403,employment_income,COL10,employment_income,Monthly_Temporary_Income,rename/type conversion,"standard name(s): Annual_Temporary_Income, Monthly_Temporary_Income"
+1390-1403,employment_income,COL11,employment_income,Monthly_Net_Income,rename/type conversion,"standard name(s): Monthly_Net_Income, Annual_Temporary_Income"
+1390-1403,employment_income,COL11,employment_income,Annual_Temporary_Income,rename/type conversion,"standard name(s): Monthly_Net_Income, Annual_Temporary_Income"
+1390-1403,employment_income,COL12,employment_income,Annual_Net_Income,rename/type conversion,"standard name(s): Annual_Net_Income, Monthly_Net_Income"
+1390-1403,employment_income,COL12,employment_income,Monthly_Net_Income,rename/type conversion,"standard name(s): Annual_Net_Income, Monthly_Net_Income"
+1390-1403,employment_income,COL13,employment_income,Annual_Net_Income,rename/type conversion,standard name(s): Annual_Net_Income
+1390-1403,employment_income,DYCOL01,employment_income,Member_Number,rename/type conversion,standard name(s): Member_Number; type=UInt8
+1390-1403,employment_income,DYCOL02,employment_income,Employment_Status,categorical code-to-label recoding,"standard name(s): Employment_Status; type=category; categorical labels recoded by HBSIR; year-specific replacement rules present: {'X01': None, 'X02': None, 'X03': None, 'X04': None, '3': None, '4': None, '5': None, '6': None, '7': None, '9': None}"
+1390-1403,employment_income,DYCOL03,employment_income,Occupation_Code,type conversion and year-specific value replacement,"standard name(s): Occupation_Code; type=UInt32; year-specific replacement rules present: {'X01': None, 'X02': None, 'X03': None, 'X04': None, 'x01': None, 'x02': None, 'x03': None, 'x04': None, 'x0000': None, 'x000': None}"
+1390-1403,employment_income,DYCOL04,employment_income,Industry_Code,type conversion and year-specific value replacement,"standard name(s): Industry_Code; type=UInt32; year-specific replacement rules present: {'x0000': None, 'x000': None}"
+1390-1403,employment_income,DYCOL05,employment_income,Sector,categorical code-to-label recoding,"standard name(s): Sector; type=category; categorical labels recoded by HBSIR; year-specific replacement rules present: {1374: {'0': None}, 1375: {'3': None}, 1376: None}"
+1390-1403,employment_income,DYCOL06,employment_income,Working_Hours_per_Day,rename/type conversion,standard name(s): Working_Hours_per_Day; type=UInt8
+1390-1403,employment_income,DYCOL07,employment_income,Working_Day_per_Week,rename/type conversion,standard name(s): Working_Day_per_Week; type=UInt8
+1390-1403,employment_income,DYCOL08,employment_income,Monthly_Gross_Income,rename/type conversion,standard name(s): Monthly_Gross_Income; type=float
+1390-1403,employment_income,DYCOL09,employment_income,Annual_Gross_Income,rename/type conversion,standard name(s): Annual_Gross_Income; type=float
+1390-1403,employment_income,DYCOL10,employment_income,Monthly_Continuous_Income,rename/type conversion,standard name(s): Monthly_Continuous_Income; type=float
+1390-1403,employment_income,DYCOL11,employment_income,Annual_Continuous_Income,rename/type conversion,standard name(s): Annual_Continuous_Income; type=float
+1390-1403,employment_income,DYCOL12,employment_income,Monthly_Temporary_Income,rename/type conversion,standard name(s): Monthly_Temporary_Income; type=float
+1390-1403,employment_income,DYCOL13,employment_income,Annual_Temporary_Income,rename/type conversion,standard name(s): Annual_Temporary_Income; type=float
+1390-1403,employment_income,DYCOL14,employment_income,Monthly_Net_Income,rename/type conversion,standard name(s): Monthly_Net_Income; type=float
+1390-1403,employment_income,DYCOL15,employment_income,Annual_Net_Income,rename/type conversion,standard name(s): Annual_Net_Income; type=float
+1390-1403,self_employed_income,ADDRESS,self_employed_income,ID,type conversion and year-specific value replacement,"standard name(s): ID; type=UInt64; year-specific replacement rules present: {1374: {'00\x04': None, '01\x04': None, '02\x04': None, '10\x04': None, '11\x04': None, '12\x04': None}, 1375: None}"
+1390-1403,self_employed_income,COL01,self_employed_income,Member_Number,rename/type conversion,standard name(s): Member_Number; type=UInt8
+1390-1403,self_employed_income,COL02,self_employed_income,Occupation_Code,rename/type conversion,"standard name(s): Occupation_Code, Employment_Status"
+1390-1403,self_employed_income,COL02,self_employed_income,Employment_Status,rename/type conversion,"standard name(s): Occupation_Code, Employment_Status"
+1390-1403,self_employed_income,COL03,self_employed_income,Industry_Code,rename/type conversion,"standard name(s): Industry_Code, Occupation_Code"
+1390-1403,self_employed_income,COL03,self_employed_income,Occupation_Code,rename/type conversion,"standard name(s): Industry_Code, Occupation_Code"
+1390-1403,self_employed_income,COL04,self_employed_income,Employment_Type,rename/type conversion,"standard name(s): Employment_Type, Industry_Code"
+1390-1403,self_employed_income,COL04,self_employed_income,Industry_Code,rename/type conversion,"standard name(s): Employment_Type, Industry_Code"
+1390-1403,self_employed_income,COL05,self_employed_income,Is_Agricultural,rename/type conversion,"standard name(s): Is_Agricultural, Employment_Type"
+1390-1403,self_employed_income,COL05,self_employed_income,Employment_Type,rename/type conversion,"standard name(s): Is_Agricultural, Employment_Type"
+1390-1403,self_employed_income,COL06,self_employed_income,Wage_Cost,rename/type conversion,"standard name(s): Wage_Cost, Is_Agricultural"
+1390-1403,self_employed_income,COL06,self_employed_income,Is_Agricultural,rename/type conversion,"standard name(s): Wage_Cost, Is_Agricultural"
+1390-1403,self_employed_income,COL07,self_employed_income,Cost_of_Sales,rename/type conversion,"standard name(s): Cost_of_Sales, Wage_Cost"
+1390-1403,self_employed_income,COL07,self_employed_income,Wage_Cost,rename/type conversion,"standard name(s): Cost_of_Sales, Wage_Cost"
+1390-1403,self_employed_income,COL08,self_employed_income,Other_Operating_Costs,rename/type conversion,"standard name(s): Other_Operating_Costs, Cost_of_Sales"
+1390-1403,self_employed_income,COL08,self_employed_income,Cost_of_Sales,rename/type conversion,"standard name(s): Other_Operating_Costs, Cost_of_Sales"
+1390-1403,self_employed_income,COL09,self_employed_income,Other_Costs,rename/type conversion,"standard name(s): Other_Costs, Other_Operating_Costs"
+1390-1403,self_employed_income,COL09,self_employed_income,Other_Operating_Costs,rename/type conversion,"standard name(s): Other_Costs, Other_Operating_Costs"
+1390-1403,self_employed_income,COL10,self_employed_income,Business_Tax,rename/type conversion,"standard name(s): Business_Tax, Other_Costs"
+1390-1403,self_employed_income,COL10,self_employed_income,Other_Costs,rename/type conversion,"standard name(s): Business_Tax, Other_Costs"
+1390-1403,self_employed_income,COL11,self_employed_income,Sales,rename/type conversion,"standard name(s): Sales, Business_Tax"
+1390-1403,self_employed_income,COL11,self_employed_income,Business_Tax,rename/type conversion,"standard name(s): Sales, Business_Tax"
+1390-1403,self_employed_income,COL12,self_employed_income,Profit,rename/type conversion,"standard name(s): Profit, Sales"
+1390-1403,self_employed_income,COL12,self_employed_income,Sales,rename/type conversion,"standard name(s): Profit, Sales"
+1390-1403,self_employed_income,COL13,self_employed_income,Profit,rename/type conversion,standard name(s): Profit
+1390-1403,self_employed_income,DYCOL01,self_employed_income,Member_Number,rename/type conversion,standard name(s): Member_Number; type=UInt8
+1390-1403,self_employed_income,DYCOL02,self_employed_income,Employment_Status,categorical code-to-label recoding,"standard name(s): Employment_Status; type=category; categorical labels recoded by HBSIR; year-specific replacement rules present: {'X01': None, 'X02': None, 'X03': None, 'X04': None, '3': None, '4': None, '5': None, '6': None, '7': None, '9': None}"
+1390-1403,self_employed_income,DYCOL03,self_employed_income,Occupation_Code,type conversion and year-specific value replacement,"standard name(s): Occupation_Code; type=UInt32; year-specific replacement rules present: {'X01': None, 'X02': None, 'X03': None, 'X04': None, 'x01': None, 'x02': None, 'x03': None, 'x04': None, 'x0000': None, 'x000': None}"
+1390-1403,self_employed_income,DYCOL04,self_employed_income,Industry_Code,type conversion and year-specific value replacement,"standard name(s): Industry_Code; type=UInt32; year-specific replacement rules present: {'x0000': None, 'x000': None}"
+1390-1403,self_employed_income,DYCOL05,self_employed_income,Employment_Type,categorical code-to-label recoding,"standard name(s): Employment_Type; type=category; categorical labels recoded by HBSIR; year-specific replacement rules present: {1396: None, 1397: {'1': None}, 1398: None}"
+1390-1403,self_employed_income,DYCOL06,self_employed_income,Working_Hours_per_Day,rename/type conversion,"standard name(s): Working_Hours_per_Day, Is_Agricultural"
+1390-1403,self_employed_income,DYCOL06,self_employed_income,Is_Agricultural,rename/type conversion,"standard name(s): Working_Hours_per_Day, Is_Agricultural"
+1390-1403,self_employed_income,DYCOL07,self_employed_income,Working_Day_per_Week,rename/type conversion,"standard name(s): Working_Day_per_Week, Working_Hours_per_Day"
+1390-1403,self_employed_income,DYCOL07,self_employed_income,Working_Hours_per_Day,rename/type conversion,"standard name(s): Working_Day_per_Week, Working_Hours_per_Day"
+1390-1403,self_employed_income,DYCOL08,self_employed_income,Is_Agricultural,rename/type conversion,"standard name(s): Is_Agricultural, Working_Day_per_Week"
+1390-1403,self_employed_income,DYCOL08,self_employed_income,Working_Day_per_Week,rename/type conversion,"standard name(s): Is_Agricultural, Working_Day_per_Week"
+1390-1403,self_employed_income,DYCOL09,self_employed_income,Wage_Cost,rename/type conversion,standard name(s): Wage_Cost; type=float
+1390-1403,self_employed_income,DYCOL10,self_employed_income,Cost_of_Sales,rename/type conversion,standard name(s): Cost_of_Sales; type=float
+1390-1403,self_employed_income,DYCOL11,self_employed_income,Other_Operating_Costs,rename/type conversion,standard name(s): Other_Operating_Costs; type=float
+1390-1403,self_employed_income,DYCOL12,self_employed_income,Other_Costs,rename/type conversion,standard name(s): Other_Costs; type=float
+1390-1403,self_employed_income,DYCOL13,self_employed_income,Business_Tax,rename/type conversion,standard name(s): Business_Tax; type=float
+1390-1403,self_employed_income,DYCOL14,self_employed_income,Sales,rename/type conversion,standard name(s): Sales; type=float
+1390-1403,self_employed_income,DYCOL15,self_employed_income,Profit,rename/type conversion,standard name(s): Profit; type=float
+1390-1403,other_income,ADDRESS,other_income,ID,type conversion and year-specific value replacement,"standard name(s): ID; type=UInt64; year-specific replacement rules present: {1374: {'00\x04': None, '01\x04': None, '02\x04': None, '10\x04': None, '11\x04': None, '12\x04': None}, 1375: None}"
+1390-1403,other_income,COL01,other_income,Member_Number,rename/type conversion,standard name(s): Member_Number; type=UInt8
+1390-1403,other_income,COL03,other_income,Retirement,rename/type conversion,standard name(s): Retirement; type=float
+1390-1403,other_income,COL04,other_income,Rent,rename/type conversion,standard name(s): Rent; type=float
+1390-1403,other_income,COL05,other_income,Interest,rename/type conversion,standard name(s): Interest; type=float
+1390-1403,other_income,COL06,other_income,Aid,rename/type conversion,standard name(s): Aid; type=float
+1390-1403,other_income,COL07,other_income,Home_Production,rename/type conversion,standard name(s): Home_Production; type=float
+1390-1403,other_income,COL08,other_income,Transfer,rename/type conversion,standard name(s): Transfer; type=float
+1390-1403,other_income,TAX,other_income,,drop,Column is declared drop in HBSIR metadata.
+1390-1403,other_income,DYCOL01,other_income,Member_Number,rename/type conversion,standard name(s): Member_Number; type=UInt8
+1390-1403,other_income,DYCOL03,other_income,Retirement,rename/type conversion,standard name(s): Retirement; type=float
+1390-1403,other_income,DYCOL04,other_income,Rent,rename/type conversion,standard name(s): Rent; type=float
+1390-1403,other_income,DYCOL05,other_income,Interest,rename/type conversion,standard name(s): Interest; type=float
+1390-1403,other_income,DYCOL06,other_income,Aid,rename/type conversion,standard name(s): Aid; type=float
+1390-1403,other_income,DYCOL07,other_income,Home_Production,rename/type conversion,standard name(s): Home_Production; type=float
+1390-1403,other_income,DYCOL08,other_income,Transfer,rename/type conversion,standard name(s): Transfer; type=float
+1390-1403,subsidy,ADDRESS,subsidy,ID,type conversion and year-specific value replacement,"standard name(s): ID; type=UInt64; year-specific replacement rules present: {1374: {'00\x04': None, '01\x04': None, '02\x04': None, '10\x04': None, '11\x04': None, '12\x04': None}, 1375: None}"
+1392-1403,subsidy,DYCOL01,subsidy,Member_Number,type conversion and year-specific value replacement,standard name(s): Member_Number; type=UInt8; year-specific replacement rules present: {1392: {'323': 1}}
+1390-1403,subsidy,DYCOL03,subsidy,Number_of_Individuals,rename/type conversion,standard name(s): Number_of_Individuals; type=UInt8
+1390-1403,subsidy,DYCOL04,subsidy,Number_of_Payments,rename/type conversion,standard name(s): Number_of_Payments; type=UInt8
+1390-1403,subsidy,DYCOL05,subsidy,Subsidy,rename/type conversion,standard name(s): Subsidy; type=float
+1403,subsidy,DycolVam,subsidy,,year-specific mapping; inspect HBSIR schema,
+1390-1403,house_specifications,ADDRESS,house_specifications,ID,rename/type conversion,standard name(s): ID; type=UInt64
+1390-1403,house_specifications,Q1,house_specifications,Tenure,categorical code-to-label recoding,standard name(s): Tenure; type=category; categorical labels recoded by HBSIR
+1390-1403,house_specifications,Q2,house_specifications,Number_of_Rooms,rename/type conversion,standard name(s): Number_of_Rooms; type=UInt8
+1390-1403,house_specifications,Q3,house_specifications,House_Area,rename/type conversion,standard name(s): House_Area; type=UInt16
+1390-1403,house_specifications,Q4A,house_specifications,Main_Materials_1,categorical code-to-label recoding,"standard name(s): Main_Materials_1; type=category; categorical labels recoded by HBSIR; year-specific replacement rules present: {1363: {'0': None, '15': None, '70': None}, 1383: {'00': None, '11': None, '31': None, '61': None}, 1389: None}"
+1390-1403,house_specifications,Q4B,house_specifications,Main_Materials_2,categorical code-to-label recoding,"standard name(s): Main_Materials_2; type=category; categorical labels recoded by HBSIR; year-specific replacement rules present: {1363: {'0': None, '15': None, '70': None}, 1383: {'00': None, '11': None, '31': None, '61': None}, 1389: None}"
+1390-1403,house_specifications,Q4,house_specifications,Structure_Type,categorical code-to-label recoding,standard name(s): Structure_Type; type=category; categorical labels recoded by HBSIR
+1390-1403,house_specifications,Q4_1,house_specifications,Structure_Main_Materials,categorical code-to-label recoding,"standard name(s): Structure_Main_Materials; type=category; categorical labels recoded by HBSIR; year-specific replacement rules present: {1363: {'0': None, '15': None, '70': None}, 1383: {'00': None, '11': None, '31': None, '61': None}, 1389: None}"
+1390-1403,house_specifications,Q5_01,house_specifications,Car,boolean conversion from survey code,standard name(s): Car; type=boolean
+1390-1403,house_specifications,Q5_02,house_specifications,Motorcycle,boolean conversion from survey code,standard name(s): Motorcycle; type=boolean
+1390-1403,house_specifications,Q5_03,house_specifications,Bicycle,boolean conversion from survey code,standard name(s): Bicycle; type=boolean
+1390-1403,house_specifications,Q5_04,house_specifications,Sewing_Machine,boolean conversion from survey code,standard name(s): Sewing_Machine; type=boolean
+1390-1403,house_specifications,Q5_05,house_specifications,Radio,boolean conversion from survey code,standard name(s): Radio; type=boolean
+1390-1403,house_specifications,Q5_06,house_specifications,Cassette,boolean conversion from survey code,standard name(s): Cassette; type=boolean
+1390-1403,house_specifications,Q5_07,house_specifications,Black_and_White_TV,boolean conversion from survey code,standard name(s): Black_and_White_TV; type=boolean
+1390-1403,house_specifications,Q5_08,house_specifications,Color_TV,boolean conversion from survey code,standard name(s): Color_TV; type=boolean
+1390-1403,house_specifications,Q5_09,house_specifications,Freezer,boolean conversion from survey code,standard name(s): Freezer; type=boolean
+1390-1403,house_specifications,Q5_10,house_specifications,Refrigerator,boolean conversion from survey code,standard name(s): Refrigerator; type=boolean
+1390-1403,house_specifications,Q5_11,house_specifications,Oven,boolean conversion from survey code,standard name(s): Oven; type=boolean
+1390-1403,house_specifications,Q5_12,house_specifications,Vacuum_Cleaner,boolean conversion from survey code,standard name(s): Vacuum_Cleaner; type=boolean
+1390-1403,house_specifications,Q5_13,house_specifications,Washing_Machine,boolean conversion from survey code,standard name(s): Washing_Machine; type=boolean
+1390-1403,house_specifications,Q5_14,house_specifications,VCR,boolean conversion from survey code,standard name(s): VCR; type=boolean
+1390-1403,house_specifications,Q5_15,house_specifications,PC,boolean conversion from survey code,standard name(s): PC; type=boolean
+1390-1403,house_specifications,Q5_16,house_specifications,Cellphone,boolean conversion from survey code,standard name(s): Cellphone; type=boolean
+1390-1403,house_specifications,Q5_17,house_specifications,Fan,boolean conversion from survey code,standard name(s): Fan; type=boolean
+1390-1403,house_specifications,Q5_18,house_specifications,Portable_Evaporative_AC,boolean conversion from survey code,standard name(s): Portable_Evaporative_AC; type=boolean
+1390-1403,house_specifications,Q6_1,house_specifications,Pipe_Water,boolean conversion from survey code,standard name(s): Pipe_Water; type=boolean
+1390-1403,house_specifications,Q6_2,house_specifications,Electricity,boolean conversion from survey code,standard name(s): Electricity; type=boolean
+1390-1403,house_specifications,Q6_3,house_specifications,Natural_Gas,boolean conversion from survey code,standard name(s): Natural_Gas; type=boolean
+1390-1403,house_specifications,Q6_4,house_specifications,Bathroom,boolean conversion from survey code,standard name(s): Bathroom; type=boolean
+1390-1403,house_specifications,Q6_5,house_specifications,AC,boolean conversion from survey code,standard name(s): AC; type=boolean
+1390-1403,house_specifications,Q6_6,house_specifications,Phone,boolean conversion from survey code,standard name(s): Phone; type=boolean
+1390-1403,house_specifications,Q6_7,house_specifications,Central_Heating,boolean conversion from survey code,standard name(s): Central_Heating; type=boolean
+1390-1403,house_specifications,Q6_8,house_specifications,Kitchen,boolean conversion from survey code,standard name(s): Kitchen; type=boolean
+1390-1403,house_specifications,Q6_9,house_specifications,Cellphone,rename/type conversion,standard name(s): Cellphone
+1390-1403,house_specifications,Q6_01,house_specifications,Pipe_Water,boolean conversion from survey code,standard name(s): Pipe_Water; type=boolean
+1390-1403,house_specifications,Q6_02,house_specifications,Electricity,boolean conversion from survey code,standard name(s): Electricity; type=boolean
+1390-1403,house_specifications,Q6_03,house_specifications,Natural_Gas,boolean conversion from survey code,standard name(s): Natural_Gas; type=boolean
+1390-1403,house_specifications,Q6_04,house_specifications,Bathroom,boolean conversion from survey code,standard name(s): Bathroom; type=boolean
+1390-1403,house_specifications,Q6_05,house_specifications,AC,boolean conversion from survey code,standard name(s): AC; type=boolean
+1390-1403,house_specifications,Q6_06,house_specifications,Phone,boolean conversion from survey code,standard name(s): Phone; type=boolean
+1390-1403,house_specifications,Q6_07,house_specifications,Central_Heating,boolean conversion from survey code,standard name(s): Central_Heating; type=boolean
+1390-1403,house_specifications,Q6_08,house_specifications,Kitchen,boolean conversion from survey code,standard name(s): Kitchen; type=boolean
+1390-1403,house_specifications,Q6_09,house_specifications,Central_AC,boolean conversion from survey code,standard name(s): Central_AC; type=boolean
+1390-1403,house_specifications,Q6_10,house_specifications,Internet,boolean conversion from survey code,standard name(s): Internet; type=boolean
+1390-1403,house_specifications,Q7A,house_specifications,Cooking_Fuel,categorical code-to-label recoding,standard name(s): Cooking_Fuel; type=category; categorical labels recoded by HBSIR; year-specific replacement rules present: {1383: {'30': None}}
+1390-1403,house_specifications,Q7B,house_specifications,Heating_Fuel,categorical code-to-label recoding,"standard name(s): Heating_Fuel; type=category; categorical labels recoded by HBSIR; year-specific replacement rules present: {1383: {'1': None, '2': None, '83': None, '88': None}}"
+1390-1403,house_specifications,Q8_1,house_specifications,Cooperative_Members,rename/type conversion,standard name(s): Cooperative_Members
+1390-1403,house_specifications,Q8_2_1,house_specifications,Consumption_Cooperative,rename/type conversion,standard name(s): Consumption_Cooperative
+1390-1403,house_specifications,Q8_2_2,house_specifications,House_Cooperative,rename/type conversion,standard name(s): House_Cooperative
+1390-1403,house_specifications,Q8_2_3,house_specifications,Other_Cooperative,rename/type conversion,standard name(s): Other_Cooperative
+1390-1403,house_specifications,DYCOL001,house_specifications,Dwelling_Type,categorical code-to-label recoding,standard name(s): Dwelling_Type; type=category; categorical labels recoded by HBSIR
+1390-1403,house_specifications,DYCOL002,house_specifications,Other_Dwelling_Types,rename/type conversion,standard name(s): Other_Dwelling_Types; type=string
+1390-1403,house_specifications,DYCOL01,house_specifications,Tenure,categorical code-to-label recoding,standard name(s): Tenure; type=category; categorical labels recoded by HBSIR
+1390-1403,house_specifications,DYCOL02,house_specifications,Number_of_Rooms,rename/type conversion,"standard name(s): Number_of_Rooms, Other_tenure"
+1390-1403,house_specifications,DYCOL02,house_specifications,Other_tenure,rename/type conversion,"standard name(s): Number_of_Rooms, Other_tenure"
+1390-1403,house_specifications,DYCOL03,house_specifications,House_Area,rename/type conversion,"standard name(s): House_Area, Number_of_Rooms"
+1390-1403,house_specifications,DYCOL03,house_specifications,Number_of_Rooms,rename/type conversion,"standard name(s): House_Area, Number_of_Rooms"
+1390-1403,house_specifications,DYCOL04,house_specifications,Structure_Type,rename/type conversion,"standard name(s): Structure_Type, House_Area"
+1390-1403,house_specifications,DYCOL04,house_specifications,House_Area,rename/type conversion,"standard name(s): Structure_Type, House_Area"
+1390-1403,house_specifications,DYCOL05,house_specifications,Structure_Main_Materials,rename/type conversion,"standard name(s): Structure_Main_Materials, Structure_Type"
+1390-1403,house_specifications,DYCOL05,house_specifications,Structure_Type,rename/type conversion,"standard name(s): Structure_Main_Materials, Structure_Type"
+1390-1403,house_specifications,DYCOL06,house_specifications,Car,rename/type conversion,"standard name(s): Car, Structure_Main_Materials"
+1390-1403,house_specifications,DYCOL06,house_specifications,Structure_Main_Materials,rename/type conversion,"standard name(s): Car, Structure_Main_Materials"
+1390-1403,house_specifications,DYCOL07,house_specifications,Motorcycle,rename/type conversion,"standard name(s): Motorcycle, Car"
+1390-1403,house_specifications,DYCOL07,house_specifications,Car,rename/type conversion,"standard name(s): Motorcycle, Car"
+1390-1403,house_specifications,DYCOL08,house_specifications,Bicycle,rename/type conversion,"standard name(s): Bicycle, Motorcycle"
+1390-1403,house_specifications,DYCOL08,house_specifications,Motorcycle,rename/type conversion,"standard name(s): Bicycle, Motorcycle"
+1390-1403,house_specifications,DYCOL09,house_specifications,Radio,rename/type conversion,"standard name(s): Radio, Bicycle"
+1390-1403,house_specifications,DYCOL09,house_specifications,Bicycle,rename/type conversion,"standard name(s): Radio, Bicycle"
+1390-1403,house_specifications,DYCOL10,house_specifications,Cassette,rename/type conversion,"standard name(s): Cassette, Radio"
+1390-1403,house_specifications,DYCOL10,house_specifications,Radio,rename/type conversion,"standard name(s): Cassette, Radio"
+1390-1403,house_specifications,DYCOL11,house_specifications,Black_and_White_TV,rename/type conversion,"standard name(s): Black_and_White_TV, Cassette"
+1390-1403,house_specifications,DYCOL11,house_specifications,Cassette,rename/type conversion,"standard name(s): Black_and_White_TV, Cassette"
+1390-1403,house_specifications,DYCOL12,house_specifications,Color_TV,rename/type conversion,"standard name(s): Color_TV, Black_and_White_TV"
+1390-1403,house_specifications,DYCOL12,house_specifications,Black_and_White_TV,rename/type conversion,"standard name(s): Color_TV, Black_and_White_TV"
+1390-1403,house_specifications,DYCOL13,house_specifications,VCR,rename/type conversion,"standard name(s): VCR, Color_TV"
+1390-1403,house_specifications,DYCOL13,house_specifications,Color_TV,rename/type conversion,"standard name(s): VCR, Color_TV"
+1390-1403,house_specifications,DYCOL14,house_specifications,PC,rename/type conversion,"standard name(s): PC, VCR"
+1390-1403,house_specifications,DYCOL14,house_specifications,VCR,rename/type conversion,"standard name(s): PC, VCR"
+1390-1403,house_specifications,DYCOL15,house_specifications,Cellphone,rename/type conversion,"standard name(s): Cellphone, PC"
+1390-1403,house_specifications,DYCOL15,house_specifications,PC,rename/type conversion,"standard name(s): Cellphone, PC"
+1390-1403,house_specifications,DYCOL16,house_specifications,Freezer,rename/type conversion,"standard name(s): Freezer, Cellphone"
+1390-1403,house_specifications,DYCOL16,house_specifications,Cellphone,rename/type conversion,"standard name(s): Freezer, Cellphone"
+1390-1403,house_specifications,DYCOL17,house_specifications,Refrigerator,rename/type conversion,"standard name(s): Refrigerator, Freezer"
+1390-1403,house_specifications,DYCOL17,house_specifications,Freezer,rename/type conversion,"standard name(s): Refrigerator, Freezer"
+1390-1403,house_specifications,DYCOL18,house_specifications,Oven,rename/type conversion,"standard name(s): Oven, Freezer_Refrigerator, Refrigerator"
+1390-1403,house_specifications,DYCOL18,house_specifications,Freezer_Refrigerator,rename/type conversion,"standard name(s): Oven, Freezer_Refrigerator, Refrigerator"
+1390-1403,house_specifications,DYCOL18,house_specifications,Refrigerator,rename/type conversion,"standard name(s): Oven, Freezer_Refrigerator, Refrigerator"
+1390-1403,house_specifications,DYCOL19,house_specifications,Vacuum_Cleaner,rename/type conversion,"standard name(s): Vacuum_Cleaner, Oven, Freezer_Refrigerator"
+1390-1403,house_specifications,DYCOL19,house_specifications,Oven,rename/type conversion,"standard name(s): Vacuum_Cleaner, Oven, Freezer_Refrigerator"
+1390-1403,house_specifications,DYCOL19,house_specifications,Freezer_Refrigerator,rename/type conversion,"standard name(s): Vacuum_Cleaner, Oven, Freezer_Refrigerator"
+1390-1403,house_specifications,DYCOL20,house_specifications,Washing_Machine,rename/type conversion,"standard name(s): Washing_Machine, Vacuum_Cleaner, Oven"
+1390-1403,house_specifications,DYCOL20,house_specifications,Vacuum_Cleaner,rename/type conversion,"standard name(s): Washing_Machine, Vacuum_Cleaner, Oven"
+1390-1403,house_specifications,DYCOL20,house_specifications,Oven,rename/type conversion,"standard name(s): Washing_Machine, Vacuum_Cleaner, Oven"
+1390-1403,house_specifications,DYCOL21,house_specifications,Sewing_Machine,rename/type conversion,"standard name(s): Sewing_Machine, Washing_Machine, Vacuum_Cleaner"
+1390-1403,house_specifications,DYCOL21,house_specifications,Washing_Machine,rename/type conversion,"standard name(s): Sewing_Machine, Washing_Machine, Vacuum_Cleaner"
+1390-1403,house_specifications,DYCOL21,house_specifications,Vacuum_Cleaner,rename/type conversion,"standard name(s): Sewing_Machine, Washing_Machine, Vacuum_Cleaner"
+1390-1403,house_specifications,DYCOL22,house_specifications,Fan,rename/type conversion,"standard name(s): Fan, Sewing_Machine, Washing_Machine"
+1390-1403,house_specifications,DYCOL22,house_specifications,Sewing_Machine,rename/type conversion,"standard name(s): Fan, Sewing_Machine, Washing_Machine"
+1390-1403,house_specifications,DYCOL22,house_specifications,Washing_Machine,rename/type conversion,"standard name(s): Fan, Sewing_Machine, Washing_Machine"
+1390-1403,house_specifications,DYCOL23,house_specifications,Portable_Evaporative_AC,rename/type conversion,"standard name(s): Portable_Evaporative_AC, Fan, Sewing_Machine"
+1390-1403,house_specifications,DYCOL23,house_specifications,Fan,rename/type conversion,"standard name(s): Portable_Evaporative_AC, Fan, Sewing_Machine"
+1390-1403,house_specifications,DYCOL23,house_specifications,Sewing_Machine,rename/type conversion,"standard name(s): Portable_Evaporative_AC, Fan, Sewing_Machine"
+1390-1403,house_specifications,DYCOL24,house_specifications,No_Appliances,rename/type conversion,"standard name(s): No_Appliances, Portable_Evaporative_AC, Fan"
+1390-1403,house_specifications,DYCOL24,house_specifications,Portable_Evaporative_AC,rename/type conversion,"standard name(s): No_Appliances, Portable_Evaporative_AC, Fan"
+1390-1403,house_specifications,DYCOL24,house_specifications,Fan,rename/type conversion,"standard name(s): No_Appliances, Portable_Evaporative_AC, Fan"
+1390-1403,house_specifications,DYCOL25,house_specifications,Pipe_Water,rename/type conversion,"standard name(s): Pipe_Water, No_Appliances, Portable_Split_AC, Portable_Evaporative_AC"
+1390-1403,house_specifications,DYCOL25,house_specifications,No_Appliances,rename/type conversion,"standard name(s): Pipe_Water, No_Appliances, Portable_Split_AC, Portable_Evaporative_AC"
+1390-1403,house_specifications,DYCOL25,house_specifications,Portable_Split_AC,rename/type conversion,"standard name(s): Pipe_Water, No_Appliances, Portable_Split_AC, Portable_Evaporative_AC"
+1390-1403,house_specifications,DYCOL25,house_specifications,Portable_Evaporative_AC,rename/type conversion,"standard name(s): Pipe_Water, No_Appliances, Portable_Split_AC, Portable_Evaporative_AC"
+1390-1403,house_specifications,DYCOL26,house_specifications,Electricity,rename/type conversion,"standard name(s): Electricity, Pipe_Water, Dishwasher, Portable_Split_AC"
+1390-1403,house_specifications,DYCOL26,house_specifications,Pipe_Water,rename/type conversion,"standard name(s): Electricity, Pipe_Water, Dishwasher, Portable_Split_AC"
+1390-1403,house_specifications,DYCOL26,house_specifications,Dishwasher,rename/type conversion,"standard name(s): Electricity, Pipe_Water, Dishwasher, Portable_Split_AC"
+1390-1403,house_specifications,DYCOL26,house_specifications,Portable_Split_AC,rename/type conversion,"standard name(s): Electricity, Pipe_Water, Dishwasher, Portable_Split_AC"
+1390-1403,house_specifications,DYCOL27,house_specifications,Natural_Gas,rename/type conversion,"standard name(s): Natural_Gas, Electricity, No_Appliances, Dishwasher"
+1390-1403,house_specifications,DYCOL27,house_specifications,Electricity,rename/type conversion,"standard name(s): Natural_Gas, Electricity, No_Appliances, Dishwasher"
+1390-1403,house_specifications,DYCOL27,house_specifications,No_Appliances,rename/type conversion,"standard name(s): Natural_Gas, Electricity, No_Appliances, Dishwasher"
+1390-1403,house_specifications,DYCOL27,house_specifications,Dishwasher,rename/type conversion,"standard name(s): Natural_Gas, Electricity, No_Appliances, Dishwasher"
+1390-1403,house_specifications,DYCOL28,house_specifications,Phone,rename/type conversion,"standard name(s): Phone, Natural_Gas, Pipe_Water, No_Appliances, Microwave_Oven"
+1390-1403,house_specifications,DYCOL28,house_specifications,Natural_Gas,rename/type conversion,"standard name(s): Phone, Natural_Gas, Pipe_Water, No_Appliances, Microwave_Oven"
+1390-1403,house_specifications,DYCOL28,house_specifications,Pipe_Water,rename/type conversion,"standard name(s): Phone, Natural_Gas, Pipe_Water, No_Appliances, Microwave_Oven"
+1390-1403,house_specifications,DYCOL28,house_specifications,No_Appliances,rename/type conversion,"standard name(s): Phone, Natural_Gas, Pipe_Water, No_Appliances, Microwave_Oven"
+1390-1403,house_specifications,DYCOL28,house_specifications,Microwave_Oven,rename/type conversion,"standard name(s): Phone, Natural_Gas, Pipe_Water, No_Appliances, Microwave_Oven"
+1390-1403,house_specifications,DYCOL29,house_specifications,Internet,rename/type conversion,"standard name(s): Internet, Phone, Electricity, Pipe_Water, No_Appliances"
+1390-1403,house_specifications,DYCOL29,house_specifications,Phone,rename/type conversion,"standard name(s): Internet, Phone, Electricity, Pipe_Water, No_Appliances"
+1390-1403,house_specifications,DYCOL29,house_specifications,Electricity,rename/type conversion,"standard name(s): Internet, Phone, Electricity, Pipe_Water, No_Appliances"
+1390-1403,house_specifications,DYCOL29,house_specifications,Pipe_Water,rename/type conversion,"standard name(s): Internet, Phone, Electricity, Pipe_Water, No_Appliances"
+1390-1403,house_specifications,DYCOL29,house_specifications,No_Appliances,rename/type conversion,"standard name(s): Internet, Phone, Electricity, Pipe_Water, No_Appliances"
+1390-1403,house_specifications,DYCOL30,house_specifications,Bathroom,rename/type conversion,"standard name(s): Bathroom, Internet, Natural_Gas, Electricity, Pipe_Water"
+1390-1403,house_specifications,DYCOL30,house_specifications,Internet,rename/type conversion,"standard name(s): Bathroom, Internet, Natural_Gas, Electricity, Pipe_Water"
+1390-1403,house_specifications,DYCOL30,house_specifications,Natural_Gas,rename/type conversion,"standard name(s): Bathroom, Internet, Natural_Gas, Electricity, Pipe_Water"
+1390-1403,house_specifications,DYCOL30,house_specifications,Electricity,rename/type conversion,"standard name(s): Bathroom, Internet, Natural_Gas, Electricity, Pipe_Water"
+1390-1403,house_specifications,DYCOL30,house_specifications,Pipe_Water,rename/type conversion,"standard name(s): Bathroom, Internet, Natural_Gas, Electricity, Pipe_Water"
+1390-1403,house_specifications,DYCOL31,house_specifications,Kitchen,rename/type conversion,"standard name(s): Kitchen, Bathroom, Phone, Natural_Gas, Electricity"
+1390-1403,house_specifications,DYCOL31,house_specifications,Bathroom,rename/type conversion,"standard name(s): Kitchen, Bathroom, Phone, Natural_Gas, Electricity"
+1390-1403,house_specifications,DYCOL31,house_specifications,Phone,rename/type conversion,"standard name(s): Kitchen, Bathroom, Phone, Natural_Gas, Electricity"
+1390-1403,house_specifications,DYCOL31,house_specifications,Natural_Gas,rename/type conversion,"standard name(s): Kitchen, Bathroom, Phone, Natural_Gas, Electricity"
+1390-1403,house_specifications,DYCOL31,house_specifications,Electricity,rename/type conversion,"standard name(s): Kitchen, Bathroom, Phone, Natural_Gas, Electricity"
+1390-1403,house_specifications,DYCOL32,house_specifications,AC,rename/type conversion,"standard name(s): AC, Kitchen, Internet, Phone, Natural_Gas"
+1390-1403,house_specifications,DYCOL32,house_specifications,Kitchen,rename/type conversion,"standard name(s): AC, Kitchen, Internet, Phone, Natural_Gas"
+1390-1403,house_specifications,DYCOL32,house_specifications,Internet,rename/type conversion,"standard name(s): AC, Kitchen, Internet, Phone, Natural_Gas"
+1390-1403,house_specifications,DYCOL32,house_specifications,Phone,rename/type conversion,"standard name(s): AC, Kitchen, Internet, Phone, Natural_Gas"
+1390-1403,house_specifications,DYCOL32,house_specifications,Natural_Gas,rename/type conversion,"standard name(s): AC, Kitchen, Internet, Phone, Natural_Gas"
+1390-1403,house_specifications,DYCOL33,house_specifications,Central_AC,rename/type conversion,"standard name(s): Central_AC, AC, Bathroom, Internet, Phone"
+1390-1403,house_specifications,DYCOL33,house_specifications,AC,rename/type conversion,"standard name(s): Central_AC, AC, Bathroom, Internet, Phone"
+1390-1403,house_specifications,DYCOL33,house_specifications,Bathroom,rename/type conversion,"standard name(s): Central_AC, AC, Bathroom, Internet, Phone"
+1390-1403,house_specifications,DYCOL33,house_specifications,Internet,rename/type conversion,"standard name(s): Central_AC, AC, Bathroom, Internet, Phone"
+1390-1403,house_specifications,DYCOL33,house_specifications,Phone,rename/type conversion,"standard name(s): Central_AC, AC, Bathroom, Internet, Phone"
+1390-1403,house_specifications,DYCOL34,house_specifications,Central_Heating,rename/type conversion,"standard name(s): Central_Heating, Central_AC, Kitchen, Bathroom, Internet"
+1390-1403,house_specifications,DYCOL34,house_specifications,Central_AC,rename/type conversion,"standard name(s): Central_Heating, Central_AC, Kitchen, Bathroom, Internet"
+1390-1403,house_specifications,DYCOL34,house_specifications,Kitchen,rename/type conversion,"standard name(s): Central_Heating, Central_AC, Kitchen, Bathroom, Internet"
+1390-1403,house_specifications,DYCOL34,house_specifications,Bathroom,rename/type conversion,"standard name(s): Central_Heating, Central_AC, Kitchen, Bathroom, Internet"
+1390-1403,house_specifications,DYCOL34,house_specifications,Internet,rename/type conversion,"standard name(s): Central_Heating, Central_AC, Kitchen, Bathroom, Internet"
+1390-1403,house_specifications,DYCOL35,house_specifications,Cooking_Fuel,rename/type conversion,"standard name(s): Cooking_Fuel, Central_Heating, Evaporative_AC, Kitchen, Bathroom"
+1390-1403,house_specifications,DYCOL35,house_specifications,Central_Heating,rename/type conversion,"standard name(s): Cooking_Fuel, Central_Heating, Evaporative_AC, Kitchen, Bathroom"
+1390-1403,house_specifications,DYCOL35,house_specifications,Evaporative_AC,rename/type conversion,"standard name(s): Cooking_Fuel, Central_Heating, Evaporative_AC, Kitchen, Bathroom"
+1390-1403,house_specifications,DYCOL35,house_specifications,Kitchen,rename/type conversion,"standard name(s): Cooking_Fuel, Central_Heating, Evaporative_AC, Kitchen, Bathroom"
+1390-1403,house_specifications,DYCOL35,house_specifications,Bathroom,rename/type conversion,"standard name(s): Cooking_Fuel, Central_Heating, Evaporative_AC, Kitchen, Bathroom"
+1390-1403,house_specifications,DYCOL36,house_specifications,Heating_Fuel,rename/type conversion,"standard name(s): Heating_Fuel, Cooking_Fuel, Central_AC, Evaporative_AC, Kitchen"
+1390-1403,house_specifications,DYCOL36,house_specifications,Cooking_Fuel,rename/type conversion,"standard name(s): Heating_Fuel, Cooking_Fuel, Central_AC, Evaporative_AC, Kitchen"
+1390-1403,house_specifications,DYCOL36,house_specifications,Central_AC,rename/type conversion,"standard name(s): Heating_Fuel, Cooking_Fuel, Central_AC, Evaporative_AC, Kitchen"
+1390-1403,house_specifications,DYCOL36,house_specifications,Evaporative_AC,rename/type conversion,"standard name(s): Heating_Fuel, Cooking_Fuel, Central_AC, Evaporative_AC, Kitchen"
+1390-1403,house_specifications,DYCOL36,house_specifications,Kitchen,rename/type conversion,"standard name(s): Heating_Fuel, Cooking_Fuel, Central_AC, Evaporative_AC, Kitchen"
+1390-1403,house_specifications,DYCOL37,house_specifications,Heating_Fuel,rename/type conversion,"standard name(s): Heating_Fuel, Central_Heating, Central_AC, Evaporative_AC"
+1390-1403,house_specifications,DYCOL37,house_specifications,Central_Heating,rename/type conversion,"standard name(s): Heating_Fuel, Central_Heating, Central_AC, Evaporative_AC"
+1390-1403,house_specifications,DYCOL37,house_specifications,Central_AC,rename/type conversion,"standard name(s): Heating_Fuel, Central_Heating, Central_AC, Evaporative_AC"
+1390-1403,house_specifications,DYCOL37,house_specifications,Evaporative_AC,rename/type conversion,"standard name(s): Heating_Fuel, Central_Heating, Central_AC, Evaporative_AC"
+1390-1403,house_specifications,DYCOL38,house_specifications,Party_Month,rename/type conversion,"standard name(s): Party_Month, Water_Heater, Central_Heating, Central_AC"
+1390-1403,house_specifications,DYCOL38,house_specifications,Water_Heater,rename/type conversion,"standard name(s): Party_Month, Water_Heater, Central_Heating, Central_AC"
+1390-1403,house_specifications,DYCOL38,house_specifications,Central_Heating,rename/type conversion,"standard name(s): Party_Month, Water_Heater, Central_Heating, Central_AC"
+1390-1403,house_specifications,DYCOL38,house_specifications,Central_AC,rename/type conversion,"standard name(s): Party_Month, Water_Heater, Central_Heating, Central_AC"
+1390-1403,house_specifications,DYCOL39,house_specifications,Party_Year,rename/type conversion,"standard name(s): Party_Year, Split_AC, Water_Heater, Central_Heating"
+1390-1403,house_specifications,DYCOL39,house_specifications,Split_AC,rename/type conversion,"standard name(s): Party_Year, Split_AC, Water_Heater, Central_Heating"
+1390-1403,house_specifications,DYCOL39,house_specifications,Water_Heater,rename/type conversion,"standard name(s): Party_Year, Split_AC, Water_Heater, Central_Heating"
+1390-1403,house_specifications,DYCOL39,house_specifications,Central_Heating,rename/type conversion,"standard name(s): Party_Year, Split_AC, Water_Heater, Central_Heating"
+1390-1403,house_specifications,DYCOL40,house_specifications,Ceremony_Month,rename/type conversion,"standard name(s): Ceremony_Month, Cooking_Fuel, Sewerage, Split_AC, Water_Heater"
+1390-1403,house_specifications,DYCOL40,house_specifications,Cooking_Fuel,rename/type conversion,"standard name(s): Ceremony_Month, Cooking_Fuel, Sewerage, Split_AC, Water_Heater"
+1390-1403,house_specifications,DYCOL40,house_specifications,Sewerage,rename/type conversion,"standard name(s): Ceremony_Month, Cooking_Fuel, Sewerage, Split_AC, Water_Heater"
+1390-1403,house_specifications,DYCOL40,house_specifications,Split_AC,rename/type conversion,"standard name(s): Ceremony_Month, Cooking_Fuel, Sewerage, Split_AC, Water_Heater"
+1390-1403,house_specifications,DYCOL40,house_specifications,Water_Heater,rename/type conversion,"standard name(s): Ceremony_Month, Cooking_Fuel, Sewerage, Split_AC, Water_Heater"
+1390-1403,house_specifications,DYCOL41,house_specifications,Ceremony_Year,rename/type conversion,"standard name(s): Ceremony_Year, Heating_Fuel, Cooking_Fuel, Sewerage, Split_AC"
+1390-1403,house_specifications,DYCOL41,house_specifications,Heating_Fuel,rename/type conversion,"standard name(s): Ceremony_Year, Heating_Fuel, Cooking_Fuel, Sewerage, Split_AC"
+1390-1403,house_specifications,DYCOL41,house_specifications,Cooking_Fuel,rename/type conversion,"standard name(s): Ceremony_Year, Heating_Fuel, Cooking_Fuel, Sewerage, Split_AC"
+1390-1403,house_specifications,DYCOL41,house_specifications,Sewerage,rename/type conversion,"standard name(s): Ceremony_Year, Heating_Fuel, Cooking_Fuel, Sewerage, Split_AC"
+1390-1403,house_specifications,DYCOL41,house_specifications,Split_AC,rename/type conversion,"standard name(s): Ceremony_Year, Heating_Fuel, Cooking_Fuel, Sewerage, Split_AC"
+1390-1403,house_specifications,DYCOL42,house_specifications,Homerepair_Month,rename/type conversion,"standard name(s): Homerepair_Month, Party_Month, Heating_Fuel, Cooking_Fuel, Sewerage"
+1390-1403,house_specifications,DYCOL42,house_specifications,Party_Month,rename/type conversion,"standard name(s): Homerepair_Month, Party_Month, Heating_Fuel, Cooking_Fuel, Sewerage"
+1390-1403,house_specifications,DYCOL42,house_specifications,Heating_Fuel,rename/type conversion,"standard name(s): Homerepair_Month, Party_Month, Heating_Fuel, Cooking_Fuel, Sewerage"
+1390-1403,house_specifications,DYCOL42,house_specifications,Cooking_Fuel,rename/type conversion,"standard name(s): Homerepair_Month, Party_Month, Heating_Fuel, Cooking_Fuel, Sewerage"
+1390-1403,house_specifications,DYCOL42,house_specifications,Sewerage,rename/type conversion,"standard name(s): Homerepair_Month, Party_Month, Heating_Fuel, Cooking_Fuel, Sewerage"
+1390-1403,house_specifications,DYCOL42_14,house_specifications,Elevator,boolean conversion from survey code,standard name(s): Elevator; type=boolean
+1390-1403,house_specifications,DYCOL43,house_specifications,Homerepair_Year,rename/type conversion,"standard name(s): Homerepair_Year, Party_Year, Hotwater_Fuel, Heating_Fuel, Cooking_Fuel"
+1390-1403,house_specifications,DYCOL43,house_specifications,Party_Year,rename/type conversion,"standard name(s): Homerepair_Year, Party_Year, Hotwater_Fuel, Heating_Fuel, Cooking_Fuel"
+1390-1403,house_specifications,DYCOL43,house_specifications,Hotwater_Fuel,rename/type conversion,"standard name(s): Homerepair_Year, Party_Year, Hotwater_Fuel, Heating_Fuel, Cooking_Fuel"
+1390-1403,house_specifications,DYCOL43,house_specifications,Heating_Fuel,rename/type conversion,"standard name(s): Homerepair_Year, Party_Year, Hotwater_Fuel, Heating_Fuel, Cooking_Fuel"
+1390-1403,house_specifications,DYCOL43,house_specifications,Cooking_Fuel,rename/type conversion,"standard name(s): Homerepair_Year, Party_Year, Hotwater_Fuel, Heating_Fuel, Cooking_Fuel"
+1390-1403,house_specifications,DYCOL44,house_specifications,Ziarati_Trip_Month,rename/type conversion,"standard name(s): Ziarati_Trip_Month, Ceremony_Month, Party_Month, Hotwater_Fuel, Heating_Fuel"
+1390-1403,house_specifications,DYCOL44,house_specifications,Ceremony_Month,rename/type conversion,"standard name(s): Ziarati_Trip_Month, Ceremony_Month, Party_Month, Hotwater_Fuel, Heating_Fuel"
+1390-1403,house_specifications,DYCOL44,house_specifications,Party_Month,rename/type conversion,"standard name(s): Ziarati_Trip_Month, Ceremony_Month, Party_Month, Hotwater_Fuel, Heating_Fuel"
+1390-1403,house_specifications,DYCOL44,house_specifications,Hotwater_Fuel,rename/type conversion,"standard name(s): Ziarati_Trip_Month, Ceremony_Month, Party_Month, Hotwater_Fuel, Heating_Fuel"
+1390-1403,house_specifications,DYCOL44,house_specifications,Heating_Fuel,rename/type conversion,"standard name(s): Ziarati_Trip_Month, Ceremony_Month, Party_Month, Hotwater_Fuel, Heating_Fuel"
+1390-1403,house_specifications,DYCOL45,house_specifications,Ziarati_Trip_Year,rename/type conversion,"standard name(s): Ziarati_Trip_Year, Ceremony_Year, Party_Year, Party_Month, Hotwater_Fuel"
+1390-1403,house_specifications,DYCOL45,house_specifications,Ceremony_Year,rename/type conversion,"standard name(s): Ziarati_Trip_Year, Ceremony_Year, Party_Year, Party_Month, Hotwater_Fuel"
+1390-1403,house_specifications,DYCOL45,house_specifications,Party_Year,rename/type conversion,"standard name(s): Ziarati_Trip_Year, Ceremony_Year, Party_Year, Party_Month, Hotwater_Fuel"
+1390-1403,house_specifications,DYCOL45,house_specifications,Party_Month,rename/type conversion,"standard name(s): Ziarati_Trip_Year, Ceremony_Year, Party_Year, Party_Month, Hotwater_Fuel"
+1390-1403,house_specifications,DYCOL45,house_specifications,Hotwater_Fuel,rename/type conversion,"standard name(s): Ziarati_Trip_Year, Ceremony_Year, Party_Year, Party_Month, Hotwater_Fuel"
+1390-1403,house_specifications,DYCOL46,house_specifications,Foreign_Trip_Month,rename/type conversion,"standard name(s): Foreign_Trip_Month, Homerepair_Month, Ceremony_Month, Party_Year, Party_Month"
+1390-1403,house_specifications,DYCOL46,house_specifications,Homerepair_Month,rename/type conversion,"standard name(s): Foreign_Trip_Month, Homerepair_Month, Ceremony_Month, Party_Year, Party_Month"
+1390-1403,house_specifications,DYCOL46,house_specifications,Ceremony_Month,rename/type conversion,"standard name(s): Foreign_Trip_Month, Homerepair_Month, Ceremony_Month, Party_Year, Party_Month"
+1390-1403,house_specifications,DYCOL46,house_specifications,Party_Year,rename/type conversion,"standard name(s): Foreign_Trip_Month, Homerepair_Month, Ceremony_Month, Party_Year, Party_Month"
+1390-1403,house_specifications,DYCOL46,house_specifications,Party_Month,rename/type conversion,"standard name(s): Foreign_Trip_Month, Homerepair_Month, Ceremony_Month, Party_Year, Party_Month"
+1390-1403,house_specifications,DYCOL47,house_specifications,Foreign_Trip_Year,rename/type conversion,"standard name(s): Foreign_Trip_Year, Homerepair_Year, Ceremony_Year, Ceremony_Month, Party_Year"
+1390-1403,house_specifications,DYCOL47,house_specifications,Homerepair_Year,rename/type conversion,"standard name(s): Foreign_Trip_Year, Homerepair_Year, Ceremony_Year, Ceremony_Month, Party_Year"
+1390-1403,house_specifications,DYCOL47,house_specifications,Ceremony_Year,rename/type conversion,"standard name(s): Foreign_Trip_Year, Homerepair_Year, Ceremony_Year, Ceremony_Month, Party_Year"
+1390-1403,house_specifications,DYCOL47,house_specifications,Ceremony_Month,rename/type conversion,"standard name(s): Foreign_Trip_Year, Homerepair_Year, Ceremony_Year, Ceremony_Month, Party_Year"
+1390-1403,house_specifications,DYCOL47,house_specifications,Party_Year,rename/type conversion,"standard name(s): Foreign_Trip_Year, Homerepair_Year, Ceremony_Year, Ceremony_Month, Party_Year"
+1390-1403,house_specifications,DYCOL48,house_specifications,Surgery_Month,rename/type conversion,"standard name(s): Surgery_Month, Ziarati_Trip_Month, Homerepair_Month, Ceremony_Year, Ceremony_Month"
+1390-1403,house_specifications,DYCOL48,house_specifications,Ziarati_Trip_Month,rename/type conversion,"standard name(s): Surgery_Month, Ziarati_Trip_Month, Homerepair_Month, Ceremony_Year, Ceremony_Month"
+1390-1403,house_specifications,DYCOL48,house_specifications,Homerepair_Month,rename/type conversion,"standard name(s): Surgery_Month, Ziarati_Trip_Month, Homerepair_Month, Ceremony_Year, Ceremony_Month"
+1390-1403,house_specifications,DYCOL48,house_specifications,Ceremony_Year,rename/type conversion,"standard name(s): Surgery_Month, Ziarati_Trip_Month, Homerepair_Month, Ceremony_Year, Ceremony_Month"
+1390-1403,house_specifications,DYCOL48,house_specifications,Ceremony_Month,rename/type conversion,"standard name(s): Surgery_Month, Ziarati_Trip_Month, Homerepair_Month, Ceremony_Year, Ceremony_Month"
+1390-1403,house_specifications,DYCOL49,house_specifications,Other_Event_mMnth,rename/type conversion,"standard name(s): Other_Event_mMnth, Ziarati_Trip_Year, Homerepair_Year, Homerepair_Month, Ceremony_Year"
+1390-1403,house_specifications,DYCOL49,house_specifications,Ziarati_Trip_Year,rename/type conversion,"standard name(s): Other_Event_mMnth, Ziarati_Trip_Year, Homerepair_Year, Homerepair_Month, Ceremony_Year"
+1390-1403,house_specifications,DYCOL49,house_specifications,Homerepair_Year,rename/type conversion,"standard name(s): Other_Event_mMnth, Ziarati_Trip_Year, Homerepair_Year, Homerepair_Month, Ceremony_Year"
+1390-1403,house_specifications,DYCOL49,house_specifications,Homerepair_Month,rename/type conversion,"standard name(s): Other_Event_mMnth, Ziarati_Trip_Year, Homerepair_Year, Homerepair_Month, Ceremony_Year"
+1390-1403,house_specifications,DYCOL49,house_specifications,Ceremony_Year,rename/type conversion,"standard name(s): Other_Event_mMnth, Ziarati_Trip_Year, Homerepair_Year, Homerepair_Month, Ceremony_Year"
+1390-1403,house_specifications,DYCOL50,house_specifications,Other_Event_Year,rename/type conversion,"standard name(s): Other_Event_Year, Foreign_Trip_Month, Ziarati_Trip_Month, Homerepair_Year, Homerepair_Month"
+1390-1403,house_specifications,DYCOL50,house_specifications,Foreign_Trip_Month,rename/type conversion,"standard name(s): Other_Event_Year, Foreign_Trip_Month, Ziarati_Trip_Month, Homerepair_Year, Homerepair_Month"
+1390-1403,house_specifications,DYCOL50,house_specifications,Ziarati_Trip_Month,rename/type conversion,"standard name(s): Other_Event_Year, Foreign_Trip_Month, Ziarati_Trip_Month, Homerepair_Year, Homerepair_Month"
+1390-1403,house_specifications,DYCOL50,house_specifications,Homerepair_Year,rename/type conversion,"standard name(s): Other_Event_Year, Foreign_Trip_Month, Ziarati_Trip_Month, Homerepair_Year, Homerepair_Month"
+1390-1403,house_specifications,DYCOL50,house_specifications,Homerepair_Month,rename/type conversion,"standard name(s): Other_Event_Year, Foreign_Trip_Month, Ziarati_Trip_Month, Homerepair_Year, Homerepair_Month"
+1390-1403,house_specifications,DYCOL51,house_specifications,No_Event_Month,rename/type conversion,"standard name(s): No_Event_Month, Foreign_Trip_Year, Ziarati_Trip_Year, Ziarati_Trip_Month, Homerepair_Year"
+1390-1403,house_specifications,DYCOL51,house_specifications,Foreign_Trip_Year,rename/type conversion,"standard name(s): No_Event_Month, Foreign_Trip_Year, Ziarati_Trip_Year, Ziarati_Trip_Month, Homerepair_Year"
+1390-1403,house_specifications,DYCOL51,house_specifications,Ziarati_Trip_Year,rename/type conversion,"standard name(s): No_Event_Month, Foreign_Trip_Year, Ziarati_Trip_Year, Ziarati_Trip_Month, Homerepair_Year"
+1390-1403,house_specifications,DYCOL51,house_specifications,Ziarati_Trip_Month,rename/type conversion,"standard name(s): No_Event_Month, Foreign_Trip_Year, Ziarati_Trip_Year, Ziarati_Trip_Month, Homerepair_Year"
+1390-1403,house_specifications,DYCOL51,house_specifications,Homerepair_Year,rename/type conversion,"standard name(s): No_Event_Month, Foreign_Trip_Year, Ziarati_Trip_Year, Ziarati_Trip_Month, Homerepair_Year"
+1390-1403,house_specifications,DYCOL52,house_specifications,No_Event_Year,rename/type conversion,"standard name(s): No_Event_Year, Surgery_Month, Foreign_Trip_Month, Ziarati_Trip_Year, Ziarati_Trip_Month"
+1390-1403,house_specifications,DYCOL52,house_specifications,Surgery_Month,rename/type conversion,"standard name(s): No_Event_Year, Surgery_Month, Foreign_Trip_Month, Ziarati_Trip_Year, Ziarati_Trip_Month"
+1390-1403,house_specifications,DYCOL52,house_specifications,Foreign_Trip_Month,rename/type conversion,"standard name(s): No_Event_Year, Surgery_Month, Foreign_Trip_Month, Ziarati_Trip_Year, Ziarati_Trip_Month"
+1390-1403,house_specifications,DYCOL52,house_specifications,Ziarati_Trip_Year,rename/type conversion,"standard name(s): No_Event_Year, Surgery_Month, Foreign_Trip_Month, Ziarati_Trip_Year, Ziarati_Trip_Month"
+1390-1403,house_specifications,DYCOL52,house_specifications,Ziarati_Trip_Month,rename/type conversion,"standard name(s): No_Event_Year, Surgery_Month, Foreign_Trip_Month, Ziarati_Trip_Year, Ziarati_Trip_Month"
+1390-1403,house_specifications,DYCOL53,house_specifications,Other_Event_mMnth,rename/type conversion,"standard name(s): Other_Event_mMnth, Foreign_Trip_Year, Foreign_Trip_Month, Ziarati_Trip_Year"
+1390-1403,house_specifications,DYCOL53,house_specifications,Foreign_Trip_Year,rename/type conversion,"standard name(s): Other_Event_mMnth, Foreign_Trip_Year, Foreign_Trip_Month, Ziarati_Trip_Year"
+1390-1403,house_specifications,DYCOL53,house_specifications,Foreign_Trip_Month,rename/type conversion,"standard name(s): Other_Event_mMnth, Foreign_Trip_Year, Foreign_Trip_Month, Ziarati_Trip_Year"
+1390-1403,house_specifications,DYCOL53,house_specifications,Ziarati_Trip_Year,rename/type conversion,"standard name(s): Other_Event_mMnth, Foreign_Trip_Year, Foreign_Trip_Month, Ziarati_Trip_Year"
+1390-1403,house_specifications,DYCOL54,house_specifications,Other_Event_Year,rename/type conversion,"standard name(s): Other_Event_Year, Surgery_Month, Foreign_Trip_Year, Foreign_Trip_Month"
+1390-1403,house_specifications,DYCOL54,house_specifications,Surgery_Month,rename/type conversion,"standard name(s): Other_Event_Year, Surgery_Month, Foreign_Trip_Year, Foreign_Trip_Month"
+1390-1403,house_specifications,DYCOL54,house_specifications,Foreign_Trip_Year,rename/type conversion,"standard name(s): Other_Event_Year, Surgery_Month, Foreign_Trip_Year, Foreign_Trip_Month"
+1390-1403,house_specifications,DYCOL54,house_specifications,Foreign_Trip_Month,rename/type conversion,"standard name(s): Other_Event_Year, Surgery_Month, Foreign_Trip_Year, Foreign_Trip_Month"
+1390-1403,house_specifications,DYCOL55,house_specifications,No_Event_Year,rename/type conversion,"standard name(s): No_Event_Year, Other_Event_mMnth, Surgery_Month, Foreign_Trip_Year"
+1390-1403,house_specifications,DYCOL55,house_specifications,Other_Event_mMnth,rename/type conversion,"standard name(s): No_Event_Year, Other_Event_mMnth, Surgery_Month, Foreign_Trip_Year"
+1390-1403,house_specifications,DYCOL55,house_specifications,Surgery_Month,rename/type conversion,"standard name(s): No_Event_Year, Other_Event_mMnth, Surgery_Month, Foreign_Trip_Year"
+1390-1403,house_specifications,DYCOL55,house_specifications,Foreign_Trip_Year,rename/type conversion,"standard name(s): No_Event_Year, Other_Event_mMnth, Surgery_Month, Foreign_Trip_Year"
+1390-1403,house_specifications,DYCOL56,house_specifications,Other_Event_Year,rename/type conversion,"standard name(s): Other_Event_Year, Other_Event_mMnth, Surgery_Month"
+1390-1403,house_specifications,DYCOL56,house_specifications,Other_Event_mMnth,rename/type conversion,"standard name(s): Other_Event_Year, Other_Event_mMnth, Surgery_Month"
+1390-1403,house_specifications,DYCOL56,house_specifications,Surgery_Month,rename/type conversion,"standard name(s): Other_Event_Year, Other_Event_mMnth, Surgery_Month"
+1390-1403,house_specifications,DYCOL57,house_specifications,No_Event_Year,rename/type conversion,"standard name(s): No_Event_Year, Other_Event_Year, Surgery_Year"
+1390-1403,house_specifications,DYCOL57,house_specifications,Other_Event_Year,rename/type conversion,"standard name(s): No_Event_Year, Other_Event_Year, Surgery_Year"
+1390-1403,house_specifications,DYCOL57,house_specifications,Surgery_Year,rename/type conversion,"standard name(s): No_Event_Year, Other_Event_Year, Surgery_Year"
+1390-1403,house_specifications,DYCOL58,house_specifications,No_Event_Year,rename/type conversion,"standard name(s): No_Event_Year, Other_Event_mMnth"
+1390-1403,house_specifications,DYCOL58,house_specifications,Other_Event_mMnth,rename/type conversion,"standard name(s): No_Event_Year, Other_Event_mMnth"
+1390-1403,house_specifications,DYCOL59,house_specifications,Other_Event_Name,rename/type conversion,"standard name(s): Other_Event_Name, Other_Event_Year"
+1390-1403,house_specifications,DYCOL59,house_specifications,Other_Event_Year,rename/type conversion,"standard name(s): Other_Event_Name, Other_Event_Year"
+1390-1403,house_specifications,DYCOL60,house_specifications,Other_Event_Name,rename/type conversion,standard name(s): Other_Event_Name
+1390-1403,house_specifications,DYCOL61,house_specifications,No_Event_Year,rename/type conversion,standard name(s): No_Event_Year
+1390-1403,household_information,MAHMORAJEH,household_information,Month,calculated_or_special_documented_rule,HBSIR changes the survey-month numbering before derived season assignment; the normalized Month is HBSIR-adjusted.
+1390-1403,household_information,FASL or Month,household_information,Season_Number / Season,calculated_or_special_documented_rule,Season is normalized from the source season/month and labeled Spring/Summer/Autumn/Winter.
+1390-1395 (external); 1396-1403 (survey field),household_information,WEIGHT or external weight table,household_information,Weight,calculated_or_special_documented_rule,HBSIR documents external weight files before 1396 and the household weight field from 1396 onward.
+1390-1403,household_information,administrative codes,household_information,Urban_Rural / Province / County,calculated_or_special_documented_rule,Geographic labels come from HBSIR administrative classification metadata.
+1390-1403,members_properties,member records by ID,members_properties,Household_Size,calculated_or_special_documented_rule,Count derived from the long members table; no members are dropped by this step.
+1390-1403,food,DYCOL04 Kilos + DYCOL03 Grams,food,Amount,calculated_or_special_documented_rule,"Amount=Kilos.fillna(0)+Grams.fillna(0)/1000; if both missing and Price>0, HBSIR backfills Expenditure/Price. The source flags are in food.parquet."
+1390-1403,food,DYCOL05 unit price,food,Price,calculated_or_special_documented_rule,For 1390–1403 Price is a survey price field in the cleaned HBSIR input; normalized HBSIR changes zero to missing. Price_Raw retains the cleaned-input value.
+1390-1403,food,none,food,Duration,calculated_or_special_documented_rule,HBSIR sets Duration to 30 days for this period.
+1390-1403,food,DYCOL01 Commodity_Code,food,Commodity_Name / category levels,calculated_or_special_documented_rule,HBSIR attaches year-aware labels; this project does not merge codes or make final food groups.
+1390-1403,food,DYCOL02,food,Provision_Method,calculated_or_special_documented_rule,"HBSIR method recoding is year-specific; purchase rates count only Purchase, Purchase_Free_Price, and Purchase_Subsidised_Price."
+1390-1403,food,DYCOL07,food,DYCOL07,calculated_or_special_documented_rule,HBSIR declares this source column dropped. It is absent from original 1402 P3S01 Access schema; counts for the other years are unavailable from the cleaned mirrors.
+1392-1403,subsidy,DYCOL01,subsidy,Member_Number,calculated_or_special_documented_rule,HBSIR recodes numeric code 323 to member number 1 from 1392. Direct 1402 Access check found 0 code-323 rows; counts for other years are unavailable from cleaned mirrors.
+1403,subsidy,DycolVam,subsidy,DycolVam,calculated_or_special_documented_rule,HBSIR drops this field in 1403; source value counts are unavailable in the cleaned mirror.
+1390-1403,members_properties,DYCOL08,members_properties,Education_Level,calculated_or_special_documented_rule,"HBSIR coding categories change from 1393 and again from 1397; category labels are retained, raw source codes are not independently decoded."
+1390-1403,self_employed_income,DYCOL05,self_employed_income,Employment_Type,calculated_or_special_documented_rule,The raw-file guide lists 1/2/3 while the questionnaire lists 4/5/6; HBSIR labels and observed 1402 standardized values use 4/5/6. No recoding was applied by this project.
+1390-1403,all,member count and age,all,Equivalence_Scale,calculated_or_special_documented_rule,HBSIR provides separate calculated scales; they are not added to the project tables.
+1390-1403,all,external SCI series,all,CPI,calculated_or_special_documented_rule,CPI was not included in the requested tables and no CPI deflation was performed.
+1390-1403,income tables,separate income components,income tables,Total household income,calculated_or_special_documented_rule,"No total-income variable is defined or calculated; wage, self-employed, other income, and subsidy remain separate."
+1390-1403,food,separate P3S02 table,food,Tobacco,calculated_or_special_documented_rule,The standardized food table is the HBSIR food table; tobacco is a separate expenditure table and is not included.
+1390-1403,household_information,same-named raw guide fields,household_information,BlkAbdJaygozin / RadifJaygozin,calculated_or_special_documented_rule,"Official 1402 raw-file guide lists replacement-household block/village and row identifiers. The project retains both fields, plus the raw replacement-description fields, directly from 1402 Access; no HBSIR remapping was applied."
+1402,R1402Data/U1402Data,TakmilDescA,household_information (project-preserved source field),Raw_TakmilDescA,direct source-field retention; no recoding,"Preserved in household.parquet as Raw_TakmilDescA; 1,697 nonmissing of 37,883 source households."
+1402,R1402Data/U1402Data,TakmilDescB,household_information (project-preserved source field),Raw_TakmilDescB,direct source-field retention; no recoding,"Preserved in household.parquet as Raw_TakmilDescB; 0 nonmissing of 37,883 source households."
+1402,R1402Data/U1402Data,TakmilDescC,household_information (project-preserved source field),Raw_TakmilDescC,direct source-field retention; no recoding,"Preserved in household.parquet as Raw_TakmilDescC; 8,245 nonmissing of 37,883 source households."
+1402,R1402Data/U1402Data,JaygozinDescA,household_information (project-preserved source field),Raw_JaygozinDescA,direct source-field retention; no recoding,"Preserved in household.parquet as Raw_JaygozinDescA; 0 nonmissing of 37,883 source households."
+1402,R1402Data/U1402Data,JaygozinDescB,household_information (project-preserved source field),Raw_JaygozinDescB,direct source-field retention; no recoding,"Preserved in household.parquet as Raw_JaygozinDescB; 4 nonmissing of 37,883 source households."
+1402,R1402Data/U1402Data,BlkAbdJaygozin,household_information (project-preserved source field),Raw_BlkAbdJaygozin,direct source-field retention; no recoding,"Preserved in household.parquet as Raw_BlkAbdJaygozin; 37,883 nonmissing of 37,883 source households."
+1402,R1402Data/U1402Data,RadifJaygozin,household_information (project-preserved source field),Raw_RadifJaygozin,direct source-field retention; no recoding,"Preserved in household.parquet as Raw_RadifJaygozin; 37,883 nonmissing of 37,883 source households."
+1402,Original Access -> HBSIR raw setup,all shared standardized fields,household_information,Year;ID;Season_Number;Season;Weight;Household_Type;Main_Household;Alternative_Household,direct HBSIR raw-to-normalized full-row multiset comparison,"37,883 raw-rebuilt rows compared with 37,883 project rows across 8 shared columns; unmatched raw/project rows=0/0."
+1402,Original Access -> HBSIR raw setup,all shared standardized fields,members_properties,Year;ID;Member_Number;Relationship;Sex;Age;Is_Literate;Is_Student;Education_Level;Marital_Status;Activity_Status,direct HBSIR raw-to-normalized full-row multiset comparison,"123,857 raw-rebuilt rows compared with 123,857 project rows across 11 shared columns; unmatched raw/project rows=0/0."
+1402,Original Access -> HBSIR raw setup,all shared standardized fields,food,Year;ID;Table_Name;Commodity_Code;Provision_Method;Amount;Duration;Price;Expenditure,direct HBSIR raw-to-normalized full-row multiset comparison,"1,085,545 raw-rebuilt rows compared with 1,085,545 project rows across 9 shared columns; unmatched raw/project rows=0/0."
+1402,Original Access -> HBSIR raw setup,all shared standardized fields,employment_income,ID;Member_Number;Employment_Status;Occupation_Code;Industry_Code;Sector;Working_Hours_per_Day;Working_Day_per_Week;Monthly_Gross_Income;Annual_Gross_Income;Monthly_Continuous_Income;Annual_Continuous_Income;Monthly_Temporary_Income;Annual_Temporary_Income;Monthly_Net_Income;Annual_Net_Income;Year;Table_Name,direct HBSIR raw-to-normalized full-row multiset comparison,"22,094 raw-rebuilt rows compared with 22,094 project rows across 18 shared columns; unmatched raw/project rows=0/0."
+1402,Original Access -> HBSIR raw setup,all shared standardized fields,self_employed_income,ID;Member_Number;Employment_Status;Occupation_Code;Industry_Code;Employment_Type;Is_Agricultural;Working_Hours_per_Day;Working_Day_per_Week;Wage_Cost;Cost_of_Sales;Other_Operating_Costs;Other_Costs;Business_Tax;Sales;Profit;Year;Table_Name,direct HBSIR raw-to-normalized full-row multiset comparison,"17,568 raw-rebuilt rows compared with 17,568 project rows across 18 shared columns; unmatched raw/project rows=0/0."
+1402,Original Access -> HBSIR raw setup,all shared standardized fields,other_income,ID;Member_Number;Retirement;Rent;Interest;Aid;Home_Production;Transfer;Year;Table_Name,direct HBSIR raw-to-normalized full-row multiset comparison,"47,606 raw-rebuilt rows compared with 47,606 project rows across 10 shared columns; unmatched raw/project rows=0/0."
+1402,Original Access -> HBSIR raw setup,all shared standardized fields,subsidy,ID;Member_Number;Number_of_Individuals;Number_of_Payments;Subsidy;Year;Table_Name,direct HBSIR raw-to-normalized full-row multiset comparison,"36,623 raw-rebuilt rows compared with 36,623 project rows across 7 shared columns; unmatched raw/project rows=0/0."
+1402,Original Access -> HBSIR raw setup,all shared standardized fields,house_specifications,ID;Dwelling_Type;Other_Dwelling_Types;Tenure;Number_of_Rooms;House_Area;Structure_Type;Structure_Main_Materials;Car;Motorcycle;Bicycle;Radio;Cassette;Black_and_White_TV;Color_TV;VCR;PC;Cellphone;Freezer;Refrigerator;Freezer_Refrigerator;Oven;Vacuum_Cleaner;Washing_Machine;Sewing_Machine;Fan;Portable_Evaporative_AC;Portable_Split_AC;Dishwasher;Microwave_Oven;No_Appliances;Pipe_Water;Electricity;Natural_Gas;Phone;Internet;Bathroom;Kitchen;Evaporative_AC;Central_AC;Central_Heating;Water_Heater;Split_AC;Sewerage;Elevator;Cooking_Fuel;Heating_Fuel;Hotwater_Fuel;Year,direct HBSIR raw-to-normalized full-row multiset comparison,"37,883 raw-rebuilt rows compared with 37,883 project rows across 49 shared columns; unmatched raw/project rows=0/0."
+1390,food,Kilos/Grams/Price/Expenditure,food,Amount_Source / Price_Raw,observed_row_level_provenance_counts,Row counts from normalized food.parquet. Direct 1402 raw Access reconstruction matched the normalized project rows and source field values; other years use HBSIR cleaned-table mirrors.
+1391,food,Kilos/Grams/Price/Expenditure,food,Amount_Source / Price_Raw,observed_row_level_provenance_counts,Row counts from normalized food.parquet. Direct 1402 raw Access reconstruction matched the normalized project rows and source field values; other years use HBSIR cleaned-table mirrors.
+1392,food,Kilos/Grams/Price/Expenditure,food,Amount_Source / Price_Raw,observed_row_level_provenance_counts,Row counts from normalized food.parquet. Direct 1402 raw Access reconstruction matched the normalized project rows and source field values; other years use HBSIR cleaned-table mirrors.
+1393,food,Kilos/Grams/Price/Expenditure,food,Amount_Source / Price_Raw,observed_row_level_provenance_counts,Row counts from normalized food.parquet. Direct 1402 raw Access reconstruction matched the normalized project rows and source field values; other years use HBSIR cleaned-table mirrors.
+1394,food,Kilos/Grams/Price/Expenditure,food,Amount_Source / Price_Raw,observed_row_level_provenance_counts,Row counts from normalized food.parquet. Direct 1402 raw Access reconstruction matched the normalized project rows and source field values; other years use HBSIR cleaned-table mirrors.
+1395,food,Kilos/Grams/Price/Expenditure,food,Amount_Source / Price_Raw,observed_row_level_provenance_counts,Row counts from normalized food.parquet. Direct 1402 raw Access reconstruction matched the normalized project rows and source field values; other years use HBSIR cleaned-table mirrors.
+1396,food,Kilos/Grams/Price/Expenditure,food,Amount_Source / Price_Raw,observed_row_level_provenance_counts,Row counts from normalized food.parquet. Direct 1402 raw Access reconstruction matched the normalized project rows and source field values; other years use HBSIR cleaned-table mirrors.
+1397,food,Kilos/Grams/Price/Expenditure,food,Amount_Source / Price_Raw,observed_row_level_provenance_counts,Row counts from normalized food.parquet. Direct 1402 raw Access reconstruction matched the normalized project rows and source field values; other years use HBSIR cleaned-table mirrors.
+1398,food,Kilos/Grams/Price/Expenditure,food,Amount_Source / Price_Raw,observed_row_level_provenance_counts,Row counts from normalized food.parquet. Direct 1402 raw Access reconstruction matched the normalized project rows and source field values; other years use HBSIR cleaned-table mirrors.
+1399,food,Kilos/Grams/Price/Expenditure,food,Amount_Source / Price_Raw,observed_row_level_provenance_counts,Row counts from normalized food.parquet. Direct 1402 raw Access reconstruction matched the normalized project rows and source field values; other years use HBSIR cleaned-table mirrors.
+1400,food,Kilos/Grams/Price/Expenditure,food,Amount_Source / Price_Raw,observed_row_level_provenance_counts,Row counts from normalized food.parquet. Direct 1402 raw Access reconstruction matched the normalized project rows and source field values; other years use HBSIR cleaned-table mirrors.
+1401,food,Kilos/Grams/Price/Expenditure,food,Amount_Source / Price_Raw,observed_row_level_provenance_counts,Row counts from normalized food.parquet. Direct 1402 raw Access reconstruction matched the normalized project rows and source field values; other years use HBSIR cleaned-table mirrors.
+1402,food,Kilos/Grams/Price/Expenditure,food,Amount_Source / Price_Raw,observed_row_level_provenance_counts,Row counts from normalized food.parquet. Direct 1402 raw Access reconstruction matched the normalized project rows and source field values; other years use HBSIR cleaned-table mirrors.
+1403,food,Kilos/Grams/Price/Expenditure,food,Amount_Source / Price_Raw,observed_row_level_provenance_counts,Row counts from normalized food.parquet. Direct 1402 raw Access reconstruction matched the normalized project rows and source field values; other years use HBSIR cleaned-table mirrors.

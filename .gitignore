@@ -1,0 +1,19 @@
+# Household microdata and working artifacts stay outside GitHub.
+raw/
+yearly/
+combined/
+intermediate/
+documentation/
+audit/panel_household_history.parquet
+audit/three_wave_panels.parquet
+audit/commodity_year_audit.parquet
+*.part
+.venv/
+__pycache__/
+.local/
+*.parquet
+*.rar
+*.zip
+*.mdb
+*.accdb
+*.db

@@ -1,0 +1,11 @@
+{
+  "unique_ids_all_years": 316513,
+  "length_bins": {
+    "one_year": 150951,
+    "two_years": 104549,
+    "three_years": 60660,
+    "more_than_three_years": 353
+  },
+  "three_wave_rows": 60716,
+  "ids_over_three_years": 353
+}
