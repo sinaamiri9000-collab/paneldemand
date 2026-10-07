@@ -232,6 +232,9 @@ def main():
     parser.add_argument('--models',nargs='+',choices=['Pooled','CRE'],default=['Pooled','CRE'])
     parser.add_argument('--algorithm',choices=['gn','lm'],default='gn')
     parser.add_argument('--gn-tol',type=float,default=1e-8)
+    parser.add_argument('--no-year-season',action='store_true')
+    parser.add_argument('--cache-prefix',default='')
+    parser.add_argument('--warm-start',type=Path)
     args=parser.parse_args();p=args.inputs;t0=time.time()
     hashes={name:digest(p/name) for name in ['all_clean_1392_1403.csv.gz','panelB_clean_1392_1403.csv.zip','final_commodity_mapping_107.xlsx']}
     assert hashes['all_clean_1392_1403.csv.gz']=='d077806039d2f891f2a26de2cfca8544acf1c322c593984f46b795152b2ccf69'
@@ -286,6 +289,8 @@ def main():
       'sample_hash':__import__('hashlib').sha256(('\n'.join(b.panel_id.astype(str)+':'+b.year.astype(str))).encode()).hexdigest()}
     print('Sample',sample,flush=True)
     z=dummies(b)
+    if args.no_year_season:
+        z=z.drop(columns=[n for n in z if n.startswith(('year_','season_'))])
     xx=pd.concat([b[PN],z[['household_size','head_age','female','marital_Widowed','marital_Divorced','marital_Bachelor']]],axis=1)
     means=xx.groupby(b.panel_id).transform('mean').add_prefix('mean_')
     income=np.log(b.total_income_real);income-=np.average(income,weights=b.weight)
@@ -307,6 +312,8 @@ def main():
     out['source_manifest']={'project_base_commit':'8d04114',
       'prior_bundle_SHA256':'220686116e3f5a23984e2af18f64151faf9f1950540010d46c5db7b3639364e7',
       'panel_csv_uncompressed_SHA256':'2f4c3683643304e6751d3d4eeecf78daebc23e8799574f46b4a52aedc1236e20'}
+    out['specification']={'year_FE':not args.no_year_season,'season_FE':not args.no_year_season,'wave_FE':True}
+    out['initialization']={'warm_start_result':str(args.warm_start) if args.warm_start else None}
     lp=b[PN].to_numpy();lnx=b.ln_exp.to_numpy();w=b[[f'w_{g}' for g in range(1,13)]].to_numpy()
     weights=b.weight.to_numpy();a0=float(np.average(lnx,weights=weights))-2.0
     previous=None;norms=None
@@ -321,13 +328,28 @@ def main():
         if not cre:norms=(center,scale)
         core=PanelCore(lp,lnx,w,norm.cdf(k),norm.pdf(k),cf,Z,a0)
         init=None;sigma0=None
+        if args.warm_start:
+            old=json.loads(args.warm_start.read_text())[tag]
+            co=old['coefficients'];oldnames=co['translation_names']
+            keep=[oldnames.index(n) for n in zz.columns]
+            et=np.array(co['translations_original_units'])[keep]
+            alpha=np.array(co['alpha_at_center'])+(center-np.array(co['translation_centers'])[keep])@et
+            init=np.zeros(core.spec.n_free)
+            for name,key in [('alpha','alpha_at_center'),('beta','beta'),('lambda','lambda'),('delta','delta'),('cfcoef','cf_current')]:
+                val=alpha if name=='alpha' else np.array(co[key])
+                sl=core.base_slices[name];init[sl]=val[:sl.stop-sl.start]
+            # Native gamma packs the upper triangle (including diagonal) of
+            # the first n-1 goods; final row/column follows homogeneity.
+            init[core.base_slices['gamma']]=np.array(co['gamma'])[:11,:11][np.triu_indices(11)]
+            init[core.spec.nbase:]=(et[:,:-1]*scale[:,None]).ravel()
+            sigma0=np.array(old['error_covariance'])
         if previous is not None and len(previous.theta)<=core.spec.n_free:
             init=np.zeros(core.spec.n_free);init[:len(previous.theta)]=previous.theta;sigma0=previous.sigma
-        logfile=p/f'{tag.lower()}_solver.log'
+        logfile=p/f'{args.cache_prefix}{tag.lower()}_solver.log'
         def logger(msg):
             with open(logfile,'a') as f:f.write(msg+'\n')
             print(tag,msg,flush=True)
-        cache=p/f'{tag.lower()}_point.pkl'
+        cache=p/f'{args.cache_prefix}{tag.lower()}_point.pkl'
         cache_key={'input_hashes':hashes,'sample_hash':sample['sample_hash'],
           'version':'106-translated-SY-v1','translation_names':list(zz.columns),'a0':a0}
         if cache.exists():
@@ -347,7 +369,7 @@ def main():
         previous=fit
     out['a0']=a0;out['elapsed_seconds']=time.time()-t0
     out['runtime']={'CRE_total_stage_wall_seconds':out.get('CRE',{}).get('stage_wall_seconds'),
-                   'BLAS_threads_per_process':1,'machine_CPU_cores':os.cpu_count()}
+                   'BLAS_threads_per_process':int(os.environ.get('PILOT_BLAS_THREADS','1')),'machine_CPU_cores':os.cpu_count()}
     if all(t in out for t in ['Pooled','CRE']):
         out['common_convergence_audit']={'gradient_threshold':1e-8,'stricter_post_fit_threshold':1e-12,
           'both_pass':all(out[t]['inference_diagnostics']['gradient_scaled_gn_ratio']<1e-12 for t in ['Pooled','CRE'])}

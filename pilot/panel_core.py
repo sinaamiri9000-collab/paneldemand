@@ -8,6 +8,7 @@ Scoped solver adapters are restored on exit; ordinary package calls are intact.
 from contextlib import contextmanager
 from dataclasses import dataclass
 import importlib
+import os
 import numpy as np
 from pyquaidsce.params import Spec,free_slices,unpack
 from pyquaidsce.model import DemandData,fitted_shares,_inner
@@ -139,7 +140,7 @@ class PanelCore:
             result=solver.nlsur(self.data,self.spec,theta0=theta0,sigma0=sigma0,
               method='ifgnls',algorithm=algorithm,max_outer=max_outer,max_iter=max_iter,
               param_tol=1e-7,objective_tol=1e-9,gn_tol=gn_tol,outer_param_tol=1e-5,
-              chunk=3000,log=log,gn_log=log,blas_threads=1)
+              chunk=3000,log=log,gn_log=log,blas_threads=int(os.environ.get('PILOT_BLAS_THREADS','1')))
         result.pilot_numerical_settings={'algorithm':algorithm,'gn_tol':gn_tol,
-           'param_tol':1e-7,'objective_tol':1e-9,'outer_param_tol':1e-5,'blas_threads':1}
+           'param_tol':1e-7,'objective_tol':1e-9,'outer_param_tol':1e-5,'blas_threads':int(os.environ.get('PILOT_BLAS_THREADS','1'))}
         return result
