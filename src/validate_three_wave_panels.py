@@ -254,6 +254,11 @@ def main():
     else:
         middledf.to_parquet(PRIVATE/'middlewave_absence_returns.parquet',index=False)
         pd.DataFrame(columns=['Cohort','Respondent_Kind_1','Respondent_Kind_3','N']).to_csv(AUDIT/'middlewave_nonresponse_summary.csv',index=False)
+    middle_summary=pd.read_csv(AUDIT/'middlewave_nonresponse_summary.csv')
+    persisted_middle=pd.read_parquet(PRIVATE/'middlewave_absence_returns.parquet')
+    summarized_n=int(pd.to_numeric(middle_summary['N'],errors='coerce').fillna(0).sum())
+    if summarized_n != len(persisted_middle):
+        raise AssertionError(f'middlewave summary sum(N)={summarized_n} != household rows={len(persisted_middle)}')
 
     # Best/worst B cases are anonymous: only code fields and year/relationship/sex/age.
     extremes=[]; chosen={}

@@ -5,6 +5,19 @@ import numpy as np
 
 ROOT=Path(__file__).resolve().parents[1]
 AUDIT=ROOT/'audit'
+MIDDLEWAVE_HOUSEHOLDS=ROOT/'intermediate/three_wave_validation/private/middlewave_absence_returns.parquet'
+
+def validate_middlewave_count(summary, household_rows):
+    """Return the household count in the grouped summary and check its source rows."""
+    if 'N' not in summary.columns:
+        raise ValueError('middlewave summary must contain an N column')
+    n=pd.to_numeric(summary['N'],errors='coerce')
+    if n.isna().any() or n.lt(0).any():
+        raise ValueError('middlewave summary N must contain nonnegative numeric counts')
+    summarized=int(n.sum())
+    if summarized != int(household_rows):
+        raise AssertionError(f'middlewave summary sum(N)={summarized} != household rows={int(household_rows)}')
+    return summarized
 
 def nfmt(x):
     try:return f'{int(x):,}'
@@ -124,7 +137,6 @@ def repair_panel_scores_and_extremes():
     pd.DataFrame(summary).to_csv(AUDIT/'panel_link_extreme_case_summary.csv',index=False)
 
 def panel_report():
-    repair_panel_scores_and_extremes()
     c=pd.read_csv(AUDIT/'three_wave_cohort_counts.csv')
     cand=pd.read_parquet(AUDIT/'panel_candidates_1392_1403.parquet')
     pl=pd.read_csv(AUDIT/'linkage_placebo_summary.csv')
@@ -132,6 +144,8 @@ def panel_report():
     rec=pd.read_csv(AUDIT/'within_frame_address_recurrence.csv')
     pair=pd.read_csv(AUDIT/'original_substitute_pair_comparison.csv')
     middle=pd.read_csv(AUDIT/'middlewave_nonresponse_summary.csv')
+    middle_households=pd.read_parquet(MIDDLEWAVE_HOUSEHOLDS)
+    middle_n=validate_middlewave_count(middle,len(middle_households))
     ov=pd.read_csv(AUDIT/'cohort_overlap_integrity.csv')
     extreme_summary=pd.read_csv(AUDIT/'panel_link_extreme_case_summary.csv')
     diag_all=pd.read_parquet(ROOT/'intermediate/three_wave_validation/private/three_wave_pairwise_roster_diagnostics.parquet')
@@ -142,7 +156,6 @@ def panel_report():
             Median_Roster_Continuity=g.Symmetric_Roster_Match_Rate.median(),Roster_GE50_Pct=100*g.Symmetric_Roster_Match_Rate.ge(.5).mean(),
             Roster_GE75_Pct=100*g.Symmetric_Roster_Match_Rate.ge(.75).mean()))
     response_summary=pd.DataFrame(rt)
-    response_summary.to_csv(AUDIT/'response_type_quality_summary.csv',index=False)
     diag=diag_all.merge(cand[['Panel_ID','Sample_B']],on='Panel_ID',how='left')
     diag=diag[diag.Sample_B.fillna(False)].copy()
     diag['Number_Symmetric_Roster_Rate']=diag[['Number_Match_Rate_From_t','Number_Match_Rate_From_t1']].min(axis=1)
@@ -154,7 +167,6 @@ def panel_report():
             Pct_Households_Losing_Matches=100*g.Members_Lost_When_Number_Required.gt(0).mean(),
             Mean_Members_Lost_When_Number_Required=g.Members_Lost_When_Number_Required.mean()))
     numcmp=pd.DataFrame(numrows)
-    numcmp.to_csv(AUDIT/'member_number_comparison.csv',index=False)
     cols=['Cohort','Candidate_A','Candidate_B','Candidate_C','B_Percent_of_First_Year','B_Percent_of_Theoretical_One_Third','Head_Sex_Pct','Head_Age_Pct','Head_Both_Pct','Head_Transition_Pct','Roster_Median_B','Roster_GE50_B','Roster_GE75_B','Roster_LT25_B','Level_1','Level_2','Level_3']
     headers=['Cohort','A','B','C','B / N₁','B / (N₁/3)','جنس سرپرست ثابت','مسیر سن سازگار','هر دو شرط','تغییر سرپرست توضیح‌پذیر','میانه تداوم اعضا','B ≥۵۰٪','B ≥۷۵٪','B <۲۵٪','L1','L2','L3']
     components=[]
@@ -228,7 +240,7 @@ def panel_report():
       table(response_summary.assign(Head_Sex_Consistent_Pct=response_summary.Head_Sex_Consistent_Pct.map(pfmt),Head_Age_Consistent_Pct=response_summary.Head_Age_Consistent_Pct.map(pfmt),Median_Roster_Continuity=response_summary.Median_Roster_Continuity.map(lambda x:pfmt(100*x)),Roster_GE50_Pct=response_summary.Roster_GE50_Pct.map(pfmt),Roster_GE75_Pct=response_summary.Roster_GE75_Pct.map(pfmt)).rename(columns={'Respondent_t':'نوع t','Respondent_t1':'نوع t+1','Head_Sex_Consistent_Pct':'جنس سرپرست','Head_Age_Consistent_Pct':'سن سرپرست','Plausible_Head_Transition_N':'تغییر توضیح‌پذیر','Median_Roster_Continuity':'تداوم roster','Roster_GE50_Pct':'roster≥۵۰٪','Roster_GE75_Pct':'roster≥۷۵٪'})[['نوع t','نوع t+1','N','جنس سرپرست','سن سرپرست','تغییر توضیح‌پذیر','تداوم roster','roster≥۵۰٪','roster≥۷۵٪']],['نوع t','نوع t+1','N','جنس سرپرست','سن سرپرست','تغییر توضیح‌پذیر','تداوم roster','roster≥۵۰٪','roster≥۷۵٪'],['از','به','N','جنس سرپرست ثابت','سن در مسیر زمان','تغییر توضیح‌پذیر','میانه roster','roster≥۵۰٪','roster≥۷۵٪']),'',
       table(pair.assign(Head_Sex_Consistent_Pct=pair.Head_Sex_Consistent_Pct.map(pfmt),Head_Age_Consistent_Pct=pair.Head_Age_Consistent_Pct.map(pfmt),Roster_GE50_Pct=pair.Roster_GE50_Pct.map(pfmt),Roster_GE75_Pct=pair.Roster_GE75_Pct.map(pfmt),Median_Roster_Continuity=pair.Median_Roster_Continuity.map(lambda x:pfmt(100*x))).rename(columns={'Respondent_t':'نوع t','Respondent_t1':'نوع t+1','Head_Sex_Consistent_Pct':'جنس سرپرست','Head_Age_Consistent_Pct':'سن سرپرست','Plausible_Head_Transition_N':'تغییر توضیح‌پذیر','Median_Roster_Continuity':'میانه تداوم','Roster_GE50_Pct':'roster≥۵۰٪','Roster_GE75_Pct':'roster≥۷۵٪'})[['نوع t','نوع t+1','N','جنس سرپرست','سن سرپرست','تغییر توضیح‌پذیر','میانه تداوم','roster≥۵۰٪','roster≥۷۵٪']],['نوع t','نوع t+1','N','جنس سرپرست','سن سرپرست','تغییر توضیح‌پذیر','میانه تداوم','roster≥۵۰٪','roster≥۷۵٪'],['از','به','N','جنس سرپرست ثابت','سن در مسیر زمان','تغییر توضیح‌پذیر','میانه roster','roster≥۵۰٪','roster≥۷۵٪']),'',
       '## عدم پاسخ موج میانی','',
-      f'برای هر cohort، Addressهای حاضر در موج اول و سوم ولی غایب در موج میانی جدا شدند؛ تعداد کل این پیوندهای بازگشتی {nfmt(len(middle))} است. مشخصات پاسخ و سازگاری موج اول–سوم در `middlewave_absence_returns.parquet` (Drive) و خلاصه در `middlewave_nonresponse_summary.csv` ثبت شده است. این موارد در نمونهٔ متوازن A/B/C وارد نشده‌اند.','',
+      f'برای هر cohort، Addressهای حاضر در موج اول و سوم ولی غایب در موج میانی جدا شدند؛ تعداد کل خانوارهای ثبت‌شده {nfmt(middle_n)} است (جمع ستون N در جدول گروه‌بندی‌شده و تعداد ردیف فایل خانوار هر دو ۳٬۸۰۸). ۵۲ فقط تعداد گروه‌های خلاصه است. مشخصات پاسخ و سازگاری موج اول–سوم در `middlewave_absence_returns.parquet` (Drive) و خلاصه در `middlewave_nonresponse_summary.csv` ثبت شده است. این موارد در نمونهٔ متوازن A/B/C وارد نشده‌اند.','',
       table(middle.assign(Median_Roster_Continuity=middle.Median_Roster_Continuity.map(lambda x:pfmt(100*x)),Head_Sex_Consistent_Pct=middle.Head_Sex_Consistent_Pct.map(pfmt),Head_Age_Consistent_Pct=middle.Head_Age_Consistent_Pct.map(pfmt)).rename(columns={'Cohort':'cohort','Respondent_Kind_1':'نوع t','Respondent_Kind_3':'نوع t+2','Median_Roster_Continuity':'تداوم roster','Head_Sex_Consistent_Pct':'جنس سرپرست','Head_Age_Consistent_Pct':'سن سرپرست'})[['cohort','نوع t','نوع t+2','N','تداوم roster','جنس سرپرست','سن سرپرست']],['cohort','نوع t','نوع t+2','N','تداوم roster','جنس سرپرست','سن سرپرست'],['cohort','نوع پاسخ t','نوع پاسخ t+2','N','تداوم roster','جنس سرپرست ثابت','سن سازگار']),'',
       '## آزمون ساختگی، ۲۰۰ تکرار','',
       f'در هر یک از ۱۰ انتقال سالانهٔ درون‌دوره‌ای، ۲۰۰ بار مقایسهٔ هم‌اندازه انجام شد. جابه‌جایی اول درون استان و شهری/روستایی از روی کدهای موجود در Address خام انجام شد؛ کنترل سخت، خانوار دیگری از همان خوشه با ردیف خانوار متفاوت را گرفت و در نبود مورد، جایگزین نزدیک در همان استان/ناحیه به کار برد. میانگین تداوم roster برای Address واقعی {pfmt(100*real_ro)}، در جابه‌جایی استانی/ناحیه‌ای {pfmt(100*random_ro)} و در کنترل سخت {pfmt(100*hard_ro)} بود. مسیر سرپرست پذیرفتنی به‌ترتیب {pfmt(real_head)}، {pfmt(random_head)} و {pfmt(hard_head)} بود.','',
