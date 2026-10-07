@@ -1,0 +1,7 @@
+# Python 3.12.14. Reuse the audited computational core at an exact commit.
+pyquaidsce @ git+https://github.com/sinaamiri9000-collab/pyquaidsce.git@636609f17e732a57b140cbbad5d2bf4042bc396a
+numpy==2.3.5
+scipy==1.17.0
+pandas==2.2.3
+pyarrow==25.0.1
+openpyxl==3.1.5
