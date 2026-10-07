@@ -1,0 +1,13 @@
+﻿year,n_access_weight_nonmissing,n_hbsir_weight_nonmissing,n_rows_compared,n_exact_weight_matches,n_weight_mismatches,match_rate,weight_source,notes
+1392,0,38316,0,0,0,,HBSIR_external_weight_table_pre_1396,1392–1395 use external HBSIR weights; raw Access comparison is available from 1396 onward.
+1393,0,38275,0,0,0,,HBSIR_external_weight_table_pre_1396,1392–1395 use external HBSIR weights; raw Access comparison is available from 1396 onward.
+1394,0,38252,0,0,0,,HBSIR_external_weight_table_pre_1396,1392–1395 use external HBSIR weights; raw Access comparison is available from 1396 onward.
+1395,0,38146,0,0,0,,HBSIR_external_weight_table_pre_1396,1392–1395 use external HBSIR weights; raw Access comparison is available from 1396 onward.
+1396,37962,37962,37962,37962,0,1.0,survey_weight_field_in_HBSIR_cleaned_household_table,1392–1395 use external HBSIR weights; raw Access comparison is available from 1396 onward.
+1397,38960,38960,38960,38960,0,1.0,survey_weight_field_in_HBSIR_cleaned_household_table,1392–1395 use external HBSIR weights; raw Access comparison is available from 1396 onward.
+1398,38328,38328,38328,38328,0,1.0,survey_weight_field_in_HBSIR_cleaned_household_table,1392–1395 use external HBSIR weights; raw Access comparison is available from 1396 onward.
+1399,37557,37557,37557,37557,0,1.0,survey_weight_field_in_HBSIR_cleaned_household_table,1392–1395 use external HBSIR weights; raw Access comparison is available from 1396 onward.
+1400,37988,37988,37988,37988,0,1.0,survey_weight_field_in_HBSIR_cleaned_household_table,1392–1395 use external HBSIR weights; raw Access comparison is available from 1396 onward.
+1401,37951,37951,37951,37951,0,1.0,survey_weight_field_in_HBSIR_cleaned_household_table,1392–1395 use external HBSIR weights; raw Access comparison is available from 1396 onward.
+1402,37883,37883,37883,37883,0,1.0,survey_weight_field_in_HBSIR_cleaned_household_table,1392–1395 use external HBSIR weights; raw Access comparison is available from 1396 onward.
+1403,37505,37505,37505,37505,0,1.0,survey_weight_field_in_HBSIR_cleaned_household_table,1392–1395 use external HBSIR weights; raw Access comparison is available from 1396 onward.

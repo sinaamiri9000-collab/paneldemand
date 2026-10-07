@@ -1,0 +1,8 @@
+﻿file,rows,bytes
+combined/household_year_all_1392_1403.parquet,438577,9246385
+combined/household_year_panelB_1392_1403.parquet,139041,3285647
+combined/food_item_long_all_1392_1403.parquet,13394042,202361367
+combined/itemwide_all_1392_1403.parquet,438577,103925061
+combined/itemwide_panelB_1392_1403.parquet,139041,35207381
+combined/itemwide_all_1392_1403.csv.gz,438577,184989288
+combined/itemwide_panelB_1392_1403.csv.gz,139041,59014511

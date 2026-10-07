@@ -1,0 +1,224 @@
+﻿commodity_code,commodity_name_1392_1403,observed_in_1392_1403,old_mapping_present,old_group,old_price_variable,old_expenditure_variable,old_commodity_name,crosswalk_status,source_file
+11111,غلات,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11112,غلات,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11113,غلات,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11114,غلات,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11115,غلات,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11116,غلات,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11117,غلات,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11118,غلات,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11121,غلات,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11122,غلات,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11123,غلات,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11124,غلات,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11125,غلات,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11141,انواع نان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11142,انواع نان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11143,انواع نان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11144,انواع نان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11151,انواع نان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11152,انواع نان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11153,انواع نان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11154,انواع نان,1,1,2,p_2_1,exp_2_1,کلوچه و پیراشکی,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11155,انواع نان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11156,انواع نان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11161,آرد رشته و فرآورده\u200cهای آن,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11162,آرد رشته و فرآورده\u200cهای آن,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11163,آرد رشته و فرآورده\u200cهای آن,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11164,آرد رشته و فرآورده\u200cهای آن,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11165,آرد رشته و فرآورده\u200cهای آن,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11166,آرد رشته و فرآورده\u200cهای آن,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11171,بیسکویت و کیک,1,1,2,p_2_2,exp_2_2,انواع بیسکویت و ویفر,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11172,بیسکویت و کیک,1,1,2,p_2_3,exp_2_3,انواع کیک ساده,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11173,بیسکویت و کیک,1,1,2,p_2_4,exp_2_4,انواع شیرینی تر و کیک,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11174,بیسکویت و کیک,1,1,2,p_2_5,exp_2_5,انواع شیرینی خشک,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11175,بیسکویت و کیک,1,1,2,p_2_6,exp_2_6,انواع پودر کیک و شیرینی,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11211,گوشت دام,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11212,گوشت دام,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11213,گوشت دام,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11214,گوشت دام,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11215,گوشت دام,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11216,گوشت دام,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11217,گوشت دام,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11218,گوشت دام,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11221,گوشت دام,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11222,گوشت دام,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11223,گوشت دام,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11224,گوشت دام,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11231,گوشت پرندگان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11232,گوشت پرندگان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11233,گوشت پرندگان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11234,گوشت پرندگان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11235,گوشت پرندگان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11236,گوشت پرندگان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11237,گوشت پرندگان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11238,گوشت پرندگان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11239,گوشت پرندگان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11241,گوشت آماده برای طبخ,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11244,گوشت آماده برای طبخ,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11247,گوشت آماده برای طبخ,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11311,ماهی، میگو و فرآورده\u200cهای آن\u200cها,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11312,ماهی، میگو و فرآورده\u200cهای آن\u200cها,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11313,ماهی، میگو و فرآورده\u200cهای آن\u200cها,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11314,ماهی، میگو و فرآورده\u200cهای آن\u200cها,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11315,ماهی، میگو و فرآورده\u200cهای آن\u200cها,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11316,ماهی، میگو و فرآورده\u200cهای آن\u200cها,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11317,ماهی، میگو و فرآورده\u200cهای آن\u200cها,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11318,ماهی، میگو و فرآورده\u200cهای آن\u200cها,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11319,ماهی، میگو و فرآورده\u200cهای آن\u200cها,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11321,ماهی، میگو و فرآورده\u200cهای آن\u200cها,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11411,شیر,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11412,شیر,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11413,شیر,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11414,شیر,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11421,فراورده\u200cهای شیری (به جز کره),1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11422,فراورده\u200cهای شیری (به جز کره),1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11423,فراورده\u200cهای شیری (به جز کره),1,1,2,p_2_7,exp_2_7,انواع بستنی شیری و میوه‌ای,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11424,فراورده\u200cهای شیری (به جز کره),1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11425,فراورده\u200cهای شیری (به جز کره),1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11426,فراورده\u200cهای شیری (به جز کره),1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11427,فراورده\u200cهای شیری (به جز کره),1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11428,فراورده\u200cهای شیری (به جز کره),1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11429,فراورده\u200cهای شیری (به جز کره),1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11431,فراورده\u200cهای شیری (به جز کره),1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11432,فراورده\u200cهای شیری (به جز کره),1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11433,فراورده\u200cهای شیری (به جز کره),1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11434,فراورده\u200cهای شیری (به جز کره),1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11441,تخم پرندگان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11442,تخم پرندگان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11443,تخم پرندگان,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11511,روغن\u200cها و چربی\u200cهای حیوانی (به جز کره),1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11512,روغن\u200cها و چربی\u200cهای حیوانی (به جز کره),1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11521,انواع کره,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11522,انواع کره,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11523,انواع کره,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11531,روغن\u200cهای نباتی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11532,روغن\u200cهای نباتی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11533,روغن\u200cهای نباتی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11611,میوه\u200cهای درختی,1,1,6,p_6_1,exp_6_1,سیب درختی,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11612,میوه\u200cهای درختی,1,1,6,p_6_2,exp_6_2,گلابی,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11613,میوه\u200cهای درختی,1,1,6,p_6_3,exp_6_3,زردآلو، آلو و گوجه سبز,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11614,میوه\u200cهای درختی,1,1,6,p_6_4,exp_6_4,هلو، شلیل و شفتالو,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11615,میوه\u200cهای درختی,1,1,6,p_6_5,exp_6_5,آلبالو و گیلاس,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11616,میوه\u200cهای درختی,1,1,6,p_6_6,exp_6_6,توت، شاه‌توت، توت فرنگی و تمشک,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11617,میوه\u200cهای درختی,1,1,6,p_6_7,exp_6_7,انگور,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11618,میوه\u200cهای درختی,1,1,6,p_6_8,exp_6_8,انجیر تازه، ازگیل، به، خرمالو، زالزالک و زغال اخته,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11619,میوه\u200cهای درختی,1,1,6,p_6_9,exp_6_9,انار,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11621,میوه\u200cهای درختی,1,1,6,p_6_10,exp_6_10,موز و نارگیل,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11622,میوه\u200cهای درختی,1,1,5,p_5_20,exp_5_20,خرمای تازه,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11623,میوه\u200cهای درختی,1,1,5,p_5_21,exp_5_21,پسته تازه,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11624,میوه\u200cهای درختی,1,1,5,p_5_22,exp_5_22,گردو تازه، فندق تازه و بادام تازه,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11625,میوه\u200cهای درختی,1,1,6,p_6_11,exp_6_11,آناناس، چغاله بادام و سایر میوه‌های درختی,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11631,میوه\u200cهای درختی,1,1,6,p_6_12,exp_6_12,پرتقال,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11632,میوه\u200cهای درختی,1,1,6,p_6_13,exp_6_13,نارنگی,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11633,میوه\u200cهای درختی,1,1,6,p_6_14,exp_6_14,لیمو شیرین,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11634,میوه\u200cهای درختی,1,1,6,p_6_15,exp_6_15,کیوی,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11635,میوه\u200cهای درختی,1,1,6,p_6_16,exp_6_16,لیموترش، گریپ‌فروت، بالنگ، نارنج، ترنج و سایر انواع مرکبات,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11641,میوه\u200cهای جالیزی,1,1,6,p_6_17,exp_6_17,خربزه,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11642,میوه\u200cهای جالیزی,1,1,6,p_6_18,exp_6_18,هندوانه,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11643,میوه\u200cهای جالیزی,1,1,6,p_6_19,exp_6_19,طالبی، گرمک، دستنبو و سایر میوه‌های جالیزی,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11651,خشکبار,1,1,5,p_5_5,exp_5_5,برگه (هلو و زردآلو),observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11652,خشکبار,1,1,5,p_5_6,exp_5_6,کشمش و مویز,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11653,خشکبار,1,1,5,p_5_7,exp_5_7,خرمای خشک,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11654,خشکبار,1,1,5,p_5_8,exp_5_8,انواع آلو,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11655,خشکبار,1,1,5,p_5_1,exp_5_1,جوزقند و لواشک,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11656,خشکبار,1,1,5,p_5_9,exp_5_9,گردو و مغز آن,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11657,خشکبار,1,1,5,p_5_10,exp_5_10,فندق و مغز آن,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11658,خشکبار,1,1,5,p_5_11,exp_5_11,پسته و مغز آن,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11659,خشکبار,1,1,5,p_5_12,exp_5_12,بادام و مغز آن,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11661,خشکبار,1,1,5,p_5_13,exp_5_13,انواع تخمه (کدو، هندوانه، آفتابگردان و ژاپنی),observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11662,خشکبار,1,1,5,p_5_14,exp_5_14,انواع آجیل مخلوط,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11663,خشکبار,1,1,5,p_5_15,exp_5_15,نخودچی و نخودچی کشمش,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11664,خشکبار,1,1,5,p_5_16,exp_5_16,گندم، شاهدانه، برنج بوداده، کنجد، ذرت بوداده، سنجد و عناب,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11665,خشکبار,1,1,5,p_5_2,exp_5_2,چیپس و پفک,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11666,خشکبار,1,1,5,p_5_17,exp_5_17,نارگیل (خشک) و قیسی,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11667,خشکبار,1,1,5,p_5_18,exp_5_18,بادام هندی، مغز هسته زردآلو و سایر انواع خشکبار,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11668,خشکبار,1,1,5,p_5_19,exp_5_19,انجیر خشک و توت خشک,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11669,خشکبار,1,1,5,p_5_3,exp_5_3,آلوچه و آلبالو خشک,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11711,سبزی\u200cهای برگی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11712,سبزی\u200cهای برگی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11713,سبزی\u200cهای برگی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11714,سبزی\u200cهای برگی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11715,سبزی\u200cهای برگی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11716,سبزی\u200cهای برگی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11721,سبزی\u200cهای بوته\u200cای,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11722,سبزی\u200cهای بوته\u200cای,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11723,سبزی\u200cهای بوته\u200cای,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11724,سبزی\u200cهای بوته\u200cای,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11725,سبزی\u200cهای بوته\u200cای,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11726,سبزی\u200cهای بوته\u200cای,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11727,سبزی\u200cهای بوته\u200cای,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11731,سبزی\u200cهای ریشه\u200cای,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11732,سبزی\u200cهای ریشه\u200cای,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11733,سبزی\u200cهای ریشه\u200cای,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11734,سبزی\u200cهای ریشه\u200cای,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11735,سبزی\u200cهای ریشه\u200cای,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11741,سایر انواع سبزی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11742,سایر انواع سبزی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11751,سبزی\u200cهای آماده بسته\u200cبندی شده,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11752,سبزی\u200cهای آماده بسته\u200cبندی شده,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11753,سبزی\u200cهای آماده بسته\u200cبندی شده,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11754,سبزی\u200cهای آماده بسته\u200cبندی شده,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11761,حبوب,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11762,حبوب,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11763,حبوب,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11764,حبوب,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11765,حبوب,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11766,حبوب,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11767,حبوب,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11768,حبوب,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11769,حبوب,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11811,قند و شکر,1,1,3,p_3_1,exp_3_1,قند,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11812,قند و شکر,1,1,3,p_3_2,exp_3_2,شکر,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11821,مرباها و شیرینی\u200cها,1,1,3,p_3_3,exp_3_3,انواع عسل (شهد و با موم),observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11822,مرباها و شیرینی\u200cها,1,1,3,p_3_4,exp_3_4,شیره (انگور و خرما و ...),observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11823,مرباها و شیرینی\u200cها,1,1,3,p_3_5,exp_3_5,مربا,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11831,مرباها و شیرینی\u200cها,1,1,3,p_3_6,exp_3_6,حلوا شکری، حلوا ارده و ارده,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11832,مرباها و شیرینی\u200cها,1,1,2,p_2_8,exp_2_8,مسقطی، ژله، باسلق، کرم کارامل، پاستیل، راحت الحلقوم و سمنو,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11833,مرباها و شیرینی\u200cها,1,1,2,p_2_9,exp_2_9,انواع گز,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11834,مرباها و شیرینی\u200cها,1,1,2,p_2_10,exp_2_10,انواع سوهان,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11835,مرباها و شیرینی\u200cها,1,1,2,p_2_11,exp_2_11,باقلوا، زولبیا، بامیه، قطاب، رشته خوشکار و ...,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11838,مرباها و شیرینی\u200cها,1,1,1,p_1_1,exp_1_1,شربت‌های غیرطبی و سرکه شیره,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11839,مرباها و شیرینی\u200cها,1,1,2,p_2_12,exp_2_12,انواع شکلات,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11841,مرباها و شیرینی\u200cها,1,1,2,p_2_13,exp_2_13,آب‌نبات و پولکی، نبات، نقل، پشمک، شکر پنیر و سایر انواع شیرینی,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11842,مرباها و شیرینی\u200cها,1,1,2,p_2_14,exp_2_14,آدامس,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11843,مرباها و شیرینی\u200cها,1,1,2,p_2_15,exp_2_15,انواع کمپوت,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11844,مرباها و شیرینی\u200cها,1,1,2,p_2_16,exp_2_16,آلاسکا و بستنی یخی (غیر شیری)، یخمک,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11845,مرباها و شیرینی\u200cها,1,1,2,p_2_17,exp_2_17,فالوده,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11911,انواع ادویه,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11912,انواع ادویه,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11913,انواع ادویه,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11914,انواع ادویه,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11915,انواع ادویه,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11916,انواع ادویه,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11917,انواع ادویه,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11918,انواع ادویه,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11919,انواع ادویه,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11921,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11922,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11923,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11924,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11925,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11926,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11927,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11928,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11929,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11931,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11933,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11934,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11935,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11936,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11945,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11946,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+11947,چاشنی\u200cها و سایر ترکیب\u200cهای خوراکی,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+12111,چای، قهوه و کاکائو,1,1,4,p_4_1,exp_4_1,چای داخلی,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+12112,چای، قهوه و کاکائو,1,1,4,p_4_2,exp_4_2,چای خارجی,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+12113,چای، قهوه و کاکائو,1,1,4,p_4_3,exp_4_3,چای مخلوط,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+12114,چای، قهوه و کاکائو,1,1,4,p_4_4,exp_4_4,قهوه، نسکافه، کاکائو و ترکیبات مشابه,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+12211,نوشابه\u200cها,1,1,1,p_1_2,exp_1_2,نوشابه,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+12212,نوشابه\u200cها,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+12213,نوشابه\u200cها,1,1,1,p_1_3,exp_1_3,ماء الشعیر و دلستر,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+12214,نوشابه\u200cها,1,1,1,p_1_4,exp_1_4,انواع آبمیوه و ساندیس، افشره یا آب سبزی,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+12215,نوشابه\u200cها,1,1,4,p_4_5,exp_4_5,آب معدنی، آب بطری و آب گالنی,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+12216,نوشابه\u200cها,1,1,1,p_1_5,exp_1_5,انواع شربت و کنسانتره برای تهیه‌ی نوشابه‌ها,observed_and_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
+12218,نوشابه\u200cها,1,0,,,,,observed_not_in_old_mapping,mapexcel.xlsx from Google Drive; reference crosswalk only; no old grouping applied
