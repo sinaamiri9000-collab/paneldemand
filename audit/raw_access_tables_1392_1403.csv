@@ -1,0 +1,525 @@
+Year,Database,Table,Rows,Columns
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92Data,20100,27
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92KarBargh1,11977,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92KarBargh2,9577,95
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P1,72301,10
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P2,19443,62
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P3S01,567696,7
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P3S02,4357,7
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P3S03,38008,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P3S04,73363,5
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P3S05,104811,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P3S06,34331,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P3S07,43860,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P3S08,26516,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P3S09,15666,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P3S10,0,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P3S11,15019,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P3S12,79545,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P3S13,207104,7
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P3S14,5261,5
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P4S01,11353,16
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P4S02,17348,16
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P4S03,9174,8
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,R92P4S04,20869,5
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92Data,19764,27
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92KarBargh1,14587,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92KarBargh2,1277,95
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P1,68058,10
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P2,18888,62
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P3S01,621627,7
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P3S02,3571,7
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P3S03,41169,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P3S04,77985,5
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P3S05,103460,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P3S06,35230,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P3S07,49941,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P3S08,31641,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P3S09,21214,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P3S10,0,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P3S11,18411,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P3S12,87286,4
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P3S13,236438,7
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P3S14,3110,5
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P4S01,12406,16
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P4S02,7145,16
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P4S03,9421,8
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,U92P4S04,19819,5
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93Data,20100,27
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93KarBargh1,13659,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93KarBargh2,9208,95
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P1,71551,10
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P2,20100,62
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P3S01,576207,7
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P3S02,4352,7
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P3S03,35319,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P3S04,72848,5
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P3S05,102676,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P3S06,33932,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P3S07,43670,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P3S08,26918,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P3S09,15615,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P3S10,0,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P3S11,14788,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P3S12,79057,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P3S13,209838,7
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P3S14,5039,5
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P4S01,11429,16
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P4S02,16604,16
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P4S03,9948,8
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,R93P4S04,20948,5
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93Data,19756,27
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93KarBargh1,17603,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93KarBargh2,1230,95
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P1,67482,10
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P2,19756,62
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P3S01,631073,7
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P3S02,3490,7
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P3S03,36750,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P3S04,78809,5
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P3S05,100514,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P3S06,34285,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P3S07,49543,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P3S08,32828,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P3S09,20324,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P3S10,0,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P3S11,18773,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P3S12,85773,4
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P3S13,238315,7
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P3S14,2843,5
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P4S01,12458,16
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P4S02,6894,16
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P4S03,10075,8
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,U93P4S04,19840,5
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94,20099,2
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94Data,20099,27
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94KarBargh1,14384,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94KarBargh2,8774,95
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P1,70439,10
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P2,20099,62
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P3S01,582612,7
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P3S02,4350,7
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P3S03,33792,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P3S04,73646,5
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P3S05,105832,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P3S06,35003,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P3S07,42690,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P3S08,27194,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P3S09,15403,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P3S10,0,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P3S11,13791,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P3S12,80632,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P3S13,208587,7
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P3S14,4302,5
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P4S01,11411,16
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P4S02,15530,16
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P4S03,10583,8
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,R94P4S04,20788,5
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94,19758,2
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94Data,19758,27
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94KarBargh1,17197,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94KarBargh2,1178,95
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P1,67177,10
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P2,19758,62
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P3S01,633099,7
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P3S02,3379,7
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P3S03,35373,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P3S04,80622,5
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P3S05,103610,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P3S06,34158,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P3S07,48122,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P3S08,34051,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P3S09,19110,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P3S10,0,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P3S11,16962,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P3S12,86635,4
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P3S13,237938,7
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P3S14,2398,5
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P4S01,12387,16
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P4S02,6874,16
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P4S03,10683,8
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,U94P4S04,19651,5
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95,20100,2
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95Data,20100,27
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95KarBargh1,12934,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95KarBargh2,8542,95
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P1,69514,10
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P2,20100,62
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P3S01,589371,7
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P3S02,4339,7
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P3S03,33026,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P3S04,73796,5
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P3S05,103143,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P3S06,30934,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P3S07,41876,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P3S08,28133,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P3S09,14893,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P3S10,0,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P3S11,14259,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P3S12,78828,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P3S13,208069,7
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P3S14,4377,5
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P4S01,11291,16
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P4S02,15052,16
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P4S03,10644,8
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,R95P4S04,20658,5
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95,19764,2
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95Data,19764,27
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95KarBargh1,16240,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95KarBargh2,1232,95
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P1,66038,10
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P2,19764,62
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P3S01,642443,7
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P3S02,3295,7
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P3S03,35650,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P3S04,80721,5
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P3S05,100892,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P3S06,31140,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P3S07,47537,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P3S08,35437,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P3S09,18158,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P3S10,0,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P3S11,18568,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P3S12,85116,4
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P3S13,235694,7
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P3S14,2168,5
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P4S01,12273,16
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P4S02,6770,16
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P4S03,11003,8
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,U95P4S04,19108,5
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96Data,19261,15
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P1,68817,10
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P2,19261,45
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P3S01,598874,7
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P3S02,4529,7
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P3S03,34449,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P3S04,73895,5
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P3S05,104766,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P3S06,33260,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P3S07,41254,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P3S08,29056,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P3S09,15205,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P3S10,0,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P3S11,13901,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P3S12,79570,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P3S13,219163,7
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P3S14,4929,5
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P4S01,11352,16
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P4S02,15418,16
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P4S03,12935,8
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,R96P4S04,20872,5
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96Data,18701,15
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P1,65572,10
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P2,18701,45
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P3S01,658807,7
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P3S02,3551,7
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P3S03,37630,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P3S04,81627,5
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P3S05,103712,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P3S06,33623,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P3S07,46365,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P3S08,36643,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P3S09,18804,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P3S10,0,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P3S11,19867,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P3S12,87642,4
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P3S13,245891,7
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P3S14,2737,5
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P4S01,12453,16
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P4S02,6872,16
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P4S03,12381,8
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,U96P4S04,18953,5
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97Data,18610,15
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P1,65348,10
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P2,18610,45
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P3S01,546221,7
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P3S02,4397,7
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P3S03,28407,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P3S04,70779,5
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P3S05,94634,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P3S06,32345,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P3S07,38593,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P3S08,28780,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P3S09,13650,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P3S10,0,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P3S11,13573,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P3S12,74673,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P3S13,211687,7
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P3S14,4909,5
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P4S01,11062,16
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P4S02,14368,16
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P4S03,17449,8
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,R97P4S04,19961,5
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97Data,20350,15
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P1,70482,10
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P2,20350,45
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P3S01,674708,7
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P3S02,3823,7
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P3S03,32455,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P3S04,89553,5
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P3S05,104052,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P3S06,35195,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P3S07,48771,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P3S08,39720,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P3S09,18311,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P3S10,0,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P3S11,22222,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P3S12,89534,4
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P3S13,267131,7
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P3S14,3481,5
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P4S01,13420,16
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P4S02,7620,16
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P4S03,17560,8
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,U97P4S04,20446,5
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98Data,18430,15
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P1,64296,10
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P2,18430,45
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P3S01,516798,7
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P3S02,4175,7
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P3S03,22378,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P3S04,68767,5
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P3S05,87170,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P3S06,30600,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P3S07,35450,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P3S08,28627,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P3S09,10839,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P3S10,0,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P3S11,11269,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P3S12,67753,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P3S13,197127,7
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P3S14,4387,5
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P4S01,10820,16
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P4S02,14339,16
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P4S03,18827,8
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,R98P4S04,19610,5
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98Data,19898,15
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P1,68245,10
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P2,19898,45
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P3S01,632359,7
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P3S02,3746,7
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P3S03,25993,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P3S04,86250,5
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P3S05,96007,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P3S06,34433,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P3S07,45388,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P3S08,38975,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P3S09,14660,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P3S10,0,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P3S11,18480,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P3S12,81829,4
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P3S13,246298,7
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P3S14,2952,5
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P4S01,12755,16
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P4S02,7312,16
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P4S03,19137,8
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,U98P4S04,19833,5
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99Data,18251,17
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P1,63289,10
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P2,18251,45
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P3S01,498284,7
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P3S02,3652,7
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P3S03,24157,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P3S04,67908,5
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P3S05,89096,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P3S06,29047,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P3S07,31621,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P3S08,32888,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P3S09,7999,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P3S10,0,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P3S11,6658,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P3S12,64457,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P3S13,183537,7
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P3S14,4177,5
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P4S01,10887,16
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P4S02,12946,16
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P4S03,23990,8
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,R99P4S04,29088,5
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99Data,19306,17
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P1,65666,10
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P2,19306,45
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P3S01,603766,7
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P3S02,3162,7
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P3S03,29638,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P3S04,83775,5
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P3S05,99683,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P3S06,33904,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P3S07,37832,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P3S08,41919,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P3S09,9726,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P3S10,0,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P3S11,10161,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P3S12,76547,4
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P3S13,220481,7
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P3S14,2783,5
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P4S01,12186,16
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P4S02,6377,16
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P4S03,23632,8
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,U99P4S04,28520,5
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400Data,18370,16
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P1,62972,10
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P2,19452,45
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P3S01,509426,7
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P3S02,3621,7
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P3S03,26019,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P3S04,69396,5
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P3S05,87768,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P3S06,29465,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P3S07,32866,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P3S08,34928,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P3S09,9523,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P3S10,0,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P3S11,9206,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P3S12,66456,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P3S13,180585,7
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P3S14,4014,5
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P4S01,10731,16
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P4S02,12194,16
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P4S03,25097,8
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,R1400P4S04,32053,5
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400Data,19618,16
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P1,65942,10
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P2,21516,45
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P3S01,617707,7
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P3S02,3207,7
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P3S03,30896,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P3S04,85990,5
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P3S05,96497,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P3S06,34081,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P3S07,40175,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P3S08,43990,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P3S09,10918,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P3S10,0,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P3S11,14931,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P3S12,80370,4
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P3S13,220419,7
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P3S14,2529,5
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P4S01,12399,16
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P4S02,6376,16
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P4S03,24345,8
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,U1400P4S04,32054,5
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401Data,18384,13
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P1,61743,10
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P2,18384,48
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P3S01,489676,7
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P3S02,3652,7
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P3S03,22422,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P3S04,69889,5
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P3S05,80751,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P3S06,28412,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P3S07,32662,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P3S08,34789,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P3S09,10935,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P3S10,0,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P3S11,9097,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P3S12,62506,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P3S13,174397,7
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P3S14,3568,5
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P4S01,10303,16
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P4S02,11139,16
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P4S03,26941,8
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,R1401P4S04,30755,5
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401Data,19567,13
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P1,64735,10
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P2,19567,48
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P3S01,591706,7
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P3S02,3110,7
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P3S03,25613,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P3S04,86983,5
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P3S05,90303,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P3S06,30974,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P3S07,41236,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P3S08,43267,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P3S09,12697,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P3S10,0,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P3S11,14814,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P3S12,76382,4
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P3S13,212472,7
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P3S14,2207,5
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P4S01,12312,16
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P4S02,6174,16
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P4S03,26783,8
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,U1401P4S04,30772,5
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402Data,18243,13
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P1,59927,10
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P2,18243,48
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P3S01,488838,7
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P3S02,3759,7
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P3S03,19458,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P3S04,69650,5
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P3S05,77737,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P3S06,28135,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P3S07,32979,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P3S08,34538,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P3S09,10170,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P3S10,0,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P3S11,10417,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P3S12,59397,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P3S13,174114,7
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P3S14,1910,5
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P4S01,10016,16
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P4S02,11250,16
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P4S03,24390,8
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,R1402P4S04,18160,5
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402Data,19640,13
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P1,63930,10
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P2,19640,48
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P3S01,596707,7
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P3S02,3103,7
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P3S03,22839,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P3S04,88203,5
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P3S05,89285,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P3S06,30850,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P3S07,42134,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P3S08,43450,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P3S09,12532,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P3S10,0,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P3S11,17436,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P3S12,75806,4
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P3S13,217241,7
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P3S14,1299,5
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P4S01,12078,16
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P4S02,6318,16
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P4S03,23216,8
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,U1402P4S04,18463,5
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403Data,18158,13
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P1,58861,10
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P2,18158,48
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P3S01,483103,7
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P3S02,3508,7
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P3S03,18346,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P3S04,69219,5
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P3S05,76834,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P3S06,26507,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P3S07,31715,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P3S08,34786,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P3S09,9316,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P3S10,0,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P3S11,10909,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P3S12,60005,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P3S13,174519,7
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P3S14,1643,5
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P4S01,9789,16
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P4S02,10926,16
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P4S03,24404,8
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,R1403P4S04,18091,6
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403Data,19347,13
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P1,62257,10
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P2,19347,48
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P3S01,573377,7
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P3S02,2865,7
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P3S03,21210,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P3S04,86885,5
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P3S05,87367,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P3S06,28389,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P3S07,40729,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P3S08,42703,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P3S09,11469,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P3S10,0,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P3S11,18012,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P3S12,73939,4
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P3S13,213225,7
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P3S14,1091,5
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P4S01,11877,16
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P4S02,5985,16
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P4S03,22981,8
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,U1403P4S04,18219,6

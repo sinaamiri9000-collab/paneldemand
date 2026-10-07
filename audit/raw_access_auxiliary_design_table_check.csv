@@ -1,0 +1,5 @@
+Year,Table,Rows,Columns,Address_Unique,Address_Duplicate_Rows,Main_Data_Table,Matched_Addresses,Address_Only_Side,Address_Only_Data,Compared_Fields,All_Compared_Fields_Exact
+1394,R94,20099,2,20099,0,R94Data,20099,0,0,MahMorajeh,True
+1394,U94,19758,2,19758,0,U94Data,19758,0,0,MahMorajeh,True
+1395,R95,20100,2,20100,0,R95Data,20100,0,0,MahMorajeh,True
+1395,U95,19764,2,19764,0,U95Data,19764,0,0,MahMorajeh,True

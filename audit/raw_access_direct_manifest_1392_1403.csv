@@ -1,0 +1,13 @@
+Year,Database,SHA256,Unmodified,Table_Count,Household_Rows,Member_Rows,Address_Unique,Address_Duplicate_Rows,Blank_Address,Access_Read_Success
+1392,intermediate/panel_forensic/1392/92/Outfile-92.mdb,653e4052ee6ad9301de3ddc541f6b49e85fb537f74912b897432f24be43126a9,True,46,39864,140359,39864,0,0,True
+1393,intermediate/panel_forensic/1393/93/Outfile-93.mdb,d7fddc0fc2afd4090de0c5689020e6040005945589a340421c563b47cd03bc8d,True,46,39856,139033,39856,0,0,True
+1394,intermediate/three_wave_validation/extracted/1394/94/Outfile94.mdb,10175b949eda4fae36f8a58e6ee1160fa11da6920c365f87a8f6e4a49de8c84e,True,48,39857,137616,39857,0,0,True
+1395,intermediate/panel_forensic/1395/95/Outfile95.mdb,4497a149da766d252e2ff84f7bb0fbd0a26f289f8545f88ff9092703cc6d463c,True,48,39864,135552,39864,0,0,True
+1396,intermediate/panel_forensic/1396/96/Data96.mdb,fe5efc28c52682aa5c9ac879901cc326fdf5335d34e4866519a3cb18f1bc2d8a,True,42,37962,134389,37962,0,0,True
+1397,intermediate/panel_forensic/1397/97/Data97_extracted/Data97.mdb,d701d033cb98927167a441bb5861de23a4421c66d34d538c3c423413647dbb36,True,42,38960,135830,38960,0,0,True
+1398,intermediate/panel_forensic/1398/Data kham/98_extracted/98/Data98_extracted/Data98.mdb,36b2619d64bf450d3291d1501ade52761b218324be3ba1c4ffaa5db066118c11,True,42,38328,132541,38328,0,0,True
+1399,intermediate/three_wave_validation/extracted/1399/DataKham99/Data99.mdb,4ce5a14f036109c0c0a92c5fcaab57519c2fa87b5069f4470b5249cd0dbe200c,True,42,37557,128955,37557,0,0,True
+1400,intermediate/three_wave_validation/extracted/1400/re_rawdata_hazineh14000622/Data1400_14010614.mdb,b3892be8ef787a24519d3235d4a995f1b8d18c5146ca2cc0c66c081aee9052ae,True,42,37988,128914,37988,0,0,True
+1401,intermediate/three_wave_validation/extracted/1401/raw data1401/HB1401_14020611.mdb,c8b3948b00796c8a898de9d78bab340491c96dd8e234683253ca73849401648b,True,42,37951,126478,37951,0,0,True
+1402,intermediate/extracted/1402/HB1402_14030707.mdb,241786228895b2f0755dada46a549d6d5e05e28dff7177e90875ce5698aff954,True,42,37883,123857,37883,0,0,True
+1403,intermediate/three_wave_validation/extracted/1403/فایل داده خام/HB1403.mdb,a58767f1fd2b3365970e552bb77b946c933b4f4164dd891fb2689132ed1fd6d4,True,42,37505,121118,37505,0,0,True

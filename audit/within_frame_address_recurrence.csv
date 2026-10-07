@@ -1,0 +1,13 @@
+Frame,Record_Type,Value,Address_Count
+Frame_1392_1396,Years_Present,1,50252
+Frame_1392_1396,Years_Present,2,33458
+Frame_1392_1396,Years_Present,3,26745
+Frame_1397_1403,Years_Present,1,77103
+Frame_1397_1403,Years_Present,2,43578
+Frame_1397_1403,Years_Present,3,33971
+Frame_1392_1396,Any_gap_then_return,Yes,1341
+Frame_1392_1396,1392_and_1394_without_1393,Yes,195
+Frame_1392_1396,Any_t_and_t2_without_t1,Yes,1341
+Frame_1397_1403,Any_gap_then_return,Yes,2467
+Frame_1397_1403,1392_and_1394_without_1393,Yes,0
+Frame_1397_1403,Any_t_and_t2_without_t1,Yes,2467

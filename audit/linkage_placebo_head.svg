@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="500.0" y="34" text-anchor="middle" font-size="20" font-family="sans-serif">درصد مسیر سرپرست پذیرفتنی ـ ۲۰۰ تکرار برای هر انتقال</text>
+<line x1="90" y1="405.0" x2="960" y2="405.0" stroke="#ddd"/>
+<text x="78" y="410.0" text-anchor="end" font-size="12" font-family="sans-serif">0%</text>
+<line x1="90" y1="338.0" x2="960" y2="338.0" stroke="#ddd"/>
+<text x="78" y="343.0" text-anchor="end" font-size="12" font-family="sans-serif">20%</text>
+<line x1="90" y1="271.0" x2="960" y2="271.0" stroke="#ddd"/>
+<text x="78" y="276.0" text-anchor="end" font-size="12" font-family="sans-serif">40%</text>
+<line x1="90" y1="204.0" x2="960" y2="204.0" stroke="#ddd"/>
+<text x="78" y="209.0" text-anchor="end" font-size="12" font-family="sans-serif">60%</text>
+<line x1="90" y1="137.0" x2="960" y2="137.0" stroke="#ddd"/>
+<text x="78" y="142.0" text-anchor="end" font-size="12" font-family="sans-serif">80%</text>
+<line x1="90" y1="70.0" x2="960" y2="70.0" stroke="#ddd"/>
+<text x="78" y="75.0" text-anchor="end" font-size="12" font-family="sans-serif">100%</text>
+<text x="90.0" y="430" text-anchor="middle" font-size="11" font-family="sans-serif">1392–1393</text>
+<text x="186.7" y="430" text-anchor="middle" font-size="11" font-family="sans-serif">1393–1394</text>
+<text x="283.3" y="430" text-anchor="middle" font-size="11" font-family="sans-serif">1394–1395</text>
+<text x="380.0" y="430" text-anchor="middle" font-size="11" font-family="sans-serif">1395–1396</text>
+<text x="476.7" y="430" text-anchor="middle" font-size="11" font-family="sans-serif">1397–1398</text>
+<text x="573.3" y="430" text-anchor="middle" font-size="11" font-family="sans-serif">1398–1399</text>
+<text x="670.0" y="430" text-anchor="middle" font-size="11" font-family="sans-serif">1399–1400</text>
+<text x="766.7" y="430" text-anchor="middle" font-size="11" font-family="sans-serif">1400–1401</text>
+<text x="863.3" y="430" text-anchor="middle" font-size="11" font-family="sans-serif">1401–1402</text>
+<text x="960.0" y="430" text-anchor="middle" font-size="11" font-family="sans-serif">1402–1403</text>
+<polyline fill="none" stroke="#176b4d" stroke-width="3" points="90.0,204.7 186.7,197.4 283.3,191.1 380.0,192.3 476.7,184.1 573.3,164.7 670.0,160.2 766.7,168.4 863.3,176.0 960.0,166.1"/>
+<circle cx="90.0" cy="204.7" r="4" fill="#176b4d"/>
+<circle cx="186.7" cy="197.4" r="4" fill="#176b4d"/>
+<circle cx="283.3" cy="191.1" r="4" fill="#176b4d"/>
+<circle cx="380.0" cy="192.3" r="4" fill="#176b4d"/>
+<circle cx="476.7" cy="184.1" r="4" fill="#176b4d"/>
+<circle cx="573.3" cy="164.7" r="4" fill="#176b4d"/>
+<circle cx="670.0" cy="160.2" r="4" fill="#176b4d"/>
+<circle cx="766.7" cy="168.4" r="4" fill="#176b4d"/>
+<circle cx="863.3" cy="176.0" r="4" fill="#176b4d"/>
+<circle cx="960.0" cy="166.1" r="4" fill="#176b4d"/>
+<line x1="95" y1="492" x2="120" y2="492" stroke="#176b4d" stroke-width="3"/><text x="127" y="497" font-size="13" font-family="sans-serif">Address یکسان</text>
+<polyline fill="none" stroke="#c5533d" stroke-width="3" points="90.0,392.5 186.7,392.3 283.3,393.9 380.0,392.4 476.7,392.1 573.3,392.3 670.0,392.4 766.7,391.2 863.3,392.3 960.0,392.4"/>
+<circle cx="90.0" cy="392.5" r="4" fill="#c5533d"/>
+<circle cx="186.7" cy="392.3" r="4" fill="#c5533d"/>
+<circle cx="283.3" cy="393.9" r="4" fill="#c5533d"/>
+<circle cx="380.0" cy="392.4" r="4" fill="#c5533d"/>
+<circle cx="476.7" cy="392.1" r="4" fill="#c5533d"/>
+<circle cx="573.3" cy="392.3" r="4" fill="#c5533d"/>
+<circle cx="670.0" cy="392.4" r="4" fill="#c5533d"/>
+<circle cx="766.7" cy="391.2" r="4" fill="#c5533d"/>
+<circle cx="863.3" cy="392.3" r="4" fill="#c5533d"/>
+<circle cx="960.0" cy="392.4" r="4" fill="#c5533d"/>
+<line x1="395" y1="492" x2="420" y2="492" stroke="#c5533d" stroke-width="3"/><text x="427" y="497" font-size="13" font-family="sans-serif">جابه‌جایی استان/ناحیه</text>
+<polyline fill="none" stroke="#496caa" stroke-width="3" points="90.0,391.0 186.7,392.2 283.3,391.8 380.0,390.8 476.7,390.8 573.3,391.5 670.0,391.4 766.7,391.2 863.3,390.4 960.0,390.2"/>
+<circle cx="90.0" cy="391.0" r="4" fill="#496caa"/>
+<circle cx="186.7" cy="392.2" r="4" fill="#496caa"/>
+<circle cx="283.3" cy="391.8" r="4" fill="#496caa"/>
+<circle cx="380.0" cy="390.8" r="4" fill="#496caa"/>
+<circle cx="476.7" cy="390.8" r="4" fill="#496caa"/>
+<circle cx="573.3" cy="391.5" r="4" fill="#496caa"/>
+<circle cx="670.0" cy="391.4" r="4" fill="#496caa"/>
+<circle cx="766.7" cy="391.2" r="4" fill="#496caa"/>
+<circle cx="863.3" cy="390.4" r="4" fill="#496caa"/>
+<circle cx="960.0" cy="390.2" r="4" fill="#496caa"/>
+<line x1="695" y1="492" x2="720" y2="492" stroke="#496caa" stroke-width="3"/><text x="727" y="497" font-size="13" font-family="sans-serif">خوشه یکسان، ردیف دیگر</text>
+</svg>
