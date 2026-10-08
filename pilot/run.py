@@ -163,7 +163,7 @@ def coefficient_output(core,fit,names,scales,centers):
       'translations_standardized':eta,'translations_original_units':eta/scales[:,None],
       'translation_centers':centers,'translation_scales':scales}
 
-def inference(core,fit,b,mundlak_start):
+def inference(core,fit,b,mundlak_start,return_cov=False):
     P=np.linalg.inv(np.linalg.cholesky(fit.sigma))
     K=core.spec.n_free
     G,g,obj=core.normal(fit.theta,core.data,core.spec,None,P,3000)
@@ -191,7 +191,7 @@ def inference(core,fit,b,mundlak_start):
         diag['mundlak_and_mean_cf_joint_test']=wald(fit.theta,cov,idx)
         # Pure Mundlak (exogenous means), separate from mean-CF control.
         diag['mundlak_joint_test']=wald(fit.theta,cov,idx[:-11])
-    return diag
+    return (diag,cov) if return_cov else diag
 
 def solver_direction(G,g):
     from pyquaidsce.nlsur import _solve_scaled
@@ -238,6 +238,8 @@ def main():
     parser.add_argument('--gn-tol',type=float,default=1e-8)
     parser.add_argument('--no-year-season',action='store_true')
     parser.add_argument('--cohort-instead-of-wave',action='store_true')
+    parser.add_argument('--late-period-control',action='store_true')
+    parser.add_argument('--stage-cache',type=Path)
     parser.add_argument('--cache-prefix',default='')
     parser.add_argument('--warm-start',type=Path)
     args=parser.parse_args();p=args.inputs;t0=time.time()
@@ -297,6 +299,8 @@ def main():
     z=dummies(b,args.cohort_instead_of_wave)
     if args.no_year_season:
         z=z.drop(columns=[n for n in z if n.startswith(('year_','season_'))])
+    if args.late_period_control:
+        z['period_1400_plus']=(b.year>=1400).astype(float)
     xx=pd.concat([b[PN],z[['household_size','head_age','female','marital_Widowed','marital_Divorced','marital_Bachelor']]],axis=1)
     means=xx.groupby(b.panel_id).transform('mean').add_prefix('mean_')
     income=np.log(b.total_income_real);income-=np.average(income,weights=b.weight)
@@ -321,7 +325,8 @@ def main():
     out['specification']={'year_FE':not args.no_year_season,'season_FE':not args.no_year_season,'wave_FE':not args.cohort_instead_of_wave,
       'cohort_FE':args.cohort_instead_of_wave,
       'cohort_definition':'first observed year of the original complete three-year Panel B trajectory',
-      'cohort_reference':int(b.cohort.min()) if args.cohort_instead_of_wave else None}
+      'cohort_reference':int(b.cohort.min()) if args.cohort_instead_of_wave else None,
+      'late_period_control':args.late_period_control}
     out['initialization']={'warm_start_result':str(args.warm_start) if args.warm_start else None}
     lp=b[PN].to_numpy();lnx=b.ln_exp.to_numpy();w=b[[f'w_{g}' for g in range(1,13)]].to_numpy()
     weights=b.weight.to_numpy();a0=float(np.average(lnx,weights=weights))-2.0
@@ -336,6 +341,12 @@ def main():
         Z,center,scale=scale_controls(zz,weights,norms)
         if not cre:norms=(center,scale)
         core=PanelCore(lp,lnx,w,norm.cdf(k),norm.pdf(k),cf,Z,a0)
+        if args.stage_cache:
+            with open(args.stage_cache,'wb') as sf:
+                pickle.dump({'data':core.data,'Z':Z,'panel_ids':b.panel_id.to_numpy(),
+                  'year':b.year.to_numpy(),'cohort':b.cohort.to_numpy(),
+                  'tau':tau,'layout':layout,'selection_index':k,
+                  'control_names':list(zz.columns),'centers':center,'scales':scale},sf)
         init=None;sigma0=None
         if args.warm_start:
             old=json.loads(args.warm_start.read_text())[tag]
