@@ -77,7 +77,7 @@ class ReferenceElasticities:
         means = Means(d.shares.mean(0), d.lnp.mean(0), float(d.lnexp.mean()),
                       np.zeros(1), cdf, pdf, k, float(cf))
         output = []
-        for regime in range(2):
+        for regime in range(self.core.spec.ncontrast+1):
             nt, eta = self.core.unpack(th, regime); c = unpack(nt, self.core.native)
             c.alpha = c.alpha+z@eta
             e = elasticities(c, self.core.native, means, d.a0,

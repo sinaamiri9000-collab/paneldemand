@@ -10,6 +10,7 @@ from panel_core import PanelCore
 from pyquaidsce.params import unpack
 from pyquaidsce.model import fitted_shares, _inner
 from pyquaidsce.jacfree import jacobian_free
+from pyquaidsce._timing import check_deadline
 
 
 @dataclass
@@ -100,3 +101,43 @@ class RegimeCore(PanelCore):
             H[mask]=d.cdf[:,:,None]*(self.B[None,:,:]-
                 inn.S[:,:,None]*(d.lnp@self.B)[:,None,:])
         return J,H
+
+    def normal(self,theta,d,spec,cache,P,chunk,deadline=None):
+        """Exact Gram matrix using each regime's nonzero parameter support.
+
+        The inherited dense contrast Jacobian contains many zero columns.
+        Accumulating by regime avoids their products without changing the
+        equations, the solver step, or its convergence thresholds.
+        """
+        k0,q,m=self.spec.nbase,self.spec.nshift,self.spec.neqn
+        h=m-1; K=self.spec.n_free
+        G=np.zeros((K,K));g=np.zeros(K);obj=0.
+        for start in range(0,d.nobs,chunk):
+            check_deadline(deadline);rows=slice(start,min(start+chunk,d.nobs))
+            for code,mask,nt,local,shift in self._pieces(theta,rows):
+                u=(local.shares-fitted_shares(nt,local,self.native)-local.cdf*shift)@P.T
+                J=jacobian_free(nt,local,self.native,self.cache)@self.T
+                indices=np.arange(self.common_base)
+                if code:
+                    J=np.concatenate([J,J[:,:,self.slope_indices]],axis=2)
+                    indices=np.r_[indices,np.arange(self.contrast_slice(code).start,
+                                                    self.contrast_slice(code).stop)]
+                inn=_inner(unpack(nt,self.native),local,self.native)
+                H=local.cdf[:,:,None]*(self.B[None,:,:]-
+                    inn.S[:,:,None]*(local.lnp@self.B)[:,None,:])
+                J=np.matmul(P,J);H=np.matmul(P,H);z=self.Z[rows][mask]
+                active=len(indices);nr=len(z);J2=J.reshape(-1,active)
+                G[np.ix_(indices,indices)]+=J2.T@J2
+                g[indices]+=J2.T@u.ravel()
+                if q:
+                    cross=np.einsum('tik,tij->tkj',J,H,optimize=True)
+                    cross=(z.T@cross.reshape(nr,-1)).reshape(q,active,h).transpose(1,0,2).reshape(active,q*h)
+                    G[indices,k0:]+=cross;G[k0:,indices]+=cross.T
+                    hh=np.einsum('tik,tij->tkj',H,H,optimize=True)
+                    zz=np.einsum('tr,ts->trs',z,z,optimize=True)
+                    block=(zz.reshape(nr,-1).T@hh.reshape(nr,-1)).reshape(q,q,h,h).transpose(0,2,1,3)
+                    G[k0:,k0:]+=block.reshape(q*h,q*h)
+                    score=np.einsum('tik,ti->tk',H,u,optimize=True)
+                    g[k0:]+=(z.T@score).ravel()
+                obj+=float(np.sum(u*u))
+        return G,g,obj

@@ -154,12 +154,18 @@ def residual_hessian(core, theta, rows, Wu, latent=None):
         out[np.ix_(ia, ib)] += cross
         out[np.ix_(ib, ia)] += cross.T
         return out
+    def weighted_gram(X, weight):
+        ids = np.flatnonzero(np.any(X != 0, axis=0))
+        out = np.zeros((core.spec.n_free, core.spec.n_free))
+        xx = X[:, ids]
+        out[np.ix_(ids, ids)] = xx.T@(weight[:, None]*xx)
+        return out
     H = -sym_product(Cb, GA)
     H -= sym_product((q*D**2)[:, None]*Cl, Gb)
     H -= 2*sym_product((q*D)[:, None]*Cl, GA)
-    H += Gb.T@((Rlam*q*D**2)[:, None]*Gb)
+    H += weighted_gram(Gb, Rlam*q*D**2)
     H += 2*sym_product((Rlam*q*D)[:, None]*Gb, GA)
-    H += 2*GA.T@((Rlam*q)[:, None]*GA)
+    H += 2*weighted_gram(GA, Rlam*q)
     return H
 
 
@@ -206,7 +212,7 @@ def scaled_solve(A, b):
     return np.linalg.solve(A/scale[:, None]/scale[None, :], b/scale[:, None])/scale[:, None]
 
 
-def stacked_covariance(core, fit, stage, design, chunk=1500, log=print):
+def stacked_covariance(core, fit, stage, design, chunk=1500, log=print, score_test=False):
     """Observed-Jacobian household sandwich, with all generated stages included."""
     n = core.data.nobs; m = core.spec.neqn; K = core.spec.n_free
     assert n % 3 == 0 and chunk % 3 == 0
@@ -273,6 +279,9 @@ def stacked_covariance(core, fit, stage, design, chunk=1500, log=print):
         srhs += I_tau[:, i]@DSp[i].T
     effective = A-DtS@DSt/n
     rhs += srhs@DtS.T/n
+    if score_test:
+        from stability_path import score_family
+        return score_family(core, effective, rhs, grad, obj)
     I_theta = scaled_solve(effective, rhs.T).T
     log('STACK forming full covariance (demand + 12 Probits + expenditure)')
     IF = np.column_stack([I_theta, I_tau.reshape(H, -1), I_rf])

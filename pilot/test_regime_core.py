@@ -37,11 +37,13 @@ class RegimeTests(unittest.TestCase):
             d=np.zeros_like(th);d[j]=1e-6
             fd=(self.core.fitted(th+d)-self.core.fitted(th-d))/(2e-6)
             np.testing.assert_allclose(J[:,:,j],fd,rtol=2e-5,atol=2e-8)
-        P=np.eye(self.core.spec.neqn)
+        a=np.random.default_rng(86).normal(size=(self.core.spec.neqn,self.core.spec.neqn))
+        P=np.linalg.inv(np.linalg.cholesky(a@a.T+np.eye(self.core.spec.neqn)))
         G,g,obj=self.core.normal(th,self.core.data,self.core.spec,None,P,6)
-        flat=J.reshape(-1,len(th));res=(self.core.data.shares-self.core.fitted(th)).ravel()
+        flat=(P@J).reshape(-1,len(th));res=((self.core.data.shares-self.core.fitted(th))@P.T).ravel()
         np.testing.assert_allclose(G,flat.T@flat,rtol=1e-12,atol=1e-12)
         np.testing.assert_allclose(g,flat.T@res,rtol=1e-12,atol=1e-12)
+        self.assertAlmostEqual(obj,float(res@res),places=12)
 
 
 if __name__=='__main__':unittest.main()
