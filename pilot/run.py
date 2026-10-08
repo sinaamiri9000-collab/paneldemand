@@ -28,7 +28,7 @@ def dump(path,obj):
         raise TypeError(str(type(x)))
     path.write_text(json.dumps(obj,ensure_ascii=False,indent=2,default=convert)+'\n')
 
-def dummies(b):
+def dummies(b,cohort_instead_of_wave=False):
     z=pd.DataFrame(index=b.index)
     z['household_size']=b.household_size.astype(float)
     z['head_age']=b.head_age.astype(float)
@@ -39,7 +39,11 @@ def dummies(b):
         z[f'marital_{value}']=(b.head_marital_status==value).astype(float)
     for y in range(1393,1404):z[f'year_{y}']=(b.year==y).astype(float)
     for s in [2,3,4]:z[f'season_{s}']=(b.season_number==s).astype(float)
-    for w in [2,3]:z[f'wave_{w}']=(b.wave==w).astype(float)
+    if cohort_instead_of_wave:
+        cohorts=sorted(b.cohort.unique())
+        for c in cohorts[1:]:z[f'cohort_{int(c)}']=(b.cohort==c).astype(float)
+    else:
+        for w in [2,3]:z[f'wave_{w}']=(b.wave==w).astype(float)
     return z
 
 def variation(b,cols):
@@ -233,6 +237,7 @@ def main():
     parser.add_argument('--algorithm',choices=['gn','lm'],default='gn')
     parser.add_argument('--gn-tol',type=float,default=1e-8)
     parser.add_argument('--no-year-season',action='store_true')
+    parser.add_argument('--cohort-instead-of-wave',action='store_true')
     parser.add_argument('--cache-prefix',default='')
     parser.add_argument('--warm-start',type=Path)
     args=parser.parse_args();p=args.inputs;t0=time.time()
@@ -253,6 +258,7 @@ def main():
     assert b.groupby('panel_id').size().eq(3).all()
     assert b.groupby('panel_id').year.diff().dropna().eq(1).all()
     b['wave']=b.groupby('panel_id').cumcount()+1
+    b['cohort']=b.groupby('panel_id').year.transform('min')
     b['exp_analysis_106']=b.exp_system_107-b.exp_11_4
     for g in range(1,13):
         b[f'X_{g}']=b[m.loc[m.group_id==g,'exp_var']].sum(1,min_count=len(m[m.group_id==g]))
@@ -288,7 +294,7 @@ def main():
       'cohort_counts':b[b.wave==1].year.value_counts().sort_index().to_dict(),
       'sample_hash':__import__('hashlib').sha256(('\n'.join(b.panel_id.astype(str)+':'+b.year.astype(str))).encode()).hexdigest()}
     print('Sample',sample,flush=True)
-    z=dummies(b)
+    z=dummies(b,args.cohort_instead_of_wave)
     if args.no_year_season:
         z=z.drop(columns=[n for n in z if n.startswith(('year_','season_'))])
     xx=pd.concat([b[PN],z[['household_size','head_age','female','marital_Widowed','marital_Divorced','marital_Bachelor']]],axis=1)
@@ -312,7 +318,10 @@ def main():
     out['source_manifest']={'project_base_commit':'8d04114',
       'prior_bundle_SHA256':'220686116e3f5a23984e2af18f64151faf9f1950540010d46c5db7b3639364e7',
       'panel_csv_uncompressed_SHA256':'2f4c3683643304e6751d3d4eeecf78daebc23e8799574f46b4a52aedc1236e20'}
-    out['specification']={'year_FE':not args.no_year_season,'season_FE':not args.no_year_season,'wave_FE':True}
+    out['specification']={'year_FE':not args.no_year_season,'season_FE':not args.no_year_season,'wave_FE':not args.cohort_instead_of_wave,
+      'cohort_FE':args.cohort_instead_of_wave,
+      'cohort_definition':'first observed year of the original complete three-year Panel B trajectory',
+      'cohort_reference':int(b.cohort.min()) if args.cohort_instead_of_wave else None}
     out['initialization']={'warm_start_result':str(args.warm_start) if args.warm_start else None}
     lp=b[PN].to_numpy();lnx=b.ln_exp.to_numpy();w=b[[f'w_{g}' for g in range(1,13)]].to_numpy()
     weights=b.weight.to_numpy();a0=float(np.average(lnx,weights=weights))-2.0
@@ -331,9 +340,14 @@ def main():
         if args.warm_start:
             old=json.loads(args.warm_start.read_text())[tag]
             co=old['coefficients'];oldnames=co['translation_names']
-            keep=[oldnames.index(n) for n in zz.columns]
-            et=np.array(co['translations_original_units'])[keep]
-            alpha=np.array(co['alpha_at_center'])+(center-np.array(co['translation_centers'])[keep])@et
+            et=np.zeros((len(zz.columns),12));oldcenter=np.array(co['translation_centers'])
+            alpha=np.array(co['alpha_at_center']).copy()
+            for j,n in enumerate(zz.columns):
+                if n in oldnames:
+                    i=oldnames.index(n);et[j]=np.array(co['translations_original_units'])[i]
+                    alpha+=(center[j]-oldcenter[i])*et[j]
+            # New cohort coefficients start at zero; omitted wave effects are
+            # held at their previous centering point only for initialization.
             init=np.zeros(core.spec.n_free)
             for name,key in [('alpha','alpha_at_center'),('beta','beta'),('lambda','lambda'),('delta','delta'),('cfcoef','cf_current')]:
                 val=alpha if name=='alpha' else np.array(co[key])

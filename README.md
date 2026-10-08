@@ -47,3 +47,5 @@ python src/make_report.py
 ## ساختار مخزن
 
 `src/` شامل کد؛ `metadata/` شامل منشأ، واژه‌نامه و نسخه‌ها؛ `audit/` شامل آمار و گزارش‌های تجمیعی؛ `environment/` شامل محیط اجرا است. فایل خام و دادهٔ سطح خانوار فقط در Drive خصوصی نگهداری می‌شوند.
+
+بازتخمین Mundlak/S&Y با هفت دامی cohort به جای wave، بدون سال/فصل: [گزارش کامل](pilot/report_cohort.md) و [نتایج](pilot/results_cohort.json). بازتولید: `python pilot/run.py --inputs intermediate/pilot_inputs --models CRE --no-year-season --cohort-instead-of-wave --cache-prefix cohort_ --warm-start pilot/results_no_year_season.json --output pilot/results_cohort.json` سپس `python pilot/write_sensitivity.py --cohort`.
