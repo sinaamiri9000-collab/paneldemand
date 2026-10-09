@@ -500,7 +500,7 @@ SE نقطهٔ متوسط از همان sandwich چندمرحله‌ای اجرا
 | complete_three_wave_estimation_panels | 684 | 137814 |
 
 هر مدل 137,814 خانوار–سال و 45,938 خانوار با سه سال متوالی دارد. Hash مرتب‌سازی panel_id/year: `397bee5d9347dc92fc687aa3bc6d5fea8c713cca3ce7de242bbd51a5474855ab`.
-SHA256 قیمت‌دار: `034483d51b599b248a58be34dafbede13f37dd59aed0b28700803fd36fbc1a13`. سبد ۱۰۶ قلم/۱۲ گروه، حذف نوشابه به درخواست قبلی کاربر، donor pool همهٔ ۴۳۸٬۵۷۷ مشاهده، Young و minimum support=3 همان اجرای قبلی‌اند. برای audit قیمت به [گزارش ساخت قیمت](../report.md) مراجعه کنید. هیچ دادهٔ منبع یا قیمت بازار دوباره ساخته نشده است.
+SHA256 قیمت‌دار: `034483d51b599b248a58be34dafbede13f37dd59aed0b28700803fd36fbc1a13`. سبد ۱۰۶ قلم/۱۲ گروه، حذف نوشابه به درخواست قبلی کاربر، donor pool همهٔ ۴۳۸٬۵۷۷ مشاهده، Young و minimum support=3 همان اجرای قبلی‌اند. برای audit قیمت به [گزارش ساخت قیمت](../initial/report.md) مراجعه کنید. هیچ دادهٔ منبع یا قیمت بازار دوباره ساخته نشده است.
 
 ## پیوست: تمام ضرایب و ماتریس‌های سه تخمین جدید
 
@@ -3618,14 +3618,14 @@ objective با Sigma خود هر مدل محاسبه شده و در fixed point 
 
 برای این بسته، cache قیمت‌دار، نمونهٔ cohort و fitted objects پنج اجرای قبلی لازم‌اند؛ مسیر ساخت آن‌ها در گزارش قبلی و کد run.py/specification_suite.py ثبت شده است. داده‌ها و influenceهای خانوار خصوصی در intermediate می‌مانند. خروجی مخزن یک گزارش و یک JSON تجمیعی است.
 ```bash
-python -m unittest discover -s pilot -p "test_*.py"
-python pilot/specification_followup.py --inputs intermediate/pilot_inputs --model P0_matched --threads 1 &
-python pilot/specification_followup.py --inputs intermediate/pilot_inputs --model B1_no_season_means --threads 1 &
-python pilot/specification_followup.py --inputs intermediate/pilot_inputs --model B2_no_season_means --threads 1 &
+python -m unittest discover -s pilot/tests -p "test_*.py"
+python pilot/specification_followup/specification_followup.py --inputs intermediate/pilot_inputs --model P0_matched --threads 1 &
+python pilot/specification_followup/specification_followup.py --inputs intermediate/pilot_inputs --model B1_no_season_means --threads 1 &
+python pilot/specification_followup/specification_followup.py --inputs intermediate/pilot_inputs --model B2_no_season_means --threads 1 &
 wait
-python pilot/specification_followup.py --inputs intermediate/pilot_inputs --direct-old B0 B1 B2 --threads 3
-python pilot/specification_followup.py --inputs intermediate/pilot_inputs --assemble
-python pilot/write_followup_report.py
+python pilot/specification_followup/specification_followup.py --inputs intermediate/pilot_inputs --direct-old B0 B1 B2 --threads 3
+python pilot/specification_followup/specification_followup.py --inputs intermediate/pilot_inputs --assemble
+python pilot/specification_followup/write_followup_report.py
 ```
 برازش‌های مستقل هم‌زمان قابل اجرا هستند؛ بخش covariance با lock مشترک به‌ترتیب اجرا می‌شود تا حافظه کنترل شود. برای تخمین تازه، فقط cacheهای suite_P0_matched/suite_B1_no_season_means/suite_B2_no_season_means و follow مربوط به همین بسته را آرشیو کنید؛ cache مدل‌های قبلی نقطهٔ شروع است. بوت‌استرپ بزرگی اجرا نشده است.
 pyquaidsce در commit `636609f17e732a57b140cbbad5d2bf4042bc396a` و نسخهٔ ۱٫۷٫۰ باقی مانده است. کد پکیج تغییر نکرده؛ همهٔ توسعه در لایهٔ pilot انجام شده است. نتایج ماشین‌خوان کامل در [results.json](results.json) هستند.

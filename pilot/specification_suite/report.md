@@ -114,7 +114,7 @@ omega فقط در B1 و B2 آزاد است. برخلاف مدل قبلی، vbar 
 | complete_three_wave_estimation_panels | 684 | 137814 |
 
 نمونهٔ هر مدل: 137,814 خانوار–سال و 45,938 خانوار با دقیقاً سه سال متوالی. hash ترتیب panel_id/year: `397bee5d9347dc92fc687aa3bc6d5fea8c713cca3ce7de242bbd51a5474855ab`.
-SHA256 فایل قیمت‌دار: `034483d51b599b248a58be34dafbede13f37dd59aed0b28700803fd36fbc1a13`. بازار قیمت، پاک‌سازی، سبد ۱۰۶قلمی و روش Young تغییر نکرده‌اند. price donor pool همان All با ۴۳۸٬۵۷۷ مشاهده است. توضیح و پوشش tierهای قیمت در [گزارش پیشین](../report.md) و نتایج منبع در [results_cohort.json](../results_cohort.json) موجود است. هیچ ردیف یا ستون منبع بازنویسی نشده است.
+SHA256 فایل قیمت‌دار: `034483d51b599b248a58be34dafbede13f37dd59aed0b28700803fd36fbc1a13`. بازار قیمت، پاک‌سازی، سبد ۱۰۶قلمی و روش Young تغییر نکرده‌اند. price donor pool همان All با ۴۳۸٬۵۷۷ مشاهده است. توضیح و پوشش tierهای قیمت در [گزارش پیشین](../initial/report.md) و نتایج منبع در [results_cohort.json](../cohort/results.json) موجود است. هیچ ردیف یا ستون منبع بازنویسی نشده است.
 ## استنباط و معنای مقایسه‌ها
 از sandwich معادلات برآوردِ روی‌هم‌قرارگرفته استفاده شده است: WLS مخارج، ۱۲ Probit، IFGNLS تقاضا و ۷۸ مؤلفهٔ مستقل Sigma. مشتق‌های score واقعی شامل مشتق دوم تقاضا و بازخورد برآورد Sigma هستند. عدم‌قطعیت CF جاری، CF میانگین و احتمال‌های خرید منتقل شده است. خوشهٔ استنباط panel_id است و هر سه مشاهده با هم قرار می‌گیرند. بوت‌استرپ انجام نشده؛ عدم‌قطعیت قیمت‌های ساخته‌شده و نقطهٔ مرجع تجربی در این استنباط وارد نشده است.
 
@@ -3512,13 +3512,13 @@ CF جمعی اضافی: ندارد.
 در این بسته هیچ قید انحنا، حذف سال/گروه، تغییر منبع قیمت یا bootstrap افزوده نشده است. کشش خودی مثبت، سهم پیش‌بینی‌شدهٔ منفی، SE بزرگ و condition بالا باید گزارش شوند؛ همگرایی عددی به‌تنهایی صحت اقتصادی نیست.
 
 ```bash
-PILOT_BLAS_THREADS=3 python pilot/specification_suite.py --inputs intermediate/pilot_inputs
-python pilot/write_specification_report.py
-python -m unittest discover -s pilot -p "test*.py"
+PILOT_BLAS_THREADS=3 python pilot/specification_suite/specification_suite.py --inputs intermediate/pilot_inputs
+python pilot/specification_suite/write_specification_report.py
+python -m unittest discover -s pilot/tests -p "test*.py"
 ```
 اگر فایل‌های مرحلهٔ قبلی موجود نیستند، ابتدا نمونه و cache قدیمی را با دستور زیر بسازید؛ خروجی قدیمی در intermediate نوشته می‌شود و نتایج قبلی مخزن بازنویسی نمی‌شوند:
 ```bash
-PILOT_BLAS_THREADS=3 python pilot/run.py --inputs intermediate/pilot_inputs --models CRE --no-year-season --cohort-instead-of-wave --cache-prefix cohort_ --stage-cache intermediate/pilot_inputs/frame_stage.pkl --warm-start pilot/results_cohort.json --output intermediate/pilot_inputs/suite_legacy_baseline.json
+PILOT_BLAS_THREADS=3 python pilot/common/run.py --inputs intermediate/pilot_inputs --models CRE --no-year-season --cohort-instead-of-wave --cache-prefix cohort_ --stage-cache intermediate/pilot_inputs/frame_stage.pkl --warm-start pilot/cohort/results.json --output intermediate/pilot_inputs/suite_legacy_baseline.json
 ```
 کد از cache قیمت‌دار و نمونهٔ معتبر اجرای قبلی استفاده می‌کند؛ مراحل و fitted objects فقط در intermediate نگهداری می‌شوند. برای اجرای تازهٔ تخمین، فایل‌های suite_* در intermediate/pilot_inputs را به مسیر آرشیو منتقل کنید تا cache استفاده نشود. microdata یا influence function خانوارها وارد GitHub نشده است.
 هستهٔ pyquaidsce در commit `636609f17e732a57b140cbbad5d2bf4042bc396a` ثابت است. وابستگی‌ها در `pilot/requirements.txt` ثبت شده‌اند. نتایج کامل ماشین‌خوان در [results.json](results.json) هستند.

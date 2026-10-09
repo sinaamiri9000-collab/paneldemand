@@ -1,0 +1,57 @@
+"""Full Mundlak/SY report without year/season dummies; compare prior CRE."""
+# Support both direct scripts and python -m from the repository root.
+if __package__ in (None, ""):
+    import sys
+    from pathlib import Path as _Path
+    sys.path.insert(0, str(_Path(__file__).resolve().parents[2]))
+
+import argparse,json
+from pathlib import Path
+import numpy as np
+from pilot.initial.write_report import table,matrix,GROUPS
+
+parser=argparse.ArgumentParser();parser.add_argument('--cohort',action='store_true');args=parser.parse_args()
+p=Path(__file__).parents[1]
+result_name='cohort/results.json' if args.cohort else 'no_year_season/results.json'
+base_name='no_year_season/results.json' if args.cohort else 'initial/results.json'
+r=json.loads((p/result_name).read_text())
+base=json.loads((p/base_name).read_text())
+m=r['CRE'];old=base['CRE'];co=m['coefficients']
+assert r['sample']['sample_hash']==base['sample']['sample_hash']
+assert r['prices']==base['prices']
+assert not any(n.startswith(('year_','season_')) for n in r['design']['level_controls'])
+if args.cohort:
+    assert not any(n.startswith('wave_') for n in r['design']['level_controls'])
+    assert sum(n.startswith('cohort_') for n in r['design']['level_controls'])==7
+else:
+    assert all(n in r['design']['level_controls'] for n in ['wave_2','wave_3'])
+parts=['# بازتخمین Mundlak/S&Y بدون دامی سال و فصل\n']
+def add(title,body):parts.append('## '+title+'\n\n'+body+'\n')
+add('خلاصه اجرایی',f"فقط Mundlak/S&Y دوباره تخمین زده شد. دامی‌های سال و فصل از RF، هر ۱۲ Probit و QUAIDS حذف شدند؛ wave_2 و wave_3 باقی ماندند. ساخت فصلی قیمت، deflation، نمونه ۴۵٬۹۳۸ خانوار / ۱۳۷٬۸۱۴ ردیف، سبد ۱۰۶قلمی و تمام meanهای قبلی تغییر نکردند. تحصیلات، قید انحنا و bootstrap استفاده نشدند.\n\nsolver success: **{m['convergence']['success']}**؛ IFGNLS iterations={m['convergence']['outer_iterations']}؛ GN steps={m['convergence']['gn_iterations']}؛ scaled GN ratio={m['inference_diagnostics']['gradient_scaled_gn_ratio']:.3e}. کشش‌های زیر convention ثابت pyquaidsce با meanها و CF fixed را حفظ می‌کنند. این مدل حاشیه‌ای Mundlak/S&Y است و full joint RE likelihood نیست.")
+add('معادله و روش اجرا','همان translated-alpha QUAIDS و raw Shonkwiler–Yen اجرای قبلی استفاده شد: کنترل‌ها alpha و translog price index را تغییر می‌دهند؛ ضرایب translation و CF در گروه‌ها sum-to-zero هستند، gamma متقارن و homogeneous است.\n\nکنترل‌های جاری اکنون ۱۴ متغیر هستند: اندازه خانوار، سن سرپرست، female، urban، پنج region، سه وضعیت تأهل و دو wave. ۲۰ mean برون‌زا و mean-CF همان قبل باقی هستند؛ ۳۵ shifter و ۵۰۷ پارامتر آزاد میانگین داریم. RF و Probitها تازه تخمین زده شدند. warm start با نگه داشتن ضرایب بلوک‌های مشترک اجرای قبلی و حذف ضرایب زمان ساخته شد؛ mean-CF با RF جدید ساخته می‌شود.\n\n'+table(['setting','value'],list(m['numerical_settings'].items()))+'\nstarting covariance از نتیجه قبلی گرفته شد و سپس در IFGNLS مجدداً برآورد شد. پیش‌بینی observed shares در raw SY دقیقاً adding-up ندارد. تمام Wald tests conditional panel-cluster هستند و generated stages را fixed می‌گیرند.\n\nدستور بازتولید:\n```bash\nPILOT_BLAS_THREADS=3 python pilot/common/run.py --inputs intermediate/pilot_inputs --models CRE --no-year-season --cache-prefix no_year_season_ --warm-start pilot/initial/results.json --output pilot/no_year_season/results.json\npython pilot/common/write_sensitivity.py\n```')
+add('ترتیب گروه‌ها',table(['گروه','نام'],[[f'G{i+1}',g] for i,g in enumerate(GROUPS)]))
+add('مقایسه با Mundlak قبلی دارای سال و فصل',table(['گروه','مخارج قبلی','مخارج جدید','own Marshallian قبلی','own Marshallian جدید',*(['own Hicksian قبلی'] if args.cohort else []),'own Hicksian جدید'],[[f'G{i+1}',old['elasticities']['expenditure'][i],m['elasticities']['expenditure'][i],np.diag(old['elasticities']['marshallian'])[i],np.diag(m['elasticities']['marshallian'])[i],*([np.diag(old['elasticities']['hicksian_slutsky_convention'])[i]] if args.cohort else []),np.diag(m['elasticities']['hicksian_slutsky_convention'])[i]] for i in range(12)])+'\nاختلاف به حذف کنترل‌های زمانی و بازبرآورد مراحل generated مربوط است؛ sample و قیمت ثابت‌اند. بدون year/season FE، مدل از حرکت مشترک سالانه/فصلی قیمت هم استفاده می‌کند و شوک‌های مشترک حذف‌شده می‌توانند در ضرایب قیمت منعکس شوند.\n')
+add('همگرایی و diagnostics',table(['نام','مقدار جدید'],list(m['convergence'].items()))+'\n'+table(['نام','مقدار جدید'],[[k,v] for k,v in m['inference_diagnostics'].items() if not isinstance(v,dict)])+'\n'+table(['آزمون','Wald','df','p'],[[k,v['statistic'],v['df'],v['pvalue']] for k,v in m['inference_diagnostics'].items() if isinstance(v,dict)])+'\n'+table(['قید','مقدار'],list(m['restrictions'].items())))
+add('first-stage diagnostics و تمام ضرایب RF',table(['نام','مقدار'],[[k,v] for k,v in m['first_stage'].items() if not isinstance(v,dict)])+'\n'+table(['نام','ضریب'],list(m['first_stage']['coefficients'].items()))+'\n'+table(['آزمون ابزارهای جاری درآمد','Wald','df','p'],[['income',*[m['first_stage']['excluded_panel_cluster_wald'][k] for k in ['statistic','df','pvalue']]]]))
+add('تمام ضرایب QUAIDS',table(['گروه','alpha centered','beta','lambda','delta','kappa CF'],[[f'G{i+1}',*[co[k][i] for k in ['alpha_at_center','beta','lambda','delta','cf_current']]] for i in range(12)]))
+add('تمام gamma',matrix(co['gamma']))
+add('تمام covariance خطا',matrix(m['error_covariance']))
+add('تمام shifter coefficients در واحد اصلی',table(['نام']+[f'G{i}' for i in range(1,13)],[[n,*row] for n,row in zip(co['translation_names'],co['translations_original_units'])])+'\nتمام ضرایب استانداردشده در JSON نیز موجودند؛ coefficient standardized = original × scale. rho و eta مربوط به Ray ثابت صفرند.\n')
+add('مرکز و مقیاس کنترل‌ها',table(['نام','center','scale'],[[n,c,s] for n,c,s in zip(co['translation_names'],co['translation_centers'],co['translation_scales'])]))
+add('تمام ضرایب ۱۲ Probit',table(['نام']+[f'G{i}' for i in range(1,13)],[[n,*row] for n,row in zip(m['probit_regressor_names'],np.array(m['probit_coefficients']).T)]))
+add('participation diagnostics',table(['گروه','purchase rate','iterations','Phi min','Phi max','CF cluster p','means cluster p'],[[x['group'],x['participation_rate'],x['iterations'],x['Phi_min'],x['Phi_max'],x['cf_panel_cluster_test']['pvalue'],x['mundlak_panel_cluster_joint_test']['pvalue']] for x in m['participation']]))
+for name,key in [('Marshallian','marshallian'),('Hicksian / Slutsky convention','hicksian_slutsky_convention'),('latent Marshallian','latent_marshallian')]:add('ماتریس کامل '+name,matrix(m['elasticities'][key]))
+add('کشش نهفته مخارج و denominator',table(['گروه','latent expenditure','adjusted mean share'],[[f'G{i+1}',m['elasticities']['latent_expenditure'][i],m['elasticities']['censoring_adjusted_mean_share'][i]] for i in range(12)]))
+add('سلامت پیش‌بینی',table(['گروه','mean fitted','negative fraction','above one fraction'],[[f'G{i+1}',*[m['predictions'][k][i] for k in ['mean_fitted_shares','negative_fitted_fraction','over_one_fitted_fraction']]] for i in range(12)])+f"\nAdding-up RMSE={m['predictions']['fitted_adding_up_rmse']:.8f}; fitted sum quantiles={m['predictions']['fitted_share_sum_quantiles']}. هیچ clipping یا حذف جدیدی صورت نگرفت.\n")
+add('variation و provenance',table(['متغیر','within SD قبلی پس از time controls','within SD جدید پس از wave'],[[k,base['conditional_within_prices']['prices'][k]['within_sd_after_time_effects'],v['within_sd_after_time_effects']] for k,v in r['conditional_within_prices']['prices'].items()])+'\n'+table(['input','SHA256'],list(r['input_hashes'].items()))+'\nSample hash: `'+r['sample']['sample_hash']+'`. جدول sample flow، همه وزن‌های Young و price-tier audits همان اجرای قبلی‌اند و در JSON هر دو اجرا و [گزارش قبلی](../initial/report.md) موجودند.\n')
+if args.cohort:
+    parts[0]='# بازتخمین Mundlak/S&Y با cohort به جای wave\n'
+    parts[1]=parts[1].replace('wave_2 و wave_3 باقی ماندند','wave_2 و wave_3 حذف شدند و هفت دامی cohort جای آن‌ها را گرفتند')
+    parts[1]+=f"\n\nهر ۱۲ own-price Marshallian منفی است. بیشترین تغییر نسبت به wave برای نان/غلات ({old['elasticities']['marshallian'][1][1]:.4f} به {m['elasticities']['marshallian'][1][1]:.4f}) و حبوبات ({old['elasticities']['marshallian'][7][7]:.4f} به {m['elasticities']['marshallian'][7][7]:.4f}) است. مجموع مربعات خطای سهم‌ها از {old['convergence']['unweighted_share_sse']:.4f} به {m['convergence']['unweighted_share_sse']:.4f} رسید. این بهبود داخل نمونه با پنج کنترل اضافی همراه است و به‌تنهایی مبنای انتخاب specification نیست.\n"
+    parts[2]=parts[2].replace('۱۴ متغیر','۱۹ متغیر').replace('و دو wave','و هفت cohort').replace('۳۵ shifter و ۵۰۷','۴۰ shifter و ۵۶۲').replace('حذف ضرایب زمان','حذف ضرایب موج و مقدار اولیه صفر برای دامی‌های جدید cohort').replace('--cache-prefix no_year_season_ --warm-start pilot/initial/results.json --output pilot/no_year_season/results.json','--cohort-instead-of-wave --cache-prefix cohort_ --warm-start pilot/no_year_season/results.json --output pilot/cohort/results.json').replace('python pilot/common/write_sensitivity.py','python pilot/common/write_sensitivity.py --cohort')
+    parts=[x.replace('مقایسه با Mundlak قبلی دارای سال و فصل','مقایسه با Mundlak قبلی بدون سال/فصل و دارای wave').replace('اختلاف به حذف کنترل‌های زمانی و بازبرآورد مراحل generated مربوط است','اختلاف به جایگزینی wave با cohort و بازبرآورد مراحل generated مربوط است').replace('within SD قبلی پس از time controls','within SD قبلی پس از wave').replace('within SD جدید پس از wave','within SD جدید بدون wave') for x in parts]
+    for name,key in [('Marshallian','marshallian'),('Hicksian / Slutsky convention','hicksian_slutsky_convention')]:
+        add('ماتریس تغییرات '+name+' نسبت به مدل wave',matrix(np.array(m['elasticities'][key])-np.array(old['elasticities'][key])))
+    add('معادلات دقیق و ثابت شاخص', f"a0 ثابت={r['a0']:.12g}. برای Z شامل کنترل‌های جاری، هفت cohort، بیست mean و mean-CF، داریم:\n\n```text\na_i(Z) = alpha_i + Z theta_i\nln A(p,Z) = a0 + sum_i a_i(Z) ln(p_i) + 0.5 ln(p)' Gamma ln(p)\nD = ln(x) - ln A(p,Z)\nf_i = a_i(Z) + Gamma_i ln(p) + beta_i D + lambda_i exp(-beta' ln(p)) D^2\nE[w_i | .] = Phi(k_i) [f_i + kappa_i vhat] + delta_i phi(k_i)\n```\n\nRF وابسته ln(x) است و شامل ln قیمت‌ها، کنترل‌های جاری/cohort، بیست mean و دو ابزار جاری درآمد لگاریتمی centered و مربع آن است. Probit وابسته 1(X_i>0) است و شامل ln قیمت‌ها، ln(x)، همان کنترل‌ها/meanها، mean-CF و vhat است. cohort در RF/Probit به صورت دامی افزایشی، و در QUAIDS از طریق a_i(Z) و شاخص ln A وارد می‌شود. قیود sum-to-zero روی theta و kappa و قیود native روی beta/lambda/Gamma حفظ شده‌اند. وزن سالانه survey فقط در RF و ساخت قیمت/وزن Young استفاده می‌شود؛ Probit/IFGNLS همان قرارداد بدون وزن پایلوت قبلی را دارند.")
+    add('تعریف cohort و شناسایی', 'cohort برابر نخستین سال مسیر سه‌ساله اصلی هر panel_id است؛ روی source کامل ساخته می‌شود. هشت cohort در نمونه داریم و cohort ۱۳۹۲–۱۳۹۴ مبناست. cohort ثابت خانوار است، پس mean جدا ندارد. این کنترل تفاوت متوسط گروه‌های ورود را جذب می‌کند، اما شوک‌های مشترک سال یا اثر ترتیب مصاحبه را کنترل نمی‌کند. هیچ year، season، wave یا frame dummy در این تخمین وجود ندارد.\n\n'+table(['cohort سه‌ساله','خانوار'],[[f'{c}–{int(c)+2}',n] for c,n in r['sample']['cohort_counts'].items()])+'\n'+table(['کنترل جاری'],[[n] for n in r['design']['level_controls']])+'\n'+table(['mean Mundlak'],[[n] for n in r['design']['Mundlak_variables']])+'\nDesign rank: '+str(r['design']))
+(p/('cohort/report.md' if args.cohort else 'no_year_season/report.md')).write_text('\n'.join(parts))
