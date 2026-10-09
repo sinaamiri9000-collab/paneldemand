@@ -9,6 +9,7 @@ from regime_core import RegimeCore
 from pyquaidsce.params import unpack
 from pyquaidsce.model import _inner, fitted_shares
 from pyquaidsce.jacfree import jacobian_free
+from pyquaidsce.elasticities import fitted_share_derivatives
 from pyquaidsce._timing import check_deadline
 
 
@@ -46,6 +47,24 @@ class SpecificationCore(RegimeCore):
                      Ha[:, :, None, :], Ht[:, :, None, :])
         controls = (self.Z[rows, None, :, None]*H).reshape(len(J), self.spec.neqn, -1)
         return np.concatenate([J, controls], axis=2)
+
+    def fitted_derivatives(self, theta, tau, layout, selection_index, rows=slice(None)):
+        """Exact current price/expenditure partials, means and CF inputs fixed."""
+        tau = np.asarray(tau, float).ravel()
+        nt, d, translate, additive = self.quantities(theta, rows)
+        dx, dp = fitted_share_derivatives(nt, d, self.native, tau=tau, layout=layout,
+                                        selection_index=selection_index[rows])
+        inn = _inner(unpack(nt, self.native), d, self.native)
+        # Only alpha translations change ln a(p); additive CF does not.
+        dp -= d.cdf[:, :, None]*inn.S[:, :, None]*translate[:, None, :]
+        tm = np.array([layout.coefficient(tau, i, layout.expenditure_position)
+                       for i in range(self.spec.neqn)])
+        tp = np.array([[layout.coefficient(tau, i, layout.price_position(j))
+                       for j in range(self.spec.neqn)] for i in range(self.spec.neqn)])
+        extra = translate+additive
+        dx += d.pdf*extra*tm
+        dp += d.pdf[:, :, None]*extra[:, :, None]*tp[None, :, :]
+        return dx, dp
 
     def normal(self, theta, d, spec, cache, P, chunk, deadline=None):
         """Structured exact Gram for the two kinds of shifter; native solver."""

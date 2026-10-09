@@ -9,6 +9,7 @@ import os
 for key in ('OPENBLAS_NUM_THREADS', 'OMP_NUM_THREADS', 'MKL_NUM_THREADS'):
     os.environ[key] = '1'
 import argparse
+import copy
 import fcntl
 import hashlib
 import json
@@ -92,12 +93,19 @@ def designs(b, name):
     return z, means, rf_means, change
 
 
-def make_stage(b, name, z, means, rf_means):
-    cf, rf = first_stage(b, z, rf_means, name != 'P0')
+def make_stage(b, name, z, means, rf_means, rf_stage=None,
+               mean_cf=None, mean_expenditure=None):
+    if rf_stage is None:
+        cf, rf = first_stage(b, z, rf_means, name != 'P0')
+    else:
+        cf = rf_stage['data'].control_function.copy()
+        rf = copy.deepcopy(rf_stage['first_stage'])
+    if mean_cf is None: mean_cf = name in ('B1', 'B2')
+    if mean_expenditure is None: mean_expenditure = name == 'B2'
     controls = pd.concat([z, means], axis=1)
-    if name in ('B1', 'B2'):
+    if mean_cf:
         controls['mean_cf_residual'] = pd.Series(cf).groupby(b.panel_id).transform('mean')
-    if name == 'B2':
+    if mean_expenditure:
         controls['mean_ln_expenditure'] = b.ln_exp.groupby(b.panel_id).transform('mean')
     lp = b[PN].to_numpy(); y = b.ln_exp.to_numpy()
     Xsel = np.column_stack([np.ones(len(b)), lp, y, controls, cf])
@@ -114,8 +122,14 @@ def make_stage(b, name, z, means, rf_means):
     a0 = float(np.average(y, weights=b.weight))-2.
     data = DemandData(lp, y, b[[f'w_{g}' for g in range(1, 13)]].to_numpy(),
                       np.zeros((len(b), 1)), norm.cdf(k), norm.pdf(k), a0, cf)
-    Xrf = np.column_stack([np.ones(len(b)), lp, z, rf_means, inc_terms(b)])
-    rf_names = ['constant']+PN+list(z)+list(rf_means)+['ln_income_centered','ln_income_centered_squared']
+    if rf_stage is None:
+        Xrf = np.column_stack([np.ones(len(b)), lp, z, rf_means, inc_terms(b)])
+        rf_names = ['constant']+PN+list(z)+list(rf_means)+['ln_income_centered','ln_income_centered_squared']
+    else:
+        np.testing.assert_array_equal(lp, rf_stage['data'].lnp)
+        np.testing.assert_array_equal(y, rf_stage['data'].lnexp)
+        np.testing.assert_array_equal(b.panel_id, rf_stage['panel_ids'])
+        Xrf = rf_stage['Xrf']; rf_names = rf_stage['rf_names']
     np.testing.assert_allclose(y-Xrf@np.array([rf['coefficients'][c] for c in rf_names]), cf, atol=2e-10)
     return {'data': data, 'Z': Z, 'centers': centers, 'scales': scales,
             'control_names': list(controls), 'additive_columns': additive,
@@ -125,7 +139,7 @@ def make_stage(b, name, z, means, rf_means):
             'panel_ids': b.panel_id.to_numpy(), 'year': b.year.to_numpy(),
             'cohort': b.cohort.to_numpy(), 'weights': b.weight.to_numpy(),
             'level_names': list(z), 'mundlak_names': list(means),
-            'rf_only_means': [c for c in rf_means if c not in means]}
+            'rf_only_means': [c for c in rf_names if c.startswith('mean_') and c not in controls]}
 
 
 def inc_terms(b):
@@ -311,10 +325,25 @@ def coefficient_summary(core, fit, stage, covariance):
     return out
 
 
-def _fit_model(root, b, old_stage, name, baseline, output_dir, preflight=False):
-    started = time.time(); z, means, rf_means, change = designs(b, name)
+def _fit_model(root, b, old_stage, name, baseline, output_dir, preflight=False,
+               prepared_stage=None, start_model=None, influence_consumer=None):
+    started = time.time()
+    if prepared_stage is None:
+        z, means, rf_means, change = designs(b, name)
     stage_path = root/f'suite_{name}_stage.pkl'
-    if stage_path.exists() and not preflight:
+    if prepared_stage is not None:
+        stage = prepared_stage
+        stage['version'] = VERSION
+        if stage_path.exists():
+            cached = pickle.load(open(stage_path, 'rb'))
+            assert cached['control_names'] == stage['control_names']
+            np.testing.assert_array_equal(cached['Z'], stage['Z'])
+            np.testing.assert_array_equal(cached['data'].control_function, stage['data'].control_function)
+            np.testing.assert_array_equal(cached['Xrf'], stage['Xrf'])
+            assert cached['rf_names'] == stage['rf_names']
+            np.testing.assert_allclose(cached['selection_index'], stage['selection_index'], atol=1e-10, rtol=1e-10)
+        with open(stage_path, 'wb') as f: pickle.dump(stage, f)
+    elif stage_path.exists() and not preflight:
         stage = pickle.load(open(stage_path, 'rb')); assert stage['version'] == VERSION
     else:
         cf, rf = first_stage(b, z, rf_means, name != 'P0')
@@ -338,7 +367,7 @@ def _fit_model(root, b, old_stage, name, baseline, output_dir, preflight=False):
             fit = pickle.load(open(fit_path, 'rb')); assert fit.pilot_suite_version == VERSION
         else:
             # Nearby nested fits supply starts, with unchanged stopping rules.
-            start_name = {'B1':'B0', 'B2':'B1', 'B3':'B0', 'P0':'B0'}.get(name)
+            start_name = start_model or {'B1':'B0', 'B2':'B1', 'B3':'B0', 'P0':'B0'}.get(name)
             start_path = root/f'suite_{start_name}_point.pkl'
             if start_name and start_path.exists():
                 old_fit = pickle.load(open(start_path, 'rb'))
@@ -348,6 +377,16 @@ def _fit_model(root, b, old_stage, name, baseline, output_dir, preflight=False):
                 old_fit = pickle.load(open(root/'cohort_cre_point.pkl', 'rb'))
                 start_stage = old_stage
             theta0 = warm_start(core, stage, old_fit, start_stage)
+            if stage.get('merge_season_mean_start'):
+                old_eta = old_fit.theta[122:].reshape(len(start_stage['control_names']), 11)
+                eta = theta0[122:].reshape(len(stage['control_names']), 11)
+                for ss in (2, 3, 4):
+                    current, mean = f'season_{ss}', f'mean_season_{ss}'
+                    j = stage['control_names'].index(current)
+                    jj = start_stage['control_names'].index(mean)
+                    extra = old_eta[jj]*stage['scales'][j]/start_stage['scales'][jj]
+                    eta[j] += extra
+                    theta0[core.base_slices['alpha']] -= core.Z[:, j].mean()*extra
             ts = time.time()
             fit = core.fit(theta0, old_fit.sigma, log=log, gn_tol=1e-8)
             fit.pilot_start_name = start_name
@@ -370,6 +409,8 @@ def _fit_model(root, b, old_stage, name, baseline, output_dir, preflight=False):
                 epoints = ref.evaluate(ref.point); J = ref.jacobian()
                 ese = np.sqrt(np.maximum(np.einsum('ij,ij->i', J@covariance, J), 0))
                 EIF = IF@J[COMPARISON_ROWS].T
+                if influence_consumer is not None:
+                    influence_consumer(core, fit, stage, design, covariance, IF)
                 # Independent step check, including additive CF and its RF channel.
                 cols = [0, core.base_slices['gamma'].start, core.spec.nbase,
                         core.spec.n_free+design.cf_pos, len(ref.point)-1]
@@ -434,10 +475,10 @@ def _fit_model(root, b, old_stage, name, baseline, output_dir, preflight=False):
     return result
 
 
-def fit_model(root, b, old_stage, name, baseline, output_dir, preflight=False):
+def fit_model(root, b, old_stage, name, baseline, output_dir, preflight=False, **kwargs):
     with open(root/f'suite_{name}.lock', 'a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
-        return _fit_model(root, b, old_stage, name, baseline, output_dir, preflight)
+        return _fit_model(root, b, old_stage, name, baseline, output_dir, preflight, **kwargs)
 
 
 def compare(root, results):
