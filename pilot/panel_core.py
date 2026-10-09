@@ -2,7 +2,9 @@
 
 The native QUAIDS/SY algebra, analytic Jacobian and IFGNLS/LM solver are reused.
 Affine maps impose latent adding up on alpha/beta/lambda/control coefficients.
-Controls translate alpha AND the translog index, preserving integrability.
+Controls translate alpha AND the translog index, retaining the native
+conditional QUAIDS functional structure. This is not a proof of integrability
+or consistency of the complete CF/SY/Mundlak working model.
 Scoped solver adapters are restored on exit; ordinary package calls are intact.
 """
 from contextlib import contextmanager

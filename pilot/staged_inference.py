@@ -77,11 +77,14 @@ def probit_components(Xs, k, y, Xr, Xbar, tau_cf, tau_mean,
     # Derivative of the complete score, including dX times the residual score.
     cross = Xs.T@(h[:, None]*(tau_cf*Xr+tau_mean*Xbar))
     cross[cf_pos] -= g@Xr/sel_scale[cf_pos]
-    cross[mean_pos] -= g@Xbar/sel_scale[mean_pos]
+    if mean_pos >= 0:
+        cross[mean_pos] -= g@Xbar/sel_scale[mean_pos]
     return bread, Xs*g[:, None], cross
 
 
 def latent_quantities(core, theta, rows):
+    if hasattr(core, 'inference_latent_quantities'):
+        return core.inference_latent_quantities(theta, rows)
     n = len(core.regimes[rows]); m = core.spec.neqn
     values = {key: np.zeros((n, m)) for key in ['latent', 'S']}
     for key in ['D', 'q']:
@@ -99,6 +102,8 @@ def latent_quantities(core, theta, rows):
 
 def linear_gradients(core, rows):
     """Gradients of ln A, beta'ln p and equation beta/lambda (linear in theta)."""
+    if hasattr(core, 'inference_linear_gradients'):
+        return core.inference_linear_gradients(rows)
     L = core.data.lnp[rows]@core.B
     n, h = L.shape; K = core.spec.n_free
     GA = np.zeros((n, K)); Gb = np.zeros_like(GA)
@@ -192,18 +197,25 @@ def input_score_derivatives(core, theta, rows, k, W, mean_z, mean_scale,
     f_v = Phi*lat['kappa']
     sv = -np.einsum('nik,ni->nk', JW, f_v, optimize=True)
     sv[:, core.base_slices['cfcoef']] += (Phi*Wu)@core.B
-    t = lat['eta'][mean_z]/mean_scale
-    f_mean = Phi*(t-lat['S']*(core.data.lnp[rows]@t)[:, None])
-    original = core.Z[rows, mean_z].copy()
-    try:
-        core.Z[rows, mean_z] = original+mean_step/mean_scale
-        Jp = core.jacobian(theta, rows)
-        core.Z[rows, mean_z] = original-mean_step/mean_scale
-        Jm = core.jacobian(theta, rows)
-    finally:
-        core.Z[rows, mean_z] = original
-    sm = np.einsum('nik,ni->nk', (Jp-Jm)/(2*mean_step), Wu, optimize=True)
-    sm -= np.einsum('nik,ni->nk', JW, f_mean, optimize=True)
+    if mean_z < 0:
+        f_mean = np.zeros_like(Phi)
+        sm = np.zeros_like(sv)
+    else:
+        t = lat['eta'][mean_z]/mean_scale
+        if getattr(core, 'additive_columns', np.zeros(core.Z.shape[1], bool))[mean_z]:
+            f_mean = Phi*t
+        else:
+            f_mean = Phi*(t-lat['S']*(core.data.lnp[rows]@t)[:, None])
+        original = core.Z[rows, mean_z].copy()
+        try:
+            core.Z[rows, mean_z] = original+mean_step/mean_scale
+            Jp = core.jacobian(theta, rows)
+            core.Z[rows, mean_z] = original-mean_step/mean_scale
+            Jm = core.jacobian(theta, rows)
+        finally:
+            core.Z[rows, mean_z] = original
+        sm = np.einsum('nik,ni->nk', (Jp-Jm)/(2*mean_step), Wu, optimize=True)
+        sm -= np.einsum('nik,ni->nk', JW, f_mean, optimize=True)
     return J, JW, u, Wu, sk, sv, sm, dfdk, f_v, f_mean, lat
 
 
@@ -212,13 +224,15 @@ def scaled_solve(A, b):
     return np.linalg.solve(A/scale[:, None]/scale[None, :], b/scale[:, None])/scale[:, None]
 
 
-def stacked_covariance(core, fit, stage, design, chunk=1500, log=print, score_test=False):
+def stacked_covariance(core, fit, stage, design, chunk=1500, log=print, score_test=False,
+                       return_influence=False):
     """Observed-Jacobian household sandwich, with all generated stages included."""
     n = core.data.nobs; m = core.spec.neqn; K = core.spec.n_free
     assert n % 3 == 0 and chunk % 3 == 0
     H = n//3; Q = design.Xs.shape[1]; R = design.Xr.shape[1]
     Xr, Xbar, Xs = design.Xr, design.Xbar, design.Xs
     tau = stage['tau']; k = stage['selection_index']
+    tau_mean = tau[:, design.mean_pos] if design.mean_pos >= 0 else np.zeros(m)
     A_rf = Xr.T@(design.weights[:, None]*Xr)
     score_rf = (Xr*(design.weights*core.data.control_function)[:, None]).reshape(H, 3, R).sum(1)
     I_rf = scaled_solve(A_rf, score_rf.T).T
@@ -226,7 +240,7 @@ def stacked_covariance(core, fit, stage, design, chunk=1500, log=print, score_te
     for i in range(m):
         B, score, cross = probit_components(
             Xs, k[:, i], (core.data.shares[:, i] > 0).astype(float), Xr, Xbar,
-            tau[i, design.cf_pos], tau[i, design.mean_pos],
+            tau[i, design.cf_pos], tau_mean[i],
             design.cf_pos, design.mean_pos, design.sel_scale)
         score = score.reshape(H, 3, Q).sum(1)
         I_tau[:, i] = scaled_solve(B, (score+I_rf@cross.T).T).T
@@ -250,9 +264,9 @@ def stacked_covariance(core, fit, stage, design, chunk=1500, log=print, score_te
         scores[hs] = score.reshape(-1, 3, K).sum(1)
         sigma_scores[hs] = (u[:, a]*u[:, b]-fit.sigma[a, b]).reshape(-1, 3, V).sum(1)
         rc = fv+dk*tau[:, design.cf_pos]
-        rm = fm+dk*tau[:, design.mean_pos]
+        rm = fm+dk*tau_mean
         rcscore = sv+np.einsum('nik,i->nk', sk, tau[:, design.cf_pos], optimize=True)
-        rmscore = sm+np.einsum('nik,i->nk', sk, tau[:, design.mean_pos], optimize=True)
+        rmscore = sm+np.einsum('nik,i->nk', sk, tau_mean, optimize=True)
         Dta -= rcscore.T@Xr[rows]+rmscore.T@Xbar[rows]
         for i in range(m):
             Dtt[i] += sk[:, i].T@Xs[rows]
@@ -309,4 +323,6 @@ def stacked_covariance(core, fit, stage, design, chunk=1500, log=print, score_te
         'corrected_to_conditional_se_ratio': np.sqrt(np.diag(covariance[:K, :K])/np.diag(conditional))}
     if ev.min() <= 0 or not diagnostics['covariance_finite']:
         raise RuntimeError('Invalid observed bread/covariance: inspect diagnostics')
+    if return_influence:
+        return covariance, conditional, diagnostics, IF
     return covariance, conditional, diagnostics
