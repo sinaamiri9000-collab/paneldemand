@@ -18,14 +18,14 @@ from pilot.common.specification_core import SpecificationCore
 
 
 class DirectReference:
-    def __init__(self, core, fit, stage, design):
+    def __init__(self, core, fit, stage, design, rows=slice(None)):
         self.K = core.spec.n_free; self.Q = design.Xs.shape[1]; self.R = design.Xr.shape[1]
         self.stage, self.design = stage, design
-        d = core.data
-        self.base_z = core.Z.mean(0); self.base_cf = float(d.control_function.mean())
-        self.base_k = stage['selection_index'].mean(0)
-        self.xr = design.Xr.mean(0); self.xbar = design.Xbar.mean(0)
-        self.xs = design.Xs.mean(0)
+        d = core.data.subset(rows)
+        self.base_z = core.Z[rows].mean(0); self.base_cf = float(d.control_function.mean())
+        self.base_k = stage['selection_index'][rows].mean(0)
+        self.xr = design.Xr[rows].mean(0); self.xbar = design.Xbar[rows].mean(0)
+        self.xs = design.Xs[rows].mean(0)
         tau = stage['tau']
         self.k_rf = -tau[:, design.cf_pos, None]*self.xr[None, :]
         if design.mean_pos >= 0:

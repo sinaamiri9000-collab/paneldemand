@@ -17,6 +17,21 @@ from pilot.specification_followup.direct_elasticities import DirectReference, fi
 
 
 class DirectTests(unittest.TestCase):
+    def test_subgroup_reference_uses_frozen_three_wave_inputs_and_original_scales(self):
+        rows = np.arange(24) % 3 == 0
+        ref = DirectReference(self.core, self.fit, self.stage, self.design, rows=rows)
+        np.testing.assert_allclose(ref.core.data.lnp[0], self.core.data.lnp[rows].mean(0))
+        np.testing.assert_allclose(ref.base_z, self.core.Z[rows].mean(0))
+        np.testing.assert_allclose(ref.core.data.cdf[0], norm.cdf(self.stage['selection_index'][rows].mean(0)))
+        np.testing.assert_allclose(ref.xbar, self.design.Xbar[rows].mean(0))
+        self.assertEqual(ref.core.data.a0, self.core.data.a0)
+        expected = self.core.Z.copy()
+        ref.evaluate(ref.point)
+        np.testing.assert_array_equal(self.core.Z, expected)
+        full = DirectReference(self.core, self.fit, self.stage, self.design)
+        explicit = DirectReference(self.core, self.fit, self.stage, self.design, rows=np.ones(24,bool))
+        np.testing.assert_array_equal(full.evaluate(full.point), explicit.evaluate(explicit.point))
+
     def setUp(self):
         r = np.random.default_rng(209); n, m, q = 24, 12, 3
         L = r.normal(0, .15, (n, m)); y = r.normal(3, .2, n)
