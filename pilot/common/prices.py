@@ -46,7 +46,7 @@ def geography(df):
     assert df.region.notna().all() and df.season_number.isin([1,2,3,4]).all()
     return df
 
-def construct(all_df,panel,mapping,log=print):
+def construct(all_df,panel,mapping,log=print,return_all=False):
     assert len(all_df)==438577 and len(panel)==139041 and len(mapping)==106
     assert mapping.exp_var.nunique()==106 and mapping.p_var.nunique()==106
     assert 'p_11_4' not in mapping.p_var.to_list()
@@ -131,10 +131,14 @@ def construct(all_df,panel,mapping,log=print):
           'by_year':{str(y):{str(t):float(np.mean(pr[(a if name=='All' else b).year.to_numpy()==y]==t))
                             for t in range(1,7)} for y in range(1392,1404)}}
     b[[f'lnp_{g}' for g in range(1,13)]]=lb
-    return b, {'item_weights':iw.to_dict('records'),'price_centers':centers.tolist(),
+    audit_result = {'item_weights':iw.to_dict('records'),'price_centers':centers.tolist(),
        'quality_regressions':audit,'tiers':tier_summary,'national_failures':failures,
        'method':'fixed national Geometric Young, equal-year All survey-weighted real expenditure weights',
        'normalization':'equal-year All survey-weighted geometric mean = 1',
        'authorized_exclusion':{'code':12211,'exp_var':'exp_11_4','p_var':'p_11_4',
           'reason':'all unit values missing; user explicitly requested soda exclusion'},
        'children_omitted':'not available in frozen clean data'}
+    if return_all:
+        a[[f'lnp_{g}' for g in range(1,13)]]=la
+        return a,b,audit_result
+    return b,audit_result

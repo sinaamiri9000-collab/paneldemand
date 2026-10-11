@@ -1,0 +1,258 @@
+{
+  "version": "b1-fourteen-2026-10-11-v1",
+  "models": [
+    {
+      "name": "CS_All_common",
+      "sample": "All",
+      "panel": false,
+      "history": false,
+      "cohort": null
+    },
+    {
+      "name": "CS_All_history",
+      "sample": "All",
+      "panel": false,
+      "history": true,
+      "cohort": null
+    },
+    {
+      "name": "CS_B_common",
+      "sample": "B",
+      "panel": false,
+      "history": false,
+      "cohort": null
+    },
+    {
+      "name": "CS_B_history",
+      "sample": "B",
+      "panel": false,
+      "history": true,
+      "cohort": null
+    },
+    {
+      "name": "Panel_1392",
+      "sample": "B",
+      "panel": true,
+      "history": false,
+      "cohort": 1392
+    },
+    {
+      "name": "Panel_1393",
+      "sample": "B",
+      "panel": true,
+      "history": false,
+      "cohort": 1393
+    },
+    {
+      "name": "Panel_1394",
+      "sample": "B",
+      "panel": true,
+      "history": false,
+      "cohort": 1394
+    },
+    {
+      "name": "Panel_1397",
+      "sample": "B",
+      "panel": true,
+      "history": false,
+      "cohort": 1397
+    },
+    {
+      "name": "Panel_1398",
+      "sample": "B",
+      "panel": true,
+      "history": false,
+      "cohort": 1398
+    },
+    {
+      "name": "Panel_1399",
+      "sample": "B",
+      "panel": true,
+      "history": false,
+      "cohort": 1399
+    },
+    {
+      "name": "Panel_1400",
+      "sample": "B",
+      "panel": true,
+      "history": false,
+      "cohort": 1400
+    },
+    {
+      "name": "Panel_1401",
+      "sample": "B",
+      "panel": true,
+      "history": false,
+      "cohort": 1401
+    },
+    {
+      "name": "Panel_B_common",
+      "sample": "B",
+      "panel": true,
+      "history": false,
+      "cohort": null
+    },
+    {
+      "name": "Panel_B_history",
+      "sample": "B",
+      "panel": true,
+      "history": true,
+      "cohort": null
+    }
+  ],
+  "sample": {
+    "All": {
+      "source_rows": 438577,
+      "flow": [
+        {
+          "criterion": "food_matched",
+          "excluded": 0,
+          "remaining": 438577
+        },
+        {
+          "criterion": "positive_106_expenditure",
+          "excluded": 57,
+          "remaining": 438520
+        },
+        {
+          "criterion": "positive_real_income",
+          "excluded": 340,
+          "remaining": 438180
+        },
+        {
+          "criterion": "required_demographics",
+          "excluded": 4,
+          "remaining": 438176
+        },
+        {
+          "criterion": "positive_finite_survey_weight",
+          "excluded": 0,
+          "remaining": 438176
+        },
+        {
+          "criterion": "finite_market_prices_and_shares",
+          "excluded": 0,
+          "remaining": 438176
+        }
+      ],
+      "rows": 438176,
+      "households": 258944,
+      "sample_hash": "39e8dfc7bebdb71a35fb17969dbaed8722b262b75ba60e6fdd2b390dc54b87d6",
+      "by_year": {
+        "1392": 38201,
+        "1393": 36017,
+        "1394": 36011,
+        "1395": 35799,
+        "1396": 35495,
+        "1397": 38822,
+        "1398": 36787,
+        "1399": 36391,
+        "1400": 36624,
+        "1401": 36315,
+        "1402": 35994,
+        "1403": 35720
+      },
+      "by_cohort": null
+    },
+    "B": {
+      "source_rows": 139041,
+      "flow": [
+        {
+          "criterion": "food_matched",
+          "excluded": 420,
+          "remaining": 138621
+        },
+        {
+          "criterion": "positive_106_expenditure",
+          "excluded": 25,
+          "remaining": 138596
+        },
+        {
+          "criterion": "positive_real_income",
+          "excluded": 97,
+          "remaining": 138499
+        },
+        {
+          "criterion": "required_demographics",
+          "excluded": 1,
+          "remaining": 138498
+        },
+        {
+          "criterion": "positive_finite_survey_weight",
+          "excluded": 0,
+          "remaining": 138498
+        },
+        {
+          "criterion": "finite_market_prices_and_shares",
+          "excluded": 0,
+          "remaining": 138498
+        },
+        {
+          "criterion": "retain_complete_three_wave_households",
+          "excluded": 684,
+          "remaining": 137814
+        }
+      ],
+      "rows": 137814,
+      "households": 45938,
+      "sample_hash": "397bee5d9347dc92fc687aa3bc6d5fea8c713cca3ce7de242bbd51a5474855ab",
+      "by_year": {
+        "1392": 6659,
+        "1393": 12767,
+        "1394": 18485,
+        "1395": 11826,
+        "1396": 5718,
+        "1397": 5937,
+        "1398": 11664,
+        "1399": 16902,
+        "1400": 16175,
+        "1401": 15789,
+        "1402": 10551,
+        "1403": 5341
+      },
+      "by_cohort": {
+        "1392": 19977,
+        "1393": 18324,
+        "1394": 17154,
+        "1397": 17811,
+        "1398": 17181,
+        "1399": 15714,
+        "1400": 15630,
+        "1401": 16023
+      }
+    }
+  },
+  "a0": 14.497627273104463,
+  "authorized_expenditure_means": true,
+  "mean_squared_definition": "mean((ln expenditure - fixed center)^2), NOT square(mean)",
+  "fixed_center": 16.463919467577398,
+  "sources_sha256": {
+    "all_clean_1392_1403.csv.gz": "d077806039d2f891f2a26de2cfca8544acf1c322c593984f46b795152b2ccf69",
+    "panelB_clean_1392_1403.csv.zip": "165dfd27c176e2c92e50a58f8762fae9635c3ffb59a61c7259f48f31dbd18ed0",
+    "final_commodity_mapping_107.xlsx": "59d9872c0ba15ac5971c15775d537e1a910e05350625dc2fc48cff469cd918ef"
+  },
+  "priced_panel_sha256": "034483d51b599b248a58be34dafbede13f37dd59aed0b28700803fd36fbc1a13",
+  "price_method_identical_to_prior": true,
+  "uploaded_chat_sha256": "236274239df8e17a6d3b21dcee6e5001aff601fb30985cadf3ccdbb64dfc7000",
+  "reference_pdf_sha256": {
+    "09-American-Journal-of-Agricultural-Economics-2005-aug-vol.-87-iss.-3-Consistent-Estimation-of-Censored-Dem...ta-Meyerhoefer-Chad-D._-Ranney-Christine-K._-Sahn-David-E.-2005-10.1111_j.1467-8276.2005.00754.x-42413091-libgen.li.pdf": "89ca469c0a8b764ab52a78655fe4e6eb6ede464ee4fb6059483e3c3a164635e1",
+    "01-Wooldridge-Cross-section-and-Panel-Data.pdf": "f283f17af8441c3eaddacc644d27f0b6b151424013191de4954cdb513d461844",
+    "02-Introductory_Econometrics_A_Modern_Approach.pdf": "21d1e23997fe1962849b58148ef97ae93d11154d59c0e5e322d091ef085f7207",
+    "07-food-demand-estimation-from-consumption-and-expenditure-data-meat-demand-in-nigeria.pdf": "bc097b1a1a4d8cc419317fb576387b8afe5070620eea089a3f11706136baa84c",
+    "08-a-household-level-demand-system-analysis-of-nuts-in-the-united-states.pdf": "1d079a05ef58842d59677bd7423f13d072a2b9a2baeb5a5833fcca1c88ca7016",
+    "05-American-Journal-of-Agricultural-Economics-2012-oct-vol.-94-iss.-5-Panel-Data-Estimation-Techniques-and-Farm-level-Data-Models-Platoni-S._-Sckokai-P._-Moro-D.-2012-10.1093_ajae_aas072-25167732-libgen.li.pdf": "ff7ad1c8b7aea2c7fcdd953e52962c33368a7ace4d45e6a11e1240403feb1634",
+    "03-two_way_mundlak-Wooldridge.pdf": "4a682620af4ddc12bc5c9aec8d75b15d7400dfdaf9615a697c7b2c019c7d7e19",
+    "04-The-Journal-of-Human-Resources-2015-apr-28-vol.-50-iss.-2-Control-Function-Methods-in-Applied-Econometrics-Wooldridge-Jeffrey-M.-2015-10.3368_jhr.50.2.420-45983108-libgen.li.pdf": "1997286cc962d83f99bdf081fb1b932804ee44123b63b038b08f6443a2d5a496",
+    "06-Two-Step-Estimation-of-a-Censored-System-of-Equations-J_-Scott-Shonkwiler-and-Steven-T_-Yen-American-Journal-of-Agricultural-Economics-4-81-10_2307_1244339-173414b26effac345dac66daf01349a2-Anna-s-Archive-1-1-.pdf": "b74eaeaff87b78daf6ce1e61518a3d85f828dd771fda691c60eefe23741d5e7d"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "pyquaidsce": "1.7.0",
+    "openpyxl": "3.1.5",
+    "pyarrow": "25.0.1"
+  },
+  "package_commit": "636609f17e732a57b140cbbad5d2bf4042bc396a"
+}
