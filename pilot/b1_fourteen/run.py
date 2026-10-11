@@ -250,9 +250,10 @@ def make_stage(b, spec):
     coef, _, rank, _ = np.linalg.lstsq(Xrf/scale*sw[:,None], y*sw, rcond=1e-11)
     assert rank == Xrf.shape[1]
     coef /= scale; cf = y-Xrf@coef
-    rss = float(np.sum(wt*cf**2)); XX = Xrf[:, :1+len(rf_controls)]
+    # DataFrame len counts rows. The restricted RF must omit the IV columns.
+    rss = float(np.sum(wt*cf**2)); XX = Xrf[:, :1+rf_controls.shape[1]]
     bc = np.linalg.lstsq(XX*sw[:,None], y*sw, rcond=1e-11)[0]
-    rss0 = float(np.sum(wt*(y-XX@bc)**2)); numiv = len(ivs)
+    rss0 = float(np.sum(wt*(y-XX@bc)**2)); numiv = ivs.shape[1]
     rfdiag = {'rank': int(rank), 'columns': len(rfnames), 'income_center': ic,
               'r_squared': 1-rss/np.sum(wt*(y-np.average(y,weights=wt))**2),
               'excluded_current_income_partial_r_squared': 1-rss/rss0,
