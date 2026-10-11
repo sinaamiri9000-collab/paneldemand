@@ -6,6 +6,7 @@ import numpy as np
 import openpyxl
 from openpyxl.styles import Alignment, Font, PatternFill, Border, Side
 from openpyxl.utils import get_column_letter
+from openpyxl.worksheet.views import Selection
 from pilot.common.run import dump
 from pilot.b1_fourteen.run import OUT, WORK, MODELS, VERSION, GROUPS
 
@@ -59,18 +60,26 @@ def workbook(results):
     wb = openpyxl.Workbook(); wb.remove(wb.active)
     navy = '203864'; teal = 'DDEBF7'; green = 'E2F0D9'
     thin = Side(style='thin',color='B8C4D1')
-    def merged(ws,row,text,color=None):
-        ws.merge_cells(start_row=row,start_column=1,end_row=row,end_column=14)
-        c=ws.cell(row,1,text); c.font=Font(name='Calibri',size=12,bold=bool(color),color='FFFFFF' if color else '000000')
-        c.alignment=Alignment(horizontal='right',vertical='center',wrap_text=True)
+    header_groups = [
+        'برنج','نان و\nغلات','گوشت','لبنیات و\nتخم‌مرغ','روغن و\nچربی','میوه',
+        'سبزیجات و\nسیب‌زمینی','حبوبات','مغزها، خشکبار\nو خرما',
+        'قند، شیرینی\nو تنقلات','نوشیدنی\nبدون نوشابه','ادویه و\nچاشنی',
+    ]
+    def merged(ws,row,text,color=None,height=20,start=1,end=14):
+        ws.merge_cells(start_row=row,start_column=start,end_row=row,end_column=end)
+        c=ws.cell(row,start,text)
+        c.font=Font(name='Calibri',size=10,bold=bool(color),color='FFFFFF' if color else '000000')
+        c.alignment=Alignment(horizontal='right',vertical='center',wrap_text=True,readingOrder=2)
         if color: c.fill=PatternFill('solid',fgColor=color)
-        ws.row_dimensions[row].height=30 if len(text)>95 else 23
+        ws.row_dimensions[row].height=height
+        return c
     def matrix(ws,row,ref,title):
         merged(ws,row,title,navy); row+=1
-        for col,val in enumerate(['گروه / قیمت']+GROUPS+['کشش مخارج'],1):
+        for col,val in enumerate(['گروه / قیمت']+header_groups+['کشش\nمخارج'],1):
             c=ws.cell(row,col,val); c.fill=PatternFill('solid',fgColor=teal)
-            c.font=Font(name='Calibri',bold=True); c.alignment=Alignment(wrap_text=True,horizontal='center',vertical='center')
-        ws.row_dimensions[row].height=58
+            c.font=Font(name='Calibri',size=10,bold=True)
+            c.alignment=Alignment(wrap_text=True,horizontal='center',vertical='center',readingOrder=2)
+        ws.row_dimensions[row].height=36
         for i in range(12):
             rr=row+i+1; ws.cell(rr,1,GROUPS[i])
             for j in range(12):
@@ -80,52 +89,96 @@ def workbook(results):
             value=ref['expenditure'][i]
             ws.cell(rr,14,float(value) if value is not None and np.isfinite(value) else 'نامعتبر').number_format='0.0000'
             for cell in ws[rr]:
+                cell.font=Font(name='Calibri',size=10)
                 cell.alignment=Alignment(horizontal='center',vertical='center',wrap_text=True)
                 cell.border=Border(left=thin,right=thin,top=thin,bottom=thin)
-            ws.row_dimensions[rr].height=28
+            ws.row_dimensions[rr].height=20
         return row+14
+    def detail(ws,row,label,text):
+        # Short wrapped rows keep long control lists readable without huge cells.
+        words=text.split(); chunks=[]; chunk=''
+        for word in words:
+            if chunk and len(chunk)+len(word)+1>145:
+                chunks.append(chunk); chunk=''
+            chunk=(chunk+' '+word).strip()
+        if chunk: chunks.append(chunk)
+        for i,chunk in enumerate(chunks or ['']):
+            c=merged(ws,row,label if i==0 else '',start=1,end=2,height=30)
+            c.font=Font(name='Calibri',size=10,bold=True)
+            c.fill=PatternFill('solid',fgColor=teal)
+            merged(ws,row,chunk,start=3,end=14,height=30)
+            row+=1
+        return row
     for run in results:
         spec=run['specification']; ws=wb.create_sheet(spec['name'])
-        ws.sheet_view.rightToLeft=True; ws.freeze_panes='B15'
-        merged(ws,1,spec['name']+' — '+model_description(spec),navy)
-        merged(ws,2,f"نمونه: {spec['sample']}؛ {run['sample']['rows']:,} مشاهده؛ {run['sample']['households']:,} خانوار؛ سال‌ها: "+'، '.join(map(str,run['sample']['years'])))
-        merged(ws,3,'۱۲ گروه، ۱۰۶ قلم؛ نوشابه حذف شده؛ قیمت بازار مشترک با اهداکنندگان All؛ Young با وزن ثابت')
+        ws.sheet_view.rightToLeft=True
+        ws.sheet_view.showGridLines=False
+        ws.sheet_view.zoomScale=85; ws.sheet_view.zoomScaleNormal=85
+        ws.sheet_view.topLeftCell='A1'
+        ws.sheet_view.selection=[Selection(activeCell='A1',sqref='A1')]
+        # Freezing fourteen rows used almost the entire viewport in Excel.
+        # No frozen rows or columns: every part of the sheet can scroll freely.
+        ws.freeze_panes=None
+        merged(ws,1,spec['name']+' — کشش‌های تقاضا',navy,height=24)
+        merged(ws,2,model_description(spec))
+        merged(ws,3,f"نمونه {spec['sample']}؛ {run['sample']['rows']:,} مشاهده؛ {run['sample']['households']:,} خانوار؛ سال‌ها: "+'، '.join(map(str,run['sample']['years'])))
         penalty=[str(d['group']) for d in run['selection'] if d.get('estimation_method',{}).get('method')=='Jeffreys_prior_penalized_probit']
-        merged(ws,4,'مدل: QUAIDS + S&Y دو مرحله‌ای + CF مخارج؛ مشارکت: پروبیت تجمیعی'+(' با میانگین‌های موندلاک' if spec['panel'] else '')+('؛ Jeffreys فقط گروه‌های '+','.join(penalty) if penalty else ''))
         years=[x for x in run['level_names'] if x.startswith('year_')]
         cohorts=[x for x in run['level_names'] if x.startswith('cohort_')]
-        merged(ws,5,f"دامی‌ها: {len(years)} سال، ۳ فصل، {len(cohorts)} گروه ورود؛ بدون wave؛ بدون تحصیلات؛ تعداد کل پارامترهای تقاضا: {run['demand_parameters']}")
-        merged(ws,6,'میانگین‌ها: قیمت، جمعیت‌شناسی منتخب، لگاریتم مخارج، میانگین مربع لگاریتم مخارج، میانگین CF' if spec['panel'] else 'در هیچ‌یک از مراحل میانگین خانواری به مدل مقطعی اضافه نشده است.')
-        merged(ws,7,'در مدل تاریخی پنلی، میانگین تعامل‌های دوره×قیمت و دوره×مخارج و دوره×مربع مخارج نیز لحاظ شده است.' if spec['history'] and spec['panel'] else 'تابع کنترل: باقیماندهٔ پیش‌بینی لگاریتم مخارج با لگاریتم درآمد واقعی و مربع آن؛ درآمدها مثبت')
-        merged(ws,8,'کشش‌ها مشتق مستقیم سهم پیش‌بینی‌شدهٔ S&Y هستند؛ میانگین‌های خانواری و CF هنگام مشتق‌گیری ثابت‌اند.')
-        merged(ws,9,'ردیف = گروه تقاضا؛ ستون = قیمت گروه؛ قطر سبز = کشش خودی؛ ستون آخر = کشش مخارج غذایی')
-        conv=run['convergence']
-        merged(ws,10,f"همگرایی: {conv['converged']}؛ نسبت بهبود GN: {conv['scaled_gn_ratio']:.3g}؛ تکرار بیرونی: {conv['outer_iterations']}؛ tol GN=1e-8، بیرونی=1e-5")
-        merged(ws,11,'توجه: جدول تاریخی «کل» میانگین وزن‌دار سه نقطهٔ دوره‌ای است؛ به معنی یک دورهٔ فرضی در نقطهٔ میانگین نیست.' if spec['history'] else 'نقطهٔ ارزیابی: میانگین غیرموزون لگاریتم قیمت، مخارج و کنترل‌ها؛ Φ و φ در میانگین شاخص پروبیت محاسبه شده‌اند.')
-        merged(ws,12,'وزن سال جاری در مرحلهٔ درآمد→مخارج استفاده شده؛ پروبیت و IFGNLS مانند B1 قبلی غیرموزون‌اند. این جدول فاصلهٔ اطمینان نهایی ندارد.')
-        row=matrix(ws,13,run['elasticities']['overall'],'کل نمونهٔ اجرا'+(' — میانگین نقاط سه دوره' if spec['history'] else ' — در نقطهٔ میانگین'))
+        merged(ws,4,f"QUAIDS + S&Y + CF؛ دامی‌ها: {len(years)} سال، ۳ فصل، {len(cohorts)} cohort؛ بدون wave و تحصیلات"+('؛ Jeffreys فقط گروه‌های '+','.join(penalty) if penalty else ''))
+        merged(ws,5,'ردیف: گروه تقاضا؛ ستون: قیمت گروه؛ قطر سبز: کشش خودی؛ ستون آخر: کشش مخارج',end=11)
+        jump=merged(ws,5,'مشخصات کامل ↓',start=12,end=14)
+        row=matrix(ws,6,run['elasticities']['overall'],'کل نمونهٔ اجرا'+(' — میانگین وزنی نقاط سه دوره' if spec['history'] else ' — در نقطهٔ میانگین'))
         if spec['history']:
-            for code in range(3): row=matrix(ws,row,run['elasticities'][f'period_{code}'],PERIODS[code]+' — ضرایب و نقطهٔ میانگین همان دوره')
-            merged(ws,row,'جدول‌های بعدی نقطهٔ فرضی مشترک‌اند؛ ترکیب cohort و میانگین تعامل‌ها ممکن است در آن دوره مشاهده نشده باشد. برای نتیجهٔ اصلی از نقاط واقعی دوره استفاده کنید.'); row+=2
-            for code in range(3): row=matrix(ws,row,run['elasticities'][f'common_reference_period_{code}'],PERIODS[code]+' — نقطهٔ مرجع مشترک کل نمونه؛ کنترل شرایط خانوار')
-        merged(ws,row,'کنترل‌های سطحی: '+', '.join(run['level_names'])); row+=2
-        if spec['panel']: merged(ws,row,'میانگین‌های شناسایی‌شده: '+', '.join(run['mundlak_names'])); ws.row_dimensions[row].height=100
-        ws.column_dimensions['A'].width=30
-        for j in range(2,14): ws.column_dimensions[get_column_letter(j)].width=17
-        ws.column_dimensions['N'].width=18
+            for code in range(3):
+                row=matrix(ws,row,run['elasticities'][f'period_{code}'],PERIODS[code]+' — ضرایب و نقطهٔ میانگین همان دوره')
+            merged(ws,row,'جدول‌های بعدی نقطهٔ فرضی مشترک‌اند؛ ترکیب cohort و میانگین تعامل‌ها ممکن است در آن دوره مشاهده نشده باشد. برای نتیجهٔ اصلی از نقاط واقعی دوره استفاده کنید.',height=32)
+            row+=2
+            for code in range(3):
+                row=matrix(ws,row,run['elasticities'][f'common_reference_period_{code}'],PERIODS[code]+' — نقطهٔ مرجع مشترک کل نمونه؛ کنترل شرایط خانوار')
+        details_row=row
+        c=merged(ws,row,'مشخصات کامل مدل — بازگشت به ماتریس اول ↑',navy); row+=1
+        c.hyperlink=f"#'{ws.title}'!A6"
+        jump.hyperlink=f"#'{ws.title}'!A{details_row}"
+        jump.font=Font(name='Calibri',size=10,color='0563C1',underline='single')
+        conv=run['convergence']
+        specs=[
+            ('سبد و قیمت','۱۲ گروه، ۱۰۶ قلم؛ نوشابه حذف شده؛ قیمت بازار مشترک با اهداکنندگان All؛ شاخص Young با وزن ثابت'),
+            ('مشارکت','پروبیت تجمیعی'+(' با میانگین‌های موندلاک' if spec['panel'] else '')+('؛ Jeffreys فقط گروه‌های '+','.join(penalty) if penalty else '؛ likelihood عادی')),
+            ('میانگین‌های خانواری','قیمت، جمعیت‌شناسی منتخب، لگاریتم مخارج، میانگین مربع لگاریتم مخارج، میانگین CF' if spec['panel'] else 'در هیچ‌یک از مراحل میانگین خانواری به مدل مقطعی اضافه نشده است.'),
+            ('تابع کنترل','باقیماندهٔ پیش‌بینی لگاریتم مخارج با لگاریتم درآمد واقعی و مربع آن؛ درآمدها مثبت'),
+            ('تعامل‌های تاریخی','در پنل تاریخی، میانگین تعامل‌های دوره×قیمت و دوره×مخارج و دوره×مربع مخارج نیز لحاظ شده است.' if spec['history'] and spec['panel'] else 'میانگین تعامل تاریخی اضافه نشده است.'),
+            ('محاسبهٔ کشش','مشتق مستقیم سهم پیش‌بینی‌شدهٔ S&Y؛ میانگین‌های خانواری و CF هنگام مشتق‌گیری ثابت‌اند.'),
+            ('نقطهٔ ارزیابی','جدول تاریخی «کل» میانگین وزن‌دار سه نقطهٔ دوره‌ای است؛ به معنی یک دورهٔ فرضی در نقطهٔ میانگین نیست.' if spec['history'] else 'میانگین غیرموزون لگاریتم قیمت، مخارج و کنترل‌ها؛ Φ و φ در میانگین شاخص پروبیت محاسبه شده‌اند.'),
+            ('همگرایی',f"{conv['converged']}؛ نسبت GN: {conv['scaled_gn_ratio']:.3g}؛ تکرار بیرونی: {conv['outer_iterations']}؛ tol GN=1e-8، بیرونی=1e-5؛ پارامترهای تقاضا: {run['demand_parameters']}"),
+            ('وزن و استنباط','وزن سال جاری در مرحلهٔ درآمد→مخارج استفاده شده؛ پروبیت و IFGNLS مانند B1 قبلی غیرموزون‌اند. این جدول فاصلهٔ اطمینان نهایی ندارد.'),
+            ('کنترل‌های سطحی',', '.join(run['level_names'])),
+        ]
+        if spec['panel']: specs.append(('میانگین‌های شناسایی‌شده',', '.join(run['mundlak_names'])))
+        for label,text in specs: row=detail(ws,row,label,text)
+        ws.column_dimensions['A'].width=28
+        for j in range(2,14): ws.column_dimensions[get_column_letter(j)].width=10.5
+        ws.column_dimensions['N'].width=12.5
         ws.print_options.horizontalCentered=True; ws.page_setup.orientation='landscape'
-        ws.page_setup.paperSize=ws.PAPERSIZE_A3; ws.page_setup.fitToWidth=1; ws.page_setup.fitToHeight=0
+        ws.page_setup.paperSize=ws.PAPERSIZE_A4; ws.page_setup.fitToWidth=1; ws.page_setup.fitToHeight=0
         ws.sheet_properties.pageSetUpPr.fitToPage=True
-        ws.print_area=f'A1:N{row+1}'
+        ws.print_area=f'A1:N{row-1}'
     path=OUT/'paneldemand_B1_fourteen_runs.xlsx'; wb.save(path)
     reopened=openpyxl.load_workbook(path,data_only=True)
     assert len(reopened.sheetnames)==14
     for run in results:
         ws=reopened[run['specification']['name']]
-        for i in range(12):
-            for j in range(12):
-                assert abs(ws.cell(15+i,2+j).value-run['elasticities']['overall']['marshallian'][i][j])<1e-12
-            assert abs(ws.cell(15+i,14).value-run['elasticities']['overall']['expenditure'][i])<1e-12
+        assert ws.freeze_panes is None and ws.sheet_view.pane is None
+        keys=['overall']
+        if run['specification']['history']:
+            keys += [f'period_{c}' for c in range(3)]+[f'common_reference_period_{c}' for c in range(3)]
+        headers=[row[0].row for row in ws if row[0].value=='گروه / قیمت']
+        assert len(headers)==len(keys)
+        for header,key in zip(headers,keys):
+            for i in range(12):
+                for j in range(12):
+                    assert abs(ws.cell(header+1+i,2+j).value-run['elasticities'][key]['marshallian'][i][j])<1e-12
+                assert abs(ws.cell(header+1+i,14).value-run['elasticities'][key]['expenditure'][i])<1e-12
     return path
 
 

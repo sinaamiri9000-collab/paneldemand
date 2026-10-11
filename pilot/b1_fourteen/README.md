@@ -12,6 +12,8 @@
 - [معادلات و منابع روش](methodology.md)، [پروبیت با رفع separation](probit_adapter.py)، [بازبینی مشارکت‌های ذخیره‌شده](selection_audit.py): فقط separation تأییدشده با Jeffreys طبق Kosmidis–Firth (2021) اصلاح می‌شود؛ بدون حذف مشاهده/متغیر.
 - [آزمون‌های بلوکی مشروط](conditional_tests.py): این covariance مراحل CF/Probit را ثابت می‌گیرد؛ برای نتیجهٔ نهایی مقاله کافی نیست.
 
+اکسل با نمایش اولیهٔ ۸۵٪، ستون‌های باریک و بدون ردیف یا ستون ثابت باز می‌شود. ماتریس اول در ابتدای هر شیت است؛ مشخصات کامل زیر جدول‌ها قرار دارد و لینک «مشخصات کامل» در بالای شیت به آن می‌رود.
+
 ```bash
 python -m pip install -r pilot/requirements.txt
 python -m pilot.b1_fourteen.run --prepare
