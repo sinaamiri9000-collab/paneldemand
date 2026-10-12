@@ -106,8 +106,10 @@ def weighted_probit(y, X, weights):
     }
 
 
-def build_stage(name, b):
-    old,_=load_baseline(); stage=copy.deepcopy(old)
+def build_stage(name, b, baseline=None):
+    """Optional explicit baseline supports later frozen-control follow-ups."""
+    old,_=load_baseline() if baseline is None else baseline
+    stage=copy.deepcopy(old)
     d=stage['data']; names=old['control_names']
     controls=pd.DataFrame(old['Z']*old['scales']+old['centers'],columns=names)
     drop=[]
