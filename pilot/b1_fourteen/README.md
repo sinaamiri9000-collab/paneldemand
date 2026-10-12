@@ -1,6 +1,6 @@
 # بستهٔ ۱۴ مدل B1 توسعه‌یافته
 
-**نسخهٔ فعال اکسل — ۲۰۲۶-۱۰-۱۲:** ده شیت پنلی با بازتخمین بدون میانگین مربع لگاریتم مخارج به‌روز شده‌اند؛ چهار شیت مقطعی تغییر نکرده‌اند. [گزارش و نتایج فعلی](../b1_fourteen_no_exp_square/README.md) در بستهٔ جدید هستند. گزارش، JSON و توضیحات زیر نسخهٔ تاریخی با میانگین مربع را ثبت می‌کنند. [اکسل تاریخی](https://github.com/sinaamiri9000-collab/paneldemand/blob/dfc9abd6c84e4326a90c1faf2490826dfc6b1796/pilot/b1_fourteen/paneldemand_B1_fourteen_runs.xlsx) نیز در commit قبلی در دسترس است.
+**نسخهٔ فعال اکسل — ۲۰۲۶-۱۰-۱۲:** ده شیت پنلی با بازتخمین بدون میانگین CF و بدون میانگین مربع لگاریتم مخارج به‌روز شده‌اند؛ چهار شیت مقطعی تغییر نکرده‌اند. [گزارش و نتایج فعلی](../b1_fourteen_no_mean_cf/README.md) در بستهٔ جدید هستند. گزارش، JSON و توضیحات زیر نسخهٔ تاریخی با هر دو میانگین را ثبت می‌کنند. [اکسل تاریخی اولیه](https://github.com/sinaamiri9000-collab/paneldemand/blob/dfc9abd6c84e4326a90c1faf2490826dfc6b1796/pilot/b1_fourteen/paneldemand_B1_fourteen_runs.xlsx) و [نسخهٔ قبل با میانگین CF](https://github.com/sinaamiri9000-collab/paneldemand/blob/be4e5f48417670c5fab24f40567e58c4c941e309/pilot/b1_fourteen/paneldemand_B1_fourteen_runs.xlsx) در تاریخچه در دسترس‌اند.
 
 این بسته شامل دو مدل مقطع تجمیعی All، دو مقطع تجمیعی B، هشت پنل سه‌سالهٔ مستقل، و دو پنل تجمیعی B است. سه جفت تجمیعی با/بدون تفاوت ضرایب تاریخی تخمین زده می‌شوند. دوره‌ها ۱۳۹۲–۱۳۹۶، ۱۳۹۷–۱۳۹۸ و ۱۳۹۹–۱۴۰۳ هستند.
 

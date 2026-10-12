@@ -112,6 +112,7 @@ def workbook(results, path=None):
     for run in results:
         spec=run['specification']; ws=wb.create_sheet(spec['name'])
         square_means=[n for n in run['control_names'] if n.startswith('mean_') and n.endswith('centered_ln_expenditure_squared')]
+        mean_cf = 'mean_cf_residual' in run['control_names']
         ws.sheet_view.rightToLeft=True
         ws.sheet_view.showGridLines=False
         ws.sheet_view.zoomScale=85; ws.sheet_view.zoomScaleNormal=85
@@ -121,7 +122,7 @@ def workbook(results, path=None):
         # No frozen rows or columns: every part of the sheet can scroll freely.
         ws.freeze_panes=None
         merged(ws,1,spec['name']+' — کشش‌های تقاضا',navy,height=24)
-        merged(ws,2,model_description(spec)+('؛ میانگین مربع لگاریتم مخارج حذف شده' if spec['panel'] and not square_means else ''))
+        merged(ws,2,model_description(spec)+('؛ میانگین مربع لگاریتم مخارج حذف شده' if spec['panel'] and not square_means else '')+('؛ میانگین CF حذف شده' if spec['panel'] and not mean_cf else ''),height=30 if spec['panel'] and not mean_cf else 20)
         merged(ws,3,f"نمونه {spec['sample']}؛ {run['sample']['rows']:,} مشاهده؛ {run['sample']['households']:,} خانوار؛ سال‌ها: "+'، '.join(map(str,run['sample']['years'])))
         penalty=[str(d['group']) for d in run['selection'] if d.get('estimation_method',{}).get('method')=='Jeffreys_prior_penalized_probit']
         years=[x for x in run['level_names'] if x.startswith('year_')]
@@ -146,7 +147,7 @@ def workbook(results, path=None):
         specs=[
             ('سبد و قیمت','۱۲ گروه، ۱۰۶ قلم؛ نوشابه حذف شده؛ قیمت بازار مشترک با اهداکنندگان All؛ شاخص Young با وزن ثابت'),
             ('مشارکت','پروبیت تجمیعی'+(' با میانگین‌های موندلاک' if spec['panel'] else '')+('؛ Jeffreys فقط گروه‌های '+','.join(penalty) if penalty else '؛ likelihood عادی')),
-            ('میانگین‌های خانواری',('قیمت، جمعیت‌شناسی منتخب، لگاریتم مخارج، '+('میانگین مربع لگاریتم مخارج، ' if square_means else '')+'میانگین CF') if spec['panel'] else 'در هیچ‌یک از مراحل میانگین خانواری به مدل مقطعی اضافه نشده است.'),
+            ('میانگین‌های خانواری',('قیمت، جمعیت‌شناسی منتخب، لگاریتم مخارج، '+('میانگین مربع لگاریتم مخارج، ' if square_means else '')+('میانگین CF' if mean_cf else 'بدون میانگین CF')) if spec['panel'] else 'در هیچ‌یک از مراحل میانگین خانواری به مدل مقطعی اضافه نشده است.'),
             ('تابع کنترل','باقیماندهٔ پیش‌بینی لگاریتم مخارج با لگاریتم درآمد واقعی و مربع آن؛ درآمدها مثبت'),
             ('تعامل‌های تاریخی',('در پنل تاریخی، میانگین تعامل‌های دوره×قیمت و دوره×لگاریتم مخارج'+(' و دوره×مربع لگاریتم مخارج' if square_means else '')+' لحاظ شده است.') if spec['history'] and spec['panel'] else 'میانگین تعامل تاریخی اضافه نشده است.'),
             ('محاسبهٔ کشش','مشتق مستقیم سهم پیش‌بینی‌شدهٔ S&Y؛ میانگین‌های خانواری و CF هنگام مشتق‌گیری ثابت‌اند.'),
