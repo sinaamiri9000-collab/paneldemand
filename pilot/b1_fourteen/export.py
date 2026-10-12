@@ -56,7 +56,7 @@ def economic_comparisons(results):
     return summary
 
 
-def workbook(results):
+def workbook(results, path=None):
     wb = openpyxl.Workbook(); wb.remove(wb.active)
     navy = '203864'; teal = 'DDEBF7'; green = 'E2F0D9'
     thin = Side(style='thin',color='B8C4D1')
@@ -111,6 +111,7 @@ def workbook(results):
         return row
     for run in results:
         spec=run['specification']; ws=wb.create_sheet(spec['name'])
+        square_means=[n for n in run['control_names'] if n.startswith('mean_') and n.endswith('centered_ln_expenditure_squared')]
         ws.sheet_view.rightToLeft=True
         ws.sheet_view.showGridLines=False
         ws.sheet_view.zoomScale=85; ws.sheet_view.zoomScaleNormal=85
@@ -120,7 +121,7 @@ def workbook(results):
         # No frozen rows or columns: every part of the sheet can scroll freely.
         ws.freeze_panes=None
         merged(ws,1,spec['name']+' — کشش‌های تقاضا',navy,height=24)
-        merged(ws,2,model_description(spec))
+        merged(ws,2,model_description(spec)+('؛ میانگین مربع لگاریتم مخارج حذف شده' if spec['panel'] and not square_means else ''))
         merged(ws,3,f"نمونه {spec['sample']}؛ {run['sample']['rows']:,} مشاهده؛ {run['sample']['households']:,} خانوار؛ سال‌ها: "+'، '.join(map(str,run['sample']['years'])))
         penalty=[str(d['group']) for d in run['selection'] if d.get('estimation_method',{}).get('method')=='Jeffreys_prior_penalized_probit']
         years=[x for x in run['level_names'] if x.startswith('year_')]
@@ -145,9 +146,9 @@ def workbook(results):
         specs=[
             ('سبد و قیمت','۱۲ گروه، ۱۰۶ قلم؛ نوشابه حذف شده؛ قیمت بازار مشترک با اهداکنندگان All؛ شاخص Young با وزن ثابت'),
             ('مشارکت','پروبیت تجمیعی'+(' با میانگین‌های موندلاک' if spec['panel'] else '')+('؛ Jeffreys فقط گروه‌های '+','.join(penalty) if penalty else '؛ likelihood عادی')),
-            ('میانگین‌های خانواری','قیمت، جمعیت‌شناسی منتخب، لگاریتم مخارج، میانگین مربع لگاریتم مخارج، میانگین CF' if spec['panel'] else 'در هیچ‌یک از مراحل میانگین خانواری به مدل مقطعی اضافه نشده است.'),
+            ('میانگین‌های خانواری',('قیمت، جمعیت‌شناسی منتخب، لگاریتم مخارج، '+('میانگین مربع لگاریتم مخارج، ' if square_means else '')+'میانگین CF') if spec['panel'] else 'در هیچ‌یک از مراحل میانگین خانواری به مدل مقطعی اضافه نشده است.'),
             ('تابع کنترل','باقیماندهٔ پیش‌بینی لگاریتم مخارج با لگاریتم درآمد واقعی و مربع آن؛ درآمدها مثبت'),
-            ('تعامل‌های تاریخی','در پنل تاریخی، میانگین تعامل‌های دوره×قیمت و دوره×مخارج و دوره×مربع مخارج نیز لحاظ شده است.' if spec['history'] and spec['panel'] else 'میانگین تعامل تاریخی اضافه نشده است.'),
+            ('تعامل‌های تاریخی',('در پنل تاریخی، میانگین تعامل‌های دوره×قیمت و دوره×لگاریتم مخارج'+(' و دوره×مربع لگاریتم مخارج' if square_means else '')+' لحاظ شده است.') if spec['history'] and spec['panel'] else 'میانگین تعامل تاریخی اضافه نشده است.'),
             ('محاسبهٔ کشش','مشتق مستقیم سهم پیش‌بینی‌شدهٔ S&Y؛ میانگین‌های خانواری و CF هنگام مشتق‌گیری ثابت‌اند.'),
             ('نقطهٔ ارزیابی','جدول تاریخی «کل» میانگین وزن‌دار سه نقطهٔ دوره‌ای است؛ به معنی یک دورهٔ فرضی در نقطهٔ میانگین نیست.' if spec['history'] else 'میانگین غیرموزون لگاریتم قیمت، مخارج و کنترل‌ها؛ Φ و φ در میانگین شاخص پروبیت محاسبه شده‌اند.'),
             ('همگرایی',f"{conv['converged']}؛ نسبت GN: {conv['scaled_gn_ratio']:.3g}؛ تکرار بیرونی: {conv['outer_iterations']}؛ tol GN=1e-8، بیرونی=1e-5؛ پارامترهای تقاضا: {run['demand_parameters']}"),
@@ -155,6 +156,8 @@ def workbook(results):
             ('کنترل‌های سطحی',', '.join(run['level_names'])),
         ]
         if spec['panel']: specs.append(('میانگین‌های شناسایی‌شده',', '.join(run['mundlak_names'])))
+        excluded=[f"گروه {d['group']}: "+', '.join(d['excluded_names']) for d in run['selection'] if d.get('excluded_names')]
+        if excluded: specs.append(('حذف‌های مشارکت','؛ '.join(excluded)+'؛ این کنترل‌ها در بخش تقاضا حفظ شده‌اند.'))
         for label,text in specs: row=detail(ws,row,label,text)
         ws.column_dimensions['A'].width=28
         for j in range(2,14): ws.column_dimensions[get_column_letter(j)].width=10.5
@@ -163,7 +166,8 @@ def workbook(results):
         ws.page_setup.paperSize=ws.PAPERSIZE_A4; ws.page_setup.fitToWidth=1; ws.page_setup.fitToHeight=0
         ws.sheet_properties.pageSetUpPr.fitToPage=True
         ws.print_area=f'A1:N{row-1}'
-    path=OUT/'paneldemand_B1_fourteen_runs.xlsx'; wb.save(path)
+    path=Path(path) if path is not None else OUT/'paneldemand_B1_fourteen_runs.xlsx'
+    path.parent.mkdir(parents=True,exist_ok=True); wb.save(path)
     reopened=openpyxl.load_workbook(path,data_only=True)
     assert len(reopened.sheetnames)==14
     for run in results:
@@ -177,8 +181,14 @@ def workbook(results):
         for header,key in zip(headers,keys):
             for i in range(12):
                 for j in range(12):
-                    assert abs(ws.cell(header+1+i,2+j).value-run['elasticities'][key]['marshallian'][i][j])<1e-12
-                assert abs(ws.cell(header+1+i,14).value-run['elasticities'][key]['expenditure'][i])<1e-12
+                    value=run['elasticities'][key]['marshallian'][i][j]
+                    actual=ws.cell(header+1+i,2+j).value
+                    if value is None or not np.isfinite(value): assert actual=='نامعتبر'
+                    else: assert abs(actual-value)<1e-12
+                value=run['elasticities'][key]['expenditure'][i]
+                actual=ws.cell(header+1+i,14).value
+                if value is None or not np.isfinite(value): assert actual=='نامعتبر'
+                else: assert abs(actual-value)<1e-12
     return path
 
 

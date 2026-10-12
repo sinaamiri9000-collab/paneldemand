@@ -1,10 +1,10 @@
 # راهنمای بسته‌های آزمایشی Panel B
 
-فایل‌ها در **۱۲ بستهٔ آزمایشی** نگهداری می‌شوند. نتایج تاریخی حفظ شده‌اند؛ بستهٔ نهم فقط محاسبهٔ کشش با ضرایب قبلی است و بستهٔ دهم ۱۴ اجرای مقطع/پنل و تاریخی است. هر پوشه کد و نتایج همان بسته را دارد؛ گزارش دو بستهٔ آخر، طبق درخواست صاحب پروژه، در چت ارائه شده است. هسته و ابزارهای مشترک در `common/` و آزمون‌های صحت کد در `tests/` قرار دارند.
+فایل‌ها در **۱۳ بستهٔ آزمایشی** نگهداری می‌شوند. نتایج تاریخی حفظ شده‌اند؛ بستهٔ نهم فقط محاسبهٔ کشش با ضرایب قبلی است و بستهٔ دهم ۱۴ اجرای اولیهٔ مقطع/پنل و تاریخی است. بستهٔ سیزدهم، نسخهٔ تازهٔ ده پنل بدون میانگین مربع مخارج را دارد. هر پوشه کد و نتایج همان بسته را دارد؛ گزارش بسته‌های ۱۱ و ۱۲، طبق درخواست صاحب پروژه، در چت ارائه شده است. هسته و ابزارهای مشترک در `common/` و آزمون‌های صحت کد در `tests/` قرار دارند.
 
 نسخهٔ [اکسل کامل مارشالی ۱۲×۱۲](fixed_parameter_elasticities/paneldemand_B1_B2_marshallian_12x12_1392_1403.xlsx) نیز در بستهٔ نهم قرار دارد.
 
-برای ۱۴ اجرای جدید B1 توسعه‌یافته، [بستهٔ دهم](b1_fourteen/README.md)، [گزارش جامع](b1_fourteen/report.md) و [اکسل ۱۴ شیت](b1_fourteen/paneldemand_B1_fourteen_runs.xlsx) را ببینید.
+برای نسخهٔ فعلی ۱۴ مدل، [بستهٔ سیزدهم](b1_fourteen_no_exp_square/README.md)، [گزارش بازتخمین ده پنل](b1_fourteen_no_exp_square/report.md) و [اکسل به‌روز ۱۴ شیت](b1_fourteen/paneldemand_B1_fourteen_runs.xlsx) را ببینید. [بستهٔ دهم](b1_fourteen/README.md) گزارش و نتایج تاریخی اولیه را حفظ می‌کند.
 
 برای کشش‌های سالانه و cohort با ضرایب ثابت از [بستهٔ نهم](fixed_parameter_elasticities/README.md) شروع کنید. برای آخرین مقایسهٔ برازش B1 و B2 از [بستهٔ پیگیری](specification_followup/README.md) شروع کنید. جدول زیر مسیر تاریخی آزمایش‌ها را نشان می‌دهد؛ فایل هر بسته وضعیت همان آزمایش است و الزاماً تصریح نهایی مقاله نیست.
 
@@ -19,9 +19,10 @@
 | [۷. بستهٔ پنج تصریح](specification_suite/README.md) | B0، B1، B2، B3 و P0: بررسی میانگین CF، میانگین مخارج و کنترل‌های جمعیت‌شناختی. | [گزارش](specification_suite/report.md) | [JSON](specification_suite/results.json) |
 | [۸. پیگیری پنج تصریح و مشتق مستقیم](specification_followup/README.md) | Pooled با سن/RF یکسان، B1/B2 بدون میانگین فصل و کشش‌های مستقیم S&Y؛ بستهٔ پیگیری برازش‌ها. | [گزارش](specification_followup/report.md) | [JSON](specification_followup/results.json) |
 | [۹. کشش با ضرایب ثابت در سال/cohort](fixed_parameter_elasticities/README.md) | بدون بازتخمین B1/B2: ۲۱ نقطهٔ مرجع برای هر مدل و خلاصهٔ کشش‌های مشاهده‌ای همان سال/cohort. | [گزارش](fixed_parameter_elasticities/report.md) | [JSON](fixed_parameter_elasticities/results.json) |
-| [۱۰. چهارده اجرای B1 توسعه‌یافته](b1_fourteen/README.md) | دو مقطع All، دو مقطع B، هشت پنل cohort و دو پنل تجمیعی؛ ضرایب مشترک/تاریخی و میانگین مخارج و مربع آن طبق تأیید صاحب پروژه. | [گزارش](b1_fourteen/report.md) | [JSON](b1_fourteen/results.json) و [اکسل](b1_fourteen/paneldemand_B1_fourteen_runs.xlsx) |
+| [۱۰. چهارده اجرای B1 توسعه‌یافته](b1_fourteen/README.md) | دو مقطع All، دو مقطع B، هشت پنل cohort و دو پنل تجمیعی؛ ضرایب مشترک/تاریخی و میانگین مخارج و مربع آن طبق تأیید اولیهٔ صاحب پروژه. | [گزارش تاریخی](b1_fourteen/report.md) | [JSON اولیه](b1_fourteen/results.json) و [اکسل اولیه](https://github.com/sinaamiri9000-collab/paneldemand/blob/dfc9abd6c84e4326a90c1faf2490826dfc6b1796/pilot/b1_fourteen/paneldemand_B1_fourteen_runs.xlsx) |
 | [۱۱. اصلاح سه معادلهٔ مشارکت](marital_participation_sensitivity/run.py) | حذف متغیر مجرد و میانگین آن فقط از سه Probit دارای جداسازی؛ سپس بازتخمین کامل سیستم و مقایسه با نتایج قبلی. | در چت | [JSON](marital_participation_sensitivity/results.json) |
 | [۱۲. حساسیت مغزها در cohort ۱۴۰۱](cohort1401_nuts_sensitivity/run.py) | روش‌های مختلف محاسبهٔ کشش، ۱۱ تصریح کنترل/CF/وزن، و کنترل یک نقطهٔ شروع دیگر؛ QUAIDS و S&Y ثابت. | در چت | [JSON](cohort1401_nuts_sensitivity/results.json) |
+| [۱۳. حذف میانگین مربع مخارج از ده پنل](b1_fourteen_no_exp_square/README.md) | هشت cohort و دو پنل تجمیعی دوباره تخمین زده شدند؛ چهار مقطع قبلی و فرم QUAIDS/S&Y حفظ شده‌اند. | [گزارش](b1_fourteen_no_exp_square/report.md) | [JSON](b1_fourteen_no_exp_square/results.json) و [اکسل ۱۴مدلی](b1_fourteen/paneldemand_B1_fourteen_runs.xlsx) |
 
 در بستهٔ ۱۲، خطای شمارش ستون‌ها در شاخص قدرت ابزارهای درآمدِ مرحلهٔ اول بستهٔ ۱۰ اصلاح شده است. آمار ذخیره‌شدهٔ قدیمیِ `excluded_current_income_*` را برای استنباط استفاده نکنید؛ ضرایب مرحلهٔ اول، CF و برازش‌های تاریخی تغییر نکرده‌اند. شاخص بازحساب‌شده برای cohort ۱۴۰۱ در نتایج بستهٔ ۱۲ موجود است و کد تولید شاخص برای اجراهای بعدی اصلاح شده است.
 

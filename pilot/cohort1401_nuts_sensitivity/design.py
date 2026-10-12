@@ -50,7 +50,9 @@ def rf_diagnostics(stage):
     coef=np.array([stage['first_stage']['coefficients'][c] for c in names])
     v=d.lnexp-X@coef
     np.testing.assert_allclose(v,d.control_function,atol=3e-10)
-    iv=[j for j,c in enumerate(names) if c in ('ln_income_centered','ln_income_centered_squared')]
+    excluded=stage['first_stage'].get('excluded_current_income_names',
+        ['ln_income_centered','ln_income_centered_squared'])
+    iv=[j for j,c in enumerate(names) if c in excluded]
     X0=np.delete(X,iv,axis=1); s0=X0.std(0); s0[0]=1.
     bc,_,rank,_=np.linalg.lstsq(X0/s0*sw[:,None],d.lnexp*sw,rcond=1e-11)
     assert rank==X0.shape[1] and len(iv)>0
